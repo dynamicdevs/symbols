@@ -1,0 +1,73 @@
+{
+  "root": "apps/web-react",
+  "sourceRoot": "apps/web-react/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/web-react",
+        "index": "apps/web-react/src/index.html",
+        "baseHref": "/",
+        "main": "apps/web-react/src/main.tsx",
+        "polyfills": "apps/web-react/src/polyfills.ts",
+        "tsConfig": "apps/web-react/tsconfig.app.json",
+        "assets": [
+          "apps/web-react/src/favicon.ico",
+          "apps/web-react/src/assets"
+        ],
+        "styles": ["apps/web-react/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/web-react/src/environments/environment.ts",
+              "with": "apps/web-react/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "web-react:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "web-react:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-react/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/web-react"],
+      "options": {
+        "jestConfig": "apps/web-react/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

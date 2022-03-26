@@ -29,7 +29,6 @@
       }
     ]
   },
-  "defaultProject": "components",
   "generators": {
     "@nrwl/web:application": {
       "style": "scss",
@@ -41,6 +40,20 @@
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     }
   }
 }
