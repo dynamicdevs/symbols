@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "components": "apps/components",
+    "components-e2e": "apps/components-e2e"
+  }
+}
