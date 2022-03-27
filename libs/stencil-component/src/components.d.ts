@@ -9,7 +9,7 @@ export namespace Components {
     interface SymbolIcon {
         "iconClass"?: string;
         "name": string;
-        "style": string;
+        "type": StyleType;
     }
 }
 declare global {
@@ -27,7 +27,7 @@ declare namespace LocalJSX {
     interface SymbolIcon {
         "iconClass"?: string;
         "name"?: string;
-        "style"?: string;
+        "type"?: StyleType;
     }
     interface IntrinsicElements {
         "symbol-icon": SymbolIcon;

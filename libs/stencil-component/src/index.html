@@ -10,8 +10,20 @@
 
     <script type="module" src="/build/stencil-component.esm.js"></script>
     <script nomodule src="/build/stencil-component.js"></script>
+    <style>
+      .test {
+        width: 60px;
+        height: 60px;
+        color: blue;
+      }
+    </style>
   </head>
   <body>
+    <symbol-icon name="twitter" icon-class="test"></symbol-icon>
     <symbol-icon name="twitter"></symbol-icon>
+    <symbol-icon name="twitter" icon-class="symbol-sm"></symbol-icon>
+    <symbol-icon name="twitter" icon-class="symbol-md"></symbol-icon>
+    <symbol-icon name="twitter" icon-class="symbol-lg"></symbol-icon>
+    <symbol-icon name="twitter" icon-class="symbol-xl"></symbol-icon>
   </body>
 </html>
