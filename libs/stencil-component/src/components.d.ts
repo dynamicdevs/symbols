@@ -6,56 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface SymbolIcon {
+        "iconClass"?: string;
+        "name": string;
+        "style": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLSymbolIconElement extends Components.SymbolIcon, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLSymbolIconElement: {
+        prototype: HTMLSymbolIconElement;
+        new (): HTMLSymbolIconElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "symbol-icon": HTMLSymbolIconElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface SymbolIcon {
+        "iconClass"?: string;
+        "name"?: string;
+        "style"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "symbol-icon": SymbolIcon;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "symbol-icon": LocalJSX.SymbolIcon & JSXBase.HTMLAttributes<HTMLSymbolIconElement>;
         }
     }
 }
