@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
-    <title>Stencil Component Starter</title>
+    <title>Symbol Sandbox</title>
 
     <script type="module" src="/build/stencil-component.esm.js"></script>
     <script nomodule src="/build/stencil-component.js"></script>
@@ -16,14 +16,27 @@
         height: 60px;
         color: blue;
       }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
-    <symbol-icon name="twitter" icon-class="test"></symbol-icon>
-    <symbol-icon name="twitter"></symbol-icon>
-    <symbol-icon name="twitter" icon-class="symbol-sm"></symbol-icon>
-    <symbol-icon name="twitter" icon-class="symbol-md"></symbol-icon>
-    <symbol-icon name="twitter" icon-class="symbol-lg"></symbol-icon>
-    <symbol-icon name="twitter" icon-class="symbol-xl"></symbol-icon>
+    <div class="container">
+      <symbol-icon name="twitter" icon-class="symbol-xl"></symbol-icon>
+      <symbol-icon name="twitter" icon-class="symbol-sm"></symbol-icon>
+    </div>
+    <div id="icon-delay"></div>
+    <script>
+      setTimeout(() => {
+        let iconElement = document.createElement("symbol-icon");
+        iconElement.setAttribute('name', 'twitter');
+        iconElement.setAttribute('icon-class', 'symbol-lg');
+        document.getElementById('icon-delay').append(iconElement);
+      }, 1000)
+    </script>
   </body>
 </html>

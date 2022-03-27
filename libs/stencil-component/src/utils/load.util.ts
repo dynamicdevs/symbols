@@ -1,17 +1,25 @@
 const REQUESTS = new Map<string, Promise<string | void>>();
 export const ICONS_CONTENT = new Map<string, string>();
 
-export const getSVGContent = (url: string) => {
-  let request = REQUESTS.get(url);
+export const ICONS_SOLID_CONTENT = new Map<string, string>();
+export const ICONS_OUTLINE_CONTENT = new Map<string, string>();
 
+type StyleType = 'solid' | 'outline';
+
+export const getIconContent = (name: string, type: StyleType, url: string) => {
+
+  let request = REQUESTS.get(url);
   if (!request) {
     request = fetch(url).then((response: Response) => {
       if (response.ok) {
         return response.text().then((svgContent: string) => {
-          ICONS_CONTENT.set(url, svgContent || '');
+          if (type === 'solid') {
+            ICONS_SOLID_CONTENT.set(name, svgContent || '');
+          } else {
+            ICONS_OUTLINE_CONTENT.set(name, svgContent || '');
+          }
         });
       }
-      ICONS_CONTENT.set(url, '');
     })
   }
   return request;
