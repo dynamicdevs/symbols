@@ -1,4 +1,4 @@
-import { Build, Component, getAssetPath, h, Host, Prop, State, Watch } from "@stencil/core";
+import { Build, Component, h, Host, Prop, State, Watch } from "@stencil/core";
 import { getIconContent, ICONS_OUTLINE_CONTENT, ICONS_SOLID_CONTENT } from "../../utils";
 
 type StyleType = 'solid' | 'outline';
@@ -23,11 +23,10 @@ export class SymbolIcon {
     if (!Build.isBrowser) {
       return;
     }
-    const url: string = getAssetPath(`../assets/icons/${this.type}/${this.name}.svg`);
     if (this.type === 'solid') {
-      this.getSolidIcon(this.name, url);
+      this.getSolidIcon(this.name);
     } else {
-      this.getOutlineIcon(this.name, url);
+      this.getOutlineIcon(this.name);
     }
   }
 
@@ -38,21 +37,21 @@ export class SymbolIcon {
     );
   }
 
-  private async getSolidIcon(name: string, url: string) {
+  private async getSolidIcon(name: string) {
     if (ICONS_SOLID_CONTENT.has(name)) {
       this.svgContent = ICONS_SOLID_CONTENT.get(name);
     } else {
-      getIconContent(name, 'solid', url).then(() => {
+      getIconContent(name, 'solid').then(() => {
         this.svgContent = ICONS_SOLID_CONTENT.get(name)
       });
     }
   }
 
-  private async getOutlineIcon(name: string, url: string) {
+  private async getOutlineIcon(name: string) {
     if (ICONS_OUTLINE_CONTENT.has(name)) {
       this.svgContent = ICONS_OUTLINE_CONTENT.get(name);
     } else {
-      getIconContent(name, 'outline', url).then(() => {
+      getIconContent(name, 'outline').then(() => {
         this.svgContent = ICONS_OUTLINE_CONTENT.get(name)
       });
     }

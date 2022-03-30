@@ -6,8 +6,8 @@ export const ICONS_OUTLINE_CONTENT = new Map<string, string>();
 
 type StyleType = 'solid' | 'outline';
 
-export const getIconContent = (name: string, type: StyleType, url: string) => {
-
+export const getIconContent = (name: string, type: StyleType) => {
+  const url: string = `https://assets.dynamicdevs.io/symbol/icons/${type}/ic_${name}.svg`
   let request = REQUESTS.get(url);
   if (!request) {
     request = fetch(url).then((response: Response) => {

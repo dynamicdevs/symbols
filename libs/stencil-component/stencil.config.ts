@@ -21,16 +21,6 @@ export const config: Config = {
     },
     {
       type: 'www',
-      copy: [
-        {
-          src: './icons/solid/*.svg',
-          dest: './assets/icons/solid/',
-        },
-        {
-          src: './icons/outline/*.svg',
-          dest: './assets/icons/outline/',
-        },
-      ],
       serviceWorker: null, // disable service workers
     },
 
