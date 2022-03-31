@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@symbol/stencil-component": ["dist/libs/stencil-component"],
+      "@symbol/stencil-component-angular": [
+        "libs/stencil-component-angular/src/index.ts"
+      ],
       "@symbol/stencil-component-react": [
         "libs/stencil-component-react/src/index.ts"
       ],

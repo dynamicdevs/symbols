@@ -3,6 +3,12 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 import { reactOutputTarget } from '@stencil/react-output-target';
+const angularValueAccessorBindings: ValueAccessorConfig[] = [];
+
+import {
+  angularOutputTarget,
+  ValueAccessorConfig,
+} from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'stencil-component',
@@ -29,6 +35,15 @@ export const config: Config = {
       proxiesFile:
         '../../../libs/stencil-component-react/src/generated/components.ts',
       includeDefineCustomElements: true,
+    }),
+
+    angularOutputTarget({
+      componentCorePackage: '@symbol/stencil-component',
+      directivesProxyFile:
+        '../../../libs/stencil-component-angular/src/generated/directives/proxies.ts',
+      directivesArrayFile:
+        '../../../libs/stencil-component-angular/src/generated/directives/index.ts',
+      valueAccessorConfigs: angularValueAccessorBindings,
     }),
   ],
 };
