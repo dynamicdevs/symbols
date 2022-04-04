@@ -1,0 +1,21 @@
+.wrapped-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-in .5;
+
+  &:hover {
+    background-color: #ffd43b;
+  }
+
+  span {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+}

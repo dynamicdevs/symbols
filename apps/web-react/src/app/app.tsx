@@ -1,8 +1,10 @@
-import NxWelcome from './nx-welcome';
+import Home from './page/Home';
 
 export function App() {
   return (
-    <NxWelcome title="web-react" />
+    <div className="container">
+      <Home />
+    </div>
   );
 }
 

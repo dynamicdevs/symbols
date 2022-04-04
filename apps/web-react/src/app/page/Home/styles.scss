@@ -1,0 +1,35 @@
+.content-header {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.content-filters {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  button {
+    height: 58px;
+    padding: 15px 24px;
+    font-weight: bold;
+    border: solid 2px rgb(240, 241, 243);
+    background-color: #fff;
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgb(20, 110, 190);
+      border-color: rgb(20, 110, 190);
+      color: #fff;
+    }
+  }
+}
+
+.list-icons {
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  grid-gap: 16px;
+  justify-content: center;
+  margin-top: 80px;
+}
