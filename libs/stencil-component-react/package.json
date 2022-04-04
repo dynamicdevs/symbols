@@ -1,0 +1,20 @@
+{
+  "name": "@symbol/stencil-component-react",
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "copy": ""
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": ["dist/libs/stencil-component-react"],
+        "dependsOn": [
+          {
+            "target": "build",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    }
+  }
+}
