@@ -5,6 +5,7 @@ import Search from '../../components/Search';
 import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
 import { cleanText } from '../../utils/clean-text';
 
+
 import './styles.scss';
 
 type TypeIcon = 'solid' | 'outline' | '';
@@ -57,9 +58,11 @@ export const Home = () => {
         ))}
       </div>
       
-      {!!iconSelected && (
-        <ModalDetailIcon icon={iconSelected} type={type} close={() => setIconSelected('')} />
-      )}
+      <ModalDetailIcon 
+        icon={iconSelected} 
+        type={type} 
+        onClose={() => setIconSelected('')} 
+      />
     </div>
   )
 }

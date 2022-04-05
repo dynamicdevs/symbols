@@ -1,29 +1,9 @@
-.content-modal {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(81, 94, 123, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-}
-
 .modal {
-  background-color: #fff;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   width: 900px;
   padding: 28px 32px;
   position: relative;
-
-  > svg {
-    width: 14px;
-    position: absolute;
-    right: 32px;
-    cursor: pointer;
-  }
 }
 
 .modal-header {
