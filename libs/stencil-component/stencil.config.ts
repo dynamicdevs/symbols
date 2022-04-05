@@ -11,7 +11,7 @@ import {
 } from '@stencil/angular-output-target';
 
 export const config: Config = {
-  namespace: 'stencil-component',
+  namespace: 'symbol',
   taskQueue: 'async',
   plugins: [sass()],
   outputTargets: [
@@ -31,14 +31,14 @@ export const config: Config = {
     },
 
     reactOutputTarget({
-      componentCorePackage: '@symbol/stencil-component',
+      componentCorePackage: '@dynamic-devs/symbol',
       proxiesFile:
         '../../../libs/stencil-component-react/src/generated/components.ts',
       includeDefineCustomElements: true,
     }),
 
     angularOutputTarget({
-      componentCorePackage: '@symbol/stencil-component',
+      componentCorePackage: '@dynamic-devs/symbol',
       directivesProxyFile:
         '../../../libs/stencil-component-angular/src/generated/directives/proxies.ts',
       directivesArrayFile:

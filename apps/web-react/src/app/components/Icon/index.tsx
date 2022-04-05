@@ -1,4 +1,4 @@
-import { SymbolIcon } from "@symbol/stencil-component-react";
+import { SymbolIcon } from "@dynamic-devs/symbol-react";
 import './styles.scss';
 
 interface Props {
@@ -10,9 +10,9 @@ interface Props {
 export const Icon = ({ title, type, onClick }: Props) => {
   return (
     <div className="wrapped-icon" onClick={onClick}>
-      <SymbolIcon 
-        name={title} 
-        iconClass="symbol-xl" 
+      <SymbolIcon
+        name={title}
+        iconClass="symbol-xl"
         type={type}
       />
 

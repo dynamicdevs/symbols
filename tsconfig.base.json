@@ -15,14 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@symbol/stencil-component": ["dist/libs/stencil-component"],
-      "@symbol/stencil-component-angular": [
+      "@dynamic-devs/symbol": ["dist/libs/stencil-component"],
+      "@dynamic-devs/symbol-angular": [
         "libs/stencil-component-angular/src/index.ts"
       ],
-      "@symbol/stencil-component-react": [
+      "@dynamic-devs/symbol-react": [
         "libs/stencil-component-react/src/index.ts"
       ],
-      "@symbol/stencil-component/loader": ["dist/libs/stencil-component/loader"]
+      "@dynamic-devs/symbol/loader": ["dist/libs/stencil-component/loader"],
+      "@dynamic-devs/test-react": ["libs/react-test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

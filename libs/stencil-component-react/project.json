@@ -13,6 +13,26 @@
         ]
       }
     },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/stencil-component-react",
+        "tsConfig": "libs/stencil-component-react/tsconfig.lib.json",
+        "project": "libs/stencil-component-react/package.json",
+        "entryFile": "libs/stencil-component-react/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/stencil-component-react/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/stencil-component-react"],

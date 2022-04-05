@@ -5,14 +5,15 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "noImplicitOverride": false,
-    "declaration": true,
-    "declarationMap": true
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
   },
   "files": [],
-  "include": [
-    "package.json"
-  ],
+  "include": [],
   "references": [
     {
       "path": "./tsconfig.lib.json"

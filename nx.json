@@ -1,5 +1,5 @@
 {
-  "npmScope": "symbol",
+  "npmScope": "dynamic-devs",
   "affected": {
     "defaultBase": "main"
   },

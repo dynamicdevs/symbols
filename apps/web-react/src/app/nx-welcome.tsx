@@ -1,4 +1,4 @@
-import { SymbolIcon } from "@symbol/stencil-component-react";
+import { SymbolIcon } from "@dynamic-devs/symbol-react";
 
 
 export function NxWelcome({ title }: { title: string }) {

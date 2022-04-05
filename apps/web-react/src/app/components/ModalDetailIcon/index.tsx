@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SymbolIcon } from '@symbol/stencil-component-react';
+import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
 import './styles.scss';
 
@@ -26,9 +26,9 @@ const ModalDetailIcon = ({
 
         <div className="modal-body">
           <div className="content-icon">
-            <SymbolIcon 
-              name={icon} 
-              iconClass="symbol-xl" 
+            <SymbolIcon
+              name={icon}
+              iconClass="symbol-xl"
               type={type}
               class="icon"
             />
@@ -36,13 +36,13 @@ const ModalDetailIcon = ({
 
           <div className="content-code">
             <ul>
-              <li 
+              <li
                 onClick={() => setTypeImport('HTML')}
                 className={typeImport === 'HTML' ? 'selected' : ''}
               >
                 HTML
               </li>
-              <li 
+              <li
                 onClick={() => setTypeImport('React')}
                 className={typeImport === 'React' ? 'selected' : ''}
               >
@@ -106,7 +106,7 @@ const ModalDetailIcon = ({
                 </pre>
               </div>
             </div>
-          </div>    
+          </div>
         </div>
       </div>
     </div>

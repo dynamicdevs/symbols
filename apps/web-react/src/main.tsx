@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './app/app';
 
-import { defineCustomElements } from '@symbol/stencil-component/loader';
+import { defineCustomElements } from '@dynamic-devs/symbol/loader';
 
 ReactDOM.render(
   <StrictMode>
