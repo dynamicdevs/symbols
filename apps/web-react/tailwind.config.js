@@ -1,20 +1,23 @@
+const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
+const { join } = require('path');
+
 module.exports = {
   mode: 'jit',
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    join(__dirname, 'src/**/!(*.stories|*.spec).{ts,tsx,html}'),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
   theme: {
     screens: {
-      sm: '312px', // pantalla 360
-      md: '688px', // pantalla 768
-      lg: '944px', // pantalla 1024
-      xl: '1320px',  // pantalla 1440
-      '2xl': '1680px', // pantalla 1920
-      'only-sm': { max: '687px' },
-      'only-md': { min: '688px', max: '943px' },
-      'only-lg': { min: '944px', max: '1319px' },
-      'only-xl': { min: '1320px', max: '1679px' },
+      md: '768px', // { min: 768, max: 1023 }
+      lg: '1024px', // { min: 1024, max: 1799 }
+      xl: '1800px', // { min: 1800 } 
     },
     extend: {
     },
+    container: () => ({
+      center: true,
+    }),
   },
   plugins: [],
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
-import Modal from '../../elements/molecules/modal';
+import Modal from '../../elements/molecules/Modal';
 
 import './styles.scss';
 

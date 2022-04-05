@@ -3,6 +3,7 @@ import Icon from '../../components/Icon';
 import ModalDetailIcon from '../../components/ModalDetailIcon';
 import Search from '../../components/Search';
 import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
+import GridWrapper from '../../elements/organisms/GridWrapper';
 import { cleanText } from '../../utils/clean-text';
 
 
@@ -32,8 +33,8 @@ export const Home = () => {
   }
 
   return (
-    <div>
-      <div className="content-header">
+    <GridWrapper>
+      {/* <div className="content-header">
         <Search onChange={handleChangeSearch}/>
 
         <div className="content-filters">
@@ -62,8 +63,11 @@ export const Home = () => {
         icon={iconSelected} 
         type={type} 
         onClose={() => setIconSelected('')} 
-      />
-    </div>
+      /> */}
+      <div className="col-span-4 md:col-span-8 lg:col-span-12">
+        <Search onChange={handleChangeSearch}/>
+      </div>
+    </GridWrapper>
   )
 }
 

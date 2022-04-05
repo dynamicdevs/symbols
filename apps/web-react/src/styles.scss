@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
 body {
   margin: 0;
   background-color: rgba(185, 199, 209, 0.2);
@@ -7,8 +11,4 @@ body {
 * {
   box-sizing: border-box;
   font-family: "Helvetica Neue";
-}
-
-.container {
-  margin: 0 auto;
 }

@@ -3,9 +3,7 @@ import './styles/index.scss';
 
 export function App() {
   return (
-    <div className="container">
-      <Home />
-    </div>
+    <Home />
   );
 }
 
