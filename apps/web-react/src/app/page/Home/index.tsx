@@ -31,7 +31,7 @@ export const Home = () => {
     handleChangeSearch('');
   }
 
-  console.log('iconSelected => ', iconSelected);
+  console.log('type => ', type);
 
   return (
     <div>
@@ -56,12 +56,12 @@ export const Home = () => {
 
       <div className="list-icons">
         {icons.map((_) => (
-          <Icon key={_} title={_} type={type || ''} onClick={() => setIconSelected(_)} />
+          <Icon key={_} title={_} type={type} onClick={() => setIconSelected(_)} />
         ))}
       </div>
       
       {!!iconSelected && (
-        <ModalDetailIcon icon={iconSelected} type={type} />
+        <ModalDetailIcon icon={iconSelected} type={type} close={() => setIconSelected('')} />
       )}
     </div>
   )

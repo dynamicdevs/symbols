@@ -16,6 +16,14 @@
   flex-direction: column;
   width: 900px;
   padding: 28px 32px;
+  position: relative;
+
+  > svg {
+    width: 14px;
+    position: absolute;
+    right: 32px;
+    cursor: pointer;
+  }
 }
 
 .modal-header {
