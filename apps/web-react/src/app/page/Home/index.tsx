@@ -28,10 +28,7 @@ export const Home = () => {
 
   const handleChangeType = (value: TypeIcon) => {
     setType(type !== value ? value : '');
-    handleChangeSearch('');
   }
-
-  console.log('type => ', type);
 
   return (
     <div>
