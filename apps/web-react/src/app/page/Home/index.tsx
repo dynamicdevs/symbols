@@ -5,6 +5,7 @@ import Search from '../../components/Search';
 import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
 import { cleanText } from '../../utils/clean-text';
 
+
 import './styles.scss';
 
 type TypeIcon = 'solid' | 'outline' | '';
@@ -28,10 +29,7 @@ export const Home = () => {
 
   const handleChangeType = (value: TypeIcon) => {
     setType(type !== value ? value : '');
-    handleChangeSearch('');
   }
-
-  console.log('iconSelected => ', iconSelected);
 
   return (
     <div>
@@ -56,13 +54,15 @@ export const Home = () => {
 
       <div className="list-icons">
         {icons.map((_) => (
-          <Icon key={_} title={_} type={type || ''} onClick={() => setIconSelected(_)} />
+          <Icon key={_} title={_} type={type} onClick={() => setIconSelected(_)} />
         ))}
       </div>
       
-      {!!iconSelected && (
-        <ModalDetailIcon icon={iconSelected} type={type} />
-      )}
+      <ModalDetailIcon 
+        icon={iconSelected} 
+        type={type} 
+        onClose={() => setIconSelected('')} 
+      />
     </div>
   )
 }

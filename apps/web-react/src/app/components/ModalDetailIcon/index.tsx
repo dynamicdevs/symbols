@@ -1,23 +1,27 @@
 import { useState } from 'react';
+
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
+import Modal from '../../elements/molecules/modal';
 
 import './styles.scss';
 
 interface Props {
   icon: string;
   type: string;
+  onClose: () => void;
 }
 
 type TypeImport = 'HTML' | 'React';
 
 const ModalDetailIcon = ({
   icon,
-  type
+  type,
+  onClose
 }: Props) => {
   const [typeImport, setTypeImport] = useState<TypeImport>('HTML');
-
+  console.log('existe => ', !!icon);
   return (
-    <div className="content-modal">
+    <Modal isOpen={!!icon} onClose={onClose}>
       <div className="modal">
         <div className="modal-header">
           <h2>{icon}</h2>
@@ -109,7 +113,7 @@ const ModalDetailIcon = ({
           </div>
         </div>
       </div>
-    </div>
+    </Modal>
   )
 }
 
