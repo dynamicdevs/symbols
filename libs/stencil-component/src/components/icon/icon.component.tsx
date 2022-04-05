@@ -19,6 +19,7 @@ export class SymbolIcon {
   }
 
   @Watch('name')
+  @Watch('type')
   private loadIcon(): void {
     if (!Build.isBrowser) {
       return;
