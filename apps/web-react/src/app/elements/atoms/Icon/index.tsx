@@ -1,22 +1,21 @@
 import { SymbolIcon } from "@dynamic-devs/symbol-react";
-import './styles.scss';
 
 interface Props {
   title: string;
-  type: string;
+  type: 'solid' | 'outline' | '';
   onClick?: () => void;
 }
 
 export const Icon = ({ title, type, onClick }: Props) => {
   return (
-    <div className="wrapped-icon" onClick={onClick}>
+    <div className="flex flex-col items-center" onClick={onClick}>
       <SymbolIcon
         name={title}
-        iconClass="symbol-xl"
+        iconClass="symbol-md"
         type={type}
+        className="my-2 text-primary-dynamic-900"
       />
-
-      <span>{title}</span>
+      <span className="font-normal text-caption-01 text-primary-neutral-300">{title}</span>
     </div>
   );
 }

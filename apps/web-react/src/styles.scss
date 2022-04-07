@@ -3,12 +3,8 @@
 @tailwind base;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  background-color: rgba(185, 199, 209, 0.2);
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Helvetica Neue";
+@layer base {
+  * {
+    @apply font-lato;
+  }
 }

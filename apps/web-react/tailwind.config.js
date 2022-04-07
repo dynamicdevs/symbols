@@ -14,6 +14,9 @@ module.exports = {
       xl: '1800px', // { min: 1800 } 
     },
     extend: {
+      borderRadius: {
+        '4xl': '2rem',
+      },
     },
     container: () => ({
       center: true,

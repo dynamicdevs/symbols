@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 type Props = {
   className?: string;
-  hasInherit?: boolean;
 };
 
 const GridWrapper: FC<Props> = ({

@@ -1,9 +1,11 @@
+import Layout from './elements/organisms/Layout';
 import Home from './page/Home';
-import './styles/index.scss';
 
 export function App() {
   return (
-    <Home />
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 
