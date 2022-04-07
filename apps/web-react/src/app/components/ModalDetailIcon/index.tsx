@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 import Modal from '../../elements/molecules/Modal';
 
-import './styles.scss';
-
 interface Props {
   icon: string;
   type: string;
@@ -19,7 +17,7 @@ const ModalDetailIcon = ({
   onClose
 }: Props) => {
   const [typeImport, setTypeImport] = useState<TypeImport>('HTML');
-  console.log('existe => ', !!icon);
+
   return (
     <Modal isOpen={!!icon} onClose={onClose}>
       <div className="modal">

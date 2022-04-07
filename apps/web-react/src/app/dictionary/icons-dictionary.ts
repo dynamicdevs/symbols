@@ -76,8 +76,8 @@ export const IconsDictionary = {
     es: ["check", "bueno", "éxito", "aprobado", "verde", "correcto"],
   },
   negative: {
-    en: ["x", "delete", "bad", "error", "incorrect", "red"],
-    es: ["x", "eliminar", "malo", "error", "incorrecto", "rojo"],
+    en: ["x", "delete", "bad", "error", "incorrect", "red", "close", "terminate"],
+    es: ["x", "eliminar", "malo", "error", "incorrecto", "rojo", "cerrar", "terminar"],
   },
   filter_sort: {
     en: ["sort", "arrows", "sorting", "filter", "classify", "order", "arrange"],
@@ -226,6 +226,22 @@ export const IconsDictionary = {
   spotify: {
     en: ["spotify", "music", "brand", "social media"],
     es: ["spotify", "música", "marca", "redes sociales"],
+  },
+  kofi: {
+    en: ["ko-fi", "coffee", "cup", "heart", "support", "brand", "social media"],
+    es: ["ko-fi", "café", "taza", "corazón", "apoyo", "marca", "redes sociales"],
+  },
+  figma: {
+    en: ["figma", "design", "prototype", "brand", "social media"],
+    es: ["figma", "diseño", "prototipo", "protoptipado", "marca", "redes sociales"],
+  },
+  gitlab: {
+    en: ["gitlab", "open source", "develop", "brand", "social media"],
+    es: ["gitlab", "fuente abierta", "desarrollo", "marca", "redes sociales"],
+  },
+  symbol: {
+    en: ["symbol", "icon", "icons", "geometry", "cube", "library", "dynamic devs"],
+    es: ["símbolo", "ícono", "íconos", "geometría", "cubo", "librería", "dynamic devs"],
   },
 };
 
