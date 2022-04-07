@@ -23,7 +23,7 @@ const Footer = () => (
           <a href="https://gitlab.com/dynamicdevs/startup/symbol/sym-front-nx-component" target="_blank" rel="noreferrer" className="h-6 ml-4">
             <SymbolIcon
               name="gitlab"
-              type="outline"
+              type="solid"
               iconClass="symbol-md text-primary-neutral-200"
               className="icon-color-inherit"
             />
@@ -31,7 +31,7 @@ const Footer = () => (
           <a href="https://www.figma.com/file/trj9OcnB8vAdKWZH0WasBE/Design-System-%7C-Symbols" target="_blank" rel="noreferrer" className="h-6 ml-4">
             <SymbolIcon
               name="figma"
-              type="outline"
+              type="solid"
               iconClass="symbol-md text-primary-neutral-200"
               className="icon-color-inherit"
             />
