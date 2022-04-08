@@ -28,7 +28,7 @@ export const Home = () => {
   return (
     <>
       <GridWrapper className="bg-primary-grey-600">
-        <div className="col-span-4 py-6 mx-auto md:col-span-8 md:pt-14 md:px-5 lg:col-span-12 lg:w-[648px] lg:px-0 lg:pb-8 xl:w-[824px]">
+        <div className="col-span-4 py-6 mx-auto w-full md:col-span-8 md:pt-14 md:px-5 lg:col-span-12 lg:w-[648px] lg:px-0 lg:pb-8 xl:w-[824px]">
           <Search onChange={handleChangeSearch} />
           <div className="flex justify-center pt-6 md:pt-8">
             <button 

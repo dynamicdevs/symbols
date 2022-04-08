@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind utilities;
 
+@import './app/styles/index.scss';
+
 @layer base {
   * {
     @apply font-lato;
