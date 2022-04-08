@@ -1,8 +1,6 @@
 import { FC, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 
-import './styles.scss';
-
 export type ModalProps<T> = {
   isOpen: boolean;
   onClose: () => void | void;

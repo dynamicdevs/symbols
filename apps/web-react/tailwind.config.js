@@ -10,10 +10,16 @@ module.exports = {
   theme: {
     screens: {
       md: '768px', // { min: 768, max: 1023 }
-      lg: '1024px', // { min: 1024, max: 1799 }
-      xl: '1800px', // { min: 1800 } 
+      lg: '1025px', // { min: 1024, max: 1799 }
+      xl: '1801px', // { min: 1800 } 
     },
     extend: {
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      padding: {
+        18: '4.5rem',
+      },
     },
     container: () => ({
       center: true,
