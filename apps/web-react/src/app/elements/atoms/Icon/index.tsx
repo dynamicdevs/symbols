@@ -8,11 +8,11 @@ interface Props {
 
 export const Icon = ({ title, type, onClick }: Props) => {
   return (
-    <div className="flex flex-col items-center" onClick={onClick}>
-      <div className="flex items-center justify-center w-10 h-10 rounded hover:bg-secondary-blue-300 group">
+    <div className="flex flex-col items-center hover:cursor-pointer group" onClick={onClick}>
+      <div className="flex items-center justify-center w-10 h-10 rounded group-hover:bg-secondary-blue-300 transition-colors">
         <SymbolIcon
           name={title}
-          iconClass="symbol-md text-primary-dynamic-900 group-hover:text-primary-grey-600"
+          iconClass="symbol-md text-primary-dynamic-900 group-hover:text-primary-grey-600 transition-colors"
           type={type}
         />
       </div>
