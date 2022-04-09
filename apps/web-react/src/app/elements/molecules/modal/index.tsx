@@ -31,7 +31,7 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
           <Dialog.Overlay className="fixed z-40 w-screen h-screen bg-others-transparency-800" />
           <div className={`bg-primary-grey-600 absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-lg z-50 ${className}`}>
             <SymbolIcon
-              name="negative"
+              name="exit"
               iconClass="symbol-sm text-primary-neutral-400"
               className="absolute cursor-pointer top-2 right-2"
               onClick={onClose}
