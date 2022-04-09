@@ -1,5 +1,6 @@
 import { FC, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
 export type ModalProps<T> = {
   isOpen: boolean;
@@ -16,7 +17,7 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
       <Dialog
         open={isOpen}
         onClose={onClose}
-        className={`content-dialog ${className}`}
+        className="fixed inset-0 z-50 overflow-y-auto"
         as="div"
       >
         <Transition.Child
@@ -27,9 +28,14 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Dialog.Overlay className="dialog-overlay" />
-          <div className="content-body">
-            <svg onClick={onClose} aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path></svg>
+          <Dialog.Overlay className="fixed z-40 w-screen h-screen bg-others-transparency-800" />
+          <div className={`bg-primary-grey-600 absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-lg z-50 ${className}`}>
+            <SymbolIcon
+              name="negative"
+              iconClass="symbol-sm text-primary-neutral-400"
+              className="absolute cursor-pointer top-2 right-2"
+              onClick={onClose}
+            />
             {children}
           </div>
         </Transition.Child>

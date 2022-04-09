@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
+
 import Icon from '../../elements/atoms/Icon';
 import Search from '../../elements/molecules/Search';
-import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
 import GridWrapper from '../../elements/organisms/GridWrapper';
-import { cleanText } from '../../utils/clean-text';
+import ModalDetailIcon from '../../components/ModalDetailIcon';
 
-type TypeIcon = 'solid' | 'outline' ;
+import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
+import { cleanText } from '../../utils/clean-text';
+import { TypeIcon } from '../../types/type-icon';
 
 export const Home = () => {
   const [icons, setIcons] = useState<string[]>([]);
@@ -24,7 +26,6 @@ export const Home = () => {
     setIcons(res);
   }
 
-
   return (
     <>
       <GridWrapper className="bg-primary-grey-600">
@@ -35,13 +36,13 @@ export const Home = () => {
               onClick={() => setType('solid')} 
               className={`py-2 relative border-none bg-none ${type === 'solid' && 'before:bg-primary-dynamic-900 before:absolute before:h-[2px] before:w-full before:bottom-0'}`}
             >
-              <span className={`text-button-04 ${type === 'solid' ? 'font-bold text-primary-dynamic-900' : 'text-primary-neutral-300 hover:text-primary-neutral-400'}`}>Solid</span>
+              <span className={`text-button-04 ${type === 'solid' ? 'font-bold' : 'text-primary-neutral-300 hover:text-primary-neutral-400'}`}>Solid</span>
             </button>
             <button 
               onClick={() => setType('outline')} 
               className={`py-2 relative border-none bg-none ml-6 ${type === 'outline' && 'before:bg-primary-dynamic-900 before:absolute before:h-[2px] before:w-full before:bottom-0'}`}
             >
-              <span className={`text-button-04 ${type === 'outline' ? 'font-bold text-primary-dynamic-900' : 'text-primary-neutral-300 hover:text-primary-neutral-400'}`}>Outline</span>
+              <span className={`text-button-04 ${type === 'outline' ? 'font-bold' : 'text-primary-neutral-300 hover:text-primary-neutral-400'}`}>Outline</span>
             </button>
           </div>
         </div>
@@ -54,6 +55,8 @@ export const Home = () => {
           ))}
         </div>
       </GridWrapper>
+
+      <ModalDetailIcon icon={iconSelected} type={type} onClose={() => setIconSelected('')} />
     </>
   );
 }

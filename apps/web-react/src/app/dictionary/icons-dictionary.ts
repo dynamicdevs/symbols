@@ -52,8 +52,8 @@ export const IconsDictionary = {
     es: ["tablero", "menú", "tarjetas", "organizar", "cuadrado", "cuadrados"],
   },
   menu: {
-    en: ["menu", "hamburger", "lines", "rows"],
-    es: ["menú", "hamburguesa", "líneas", "filas"],
+    en: ["hamburger", "line", "lines", "menu", "options"],
+    es: ["hamburguesa", "línea", "líneas", "menú", "opciones"],
   },
   bell: {
     en: ["bell", "notification", "notice", "alarm"],
@@ -242,6 +242,14 @@ export const IconsDictionary = {
   symbol: {
     en: ["symbol", "icon", "icons", "geometry", "cube", "library", "dynamic devs"],
     es: ["símbolo", "ícono", "íconos", "geometría", "cubo", "librería", "dynamic devs"],
+  },
+  github: {
+    en: ["github", "cat", "octopus", "repository", "library", "brand", "social media"],
+    es: ["github", "gato", "pulpo", "repositorio", "librería", "marca", "redes sociales"],
+  },
+  exit: {
+    en: ["exit", "x", "close", "delete", "negative"],
+    es: ["salir", "x", "cerrar", "borrar", "negativo"],
   },
 };
 

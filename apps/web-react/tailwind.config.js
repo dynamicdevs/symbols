@@ -255,6 +255,7 @@ module.exports = {
       ],
     },
     colors: {
+      transparent: 'transparent',
       primary: {
         dynamic: {
           900: '#001B1E',
@@ -328,6 +329,19 @@ module.exports = {
           300: '#9AFE6B',
           200: '#C2FF9D',
           100: '#E8FFC3',
+        },
+      },
+      others: {
+        transparency: {
+          900: 'rgba(10, 26, 38, 0.9)',
+          800: 'rgba(10, 26, 38, 0.8)',
+          700: 'rgba(10, 26, 38, 0.7)',
+          600: 'rgba(10, 26, 38, 0.6)',
+          500: 'rgba(10, 26, 38, 0.5)',
+          400: 'rgba(10, 26, 38, 0.4)',
+          300: 'rgba(10, 26, 38, 0.3)',
+          200: 'rgba(10, 26, 38, 0.2)',
+          100: 'rgba(10, 26, 38, 0.1)',
         },
       },
     },

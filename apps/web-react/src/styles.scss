@@ -5,6 +5,10 @@
 
 @import './app/styles/index.scss';
 
+body {
+  @apply text-primary-dynamic-900;
+}
+
 @layer base {
   * {
     @apply font-lato;

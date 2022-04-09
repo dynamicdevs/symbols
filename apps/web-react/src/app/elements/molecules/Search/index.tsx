@@ -32,7 +32,7 @@ export const Search = ({ onChange }: Props) => {
         ref={ref}
         type="text"
         placeholder="Search"
-        className="w-full h-full px-12 font-semibold outline-none rounded-4xl text-paragraph-03 placeholder:text-primary-grey-400 text-primary-dynamic-900 md:px-18"
+        className="w-full h-full px-12 font-semibold outline-none rounded-4xl text-paragraph-03 placeholder:text-primary-grey-400 md:px-18"
         onChange={(e) => handleChange(e.target.value)}
       />
       <SymbolIcon

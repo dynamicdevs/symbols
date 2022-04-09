@@ -1,0 +1,21 @@
+@tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    .button-sm {
+      @apply rounded-lg px-2 py-1 h-6 text-button-05 font-bold;
+    }
+
+    .button-md {
+      @apply rounded-lg px-2 py-2 h-8;
+    }
+  }
+}
+
+.button-blue-solid {
+  @apply text-primary-grey-600 bg-secondary-blue-300 hover:bg-secondary-blue-200 outline-none;
+}
+
+.button-blue-outline {
+  @apply text-primary-neutral-200 bg-transparent border border-primary-neutral-200 outline-none;
+}
