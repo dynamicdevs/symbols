@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
-import Modal from '../../elements/molecules/Modal';
+
 import { TypeIcon } from '../../types/type-icon';
 import { TypeSize } from '../../types/type-size';
+import Modal from '../../elements/molecules/modal';
 
 interface AttributeProps {
   attr: string;
@@ -51,13 +52,13 @@ const ModalDetailIcon = ({
         className="my-6"
       />
       <div className="flex w-full mb-4">
-        <button 
+        <button
           className={`button-sm md:button-md ${auxType === 'solid' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setAuxType('solid')}
         >
           Solid
         </button>
-        <button 
+        <button
           className={`button-sm ml-4 md:button-md ${auxType === 'outline' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setAuxType('outline')}
         >
@@ -65,25 +66,25 @@ const ModalDetailIcon = ({
         </button>
       </div>
       <div className="flex w-full mb-6">
-        <button 
+        <button
           className={`button-sm md:button-md ${typeSize === 'sm' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setTypeSize('sm')}
         >
           sm
         </button>
-        <button 
+        <button
           className={`button-sm ml-4 md:button-md ${typeSize === 'md' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setTypeSize('md')}
         >
           md
         </button>
-        <button 
+        <button
           className={`button-sm ml-4 md:button-md ${typeSize === 'lg' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setTypeSize('lg')}
         >
           lg
         </button>
-        <button 
+        <button
           className={`button-sm ml-4 md:button-md ${typeSize === 'xl' ? 'button-blue-solid' : 'button-blue-outline'}`}
           onClick={() => setTypeSize('xl')}
         >
