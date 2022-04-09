@@ -59,7 +59,7 @@ export const IconsDictionary = {
     en: ["bell", "notification", "notice", "alarm"],
     es: ["campana", "notificación", "aviso", "alarma"],
   },
-  triangle: {
+  dynamic: {
     en: ["triangle", "three", "right", "dynamic devs", "advance"],
     es: ["triángulo", "tres", "derecha", "dynamic devs", "avanzar"],
   },
