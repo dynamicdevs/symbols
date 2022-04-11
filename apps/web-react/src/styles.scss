@@ -12,5 +12,9 @@ body {
 @layer base {
   * {
     @apply font-lato;
+
+    code * {
+      @apply font-inconsolata;
+    }
   }
 }
