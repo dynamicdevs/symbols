@@ -47,7 +47,7 @@ const ModalDetailIcon = ({
       <h2 className="font-bold text-subheading-03">{icon}</h2>
       <SymbolIcon
         name={icon}
-        iconClass="icon-xl"
+        iconClass={`icon-${typeSize}`}
         type={auxType}
         className="my-6"
       />
@@ -108,7 +108,7 @@ const ModalDetailIcon = ({
         </ul>
         <SymbolIcon
           name="copy"
-          iconClass="icon-sm text-primary-grey-600"
+          iconClass="icon-sm text-primary-grey-600 hover:text-secondary-blue-300"
           type={type}
           className="absolute cursor-pointer top-4 right-4"
           onClick={() => {
