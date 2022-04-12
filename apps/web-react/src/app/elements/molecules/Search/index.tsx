@@ -38,7 +38,7 @@ export const Search = ({ onChange }: Props) => {
       <SymbolIcon
         name="negative"
         iconClass="text-primary-neutral-200 group-focus-within:text-secondary-blue-300 group-focus-within:group-hover:text-secondary-blue-300 group-hover:text-primary-neutral-300 icon-md md:icon-lg"
-        className={`absolute cursor-pointer right-4 md:right-6 ${text ? 'opacity-1' : 'opacity-0'}`}
+        className={`absolute cursor-pointer right-4 md:right-6 group-focus-within:opacity-100 ${text ? 'opacity-100' : 'opacity-0'}`}
         onClick={() => {
           handleChange('');
           ref.current.value = '';
