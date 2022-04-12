@@ -9,6 +9,10 @@
     .button-md {
       @apply rounded-lg px-2 py-2 h-8;
     }
+
+    .button-lg {
+      @apply rounded-lg px-4 py-4 h-12;
+    }
   }
 }
 
