@@ -1,0 +1,7 @@
+{
+  "scss.lint.unknownAtRules": "ignore",
+  "tailwindCSS.classAttributes": [
+    "className",
+    "iconClass",
+  ],
+}
