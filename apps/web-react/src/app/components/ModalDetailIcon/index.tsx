@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
@@ -39,9 +39,13 @@ const ModalDetailIcon = ({
   type,
   onClose
 }: Props) => {
-  const [auxType, setAuxType] = useState<TypeIcon>(type);
+  const [auxType, setAuxType] = useState<TypeIcon>("solid");
   const [typeSize, setTypeSize] = useState<TypeSize>('xl');
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
+
+  useEffect(() => {
+    setAuxType(type);
+  }, [type])
 
   return (
     <Modal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">      
@@ -50,11 +54,13 @@ const ModalDetailIcon = ({
       </div>
       <div className='flex flex-col md:items-center md:flex-row md:space-x-4 my-6 lg:my-8'>
         <div className='w-full flex justify-center mb-6 md:mb-0'>
-          <SymbolIcon
-            name={icon}
-            iconClass={`symbol-${typeSize}`}
-            type={auxType}
-          />
+          {icon && 
+            <SymbolIcon
+              name={icon}
+              iconClass={`symbol-${typeSize}`}
+              type={auxType}
+            />
+          }
         </div>
         <div className='w-full'>
           <div className="flex mb-4">
@@ -120,7 +126,6 @@ const ModalDetailIcon = ({
               <SymbolIcon
                 name="copy"
                 iconClass="icon-sm md:icon-md lg:icon-lg text-primary-grey-600 hover:text-secondary-blue-300"
-                type={type}
                 className="absolute cursor-pointer right-0"
                 onClick={() => {
                   navigator.clipboard.writeText(
