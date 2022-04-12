@@ -39,7 +39,8 @@ const ModalDetailIcon = ({
   type,
   onClose
 }: Props) => {
-  const [auxType, setAuxType] = useState<TypeIcon>("solid");
+
+  const [auxType, setAuxType] = useState<TypeIcon>(type);
   const [typeSize, setTypeSize] = useState<TypeSize>('xl');
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
 
@@ -54,13 +55,11 @@ const ModalDetailIcon = ({
       </div>
       <div className='flex flex-col md:items-center md:flex-row md:space-x-4 my-6 lg:my-8'>
         <div className='w-full flex justify-center mb-6 md:mb-0'>
-          {icon && 
-            <SymbolIcon
-              name={icon}
-              iconClass={`symbol-${typeSize}`}
-              type={auxType}
-            />
-          }
+          <SymbolIcon
+            name={icon}
+            iconClass={`symbol-${typeSize}`}
+            type={auxType}
+          />
         </div>
         <div className='w-full'>
           <div className="flex mb-4">

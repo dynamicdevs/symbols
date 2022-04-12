@@ -55,8 +55,9 @@ export const Home = () => {
           ))}
         </div>
       </GridWrapper>
-
-      <ModalDetailIcon icon={iconSelected} type={type} onClose={() => setIconSelected('')} />
+      { iconSelected &&       
+        <ModalDetailIcon icon={iconSelected} type={type} onClose={() => setIconSelected('')} />
+      }
     </>
   );
 }
