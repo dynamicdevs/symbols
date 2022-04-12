@@ -22,10 +22,10 @@ export const Search = ({ onChange }: Props) => {
   );
 
   return (
-    <div className="flex relative items-center w-full h-12 border-2 rounded-4xl border-primary-neutral-200 focus-within:border-[3px] focus-within:border-primary-dynamic-500 group hover:border-primary-neutral-300 md:h-16">
+    <div className="flex relative items-center w-full h-12 border-2 rounded-4xl border-primary-neutral-200 focus-within:border-[3px] focus-within:border-secondary-blue-300 group focus-within:hover:border-secondary-blue-300 hover:border-primary-neutral-300 md:h-16">
       <SymbolIcon
         name="search"
-        iconClass="text-primary-neutral-200 group-focus-within:text-primary-dynamic-500 group-hover:text-primary-neutral-300 icon-md md:icon-lg"
+        iconClass="text-primary-neutral-200 group-focus-within:text-secondary-blue-300 group-focus-within:group-hover:text-secondary-blue-300 group-hover:text-primary-neutral-300 icon-md md:icon-lg"
         className="absolute left-4 md:left-6"
       />
       <input
@@ -37,7 +37,7 @@ export const Search = ({ onChange }: Props) => {
       />
       <SymbolIcon
         name="negative"
-        iconClass="icon-md text-primary-neutral-200 group-focus-within:text-primary-dynamic-500 group-hover:text-primary-neutral-300 md:icon-lg"
+        iconClass="text-primary-neutral-200 group-focus-within:text-secondary-blue-300 group-focus-within:group-hover:text-secondary-blue-300 group-hover:text-primary-neutral-300 icon-md md:icon-lg"
         className={`absolute cursor-pointer right-4 md:right-6 ${text ? 'opacity-1' : 'opacity-0'}`}
         onClick={() => {
           handleChange('');
