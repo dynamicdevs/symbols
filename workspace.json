@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "components": "apps/components",
-    "components-e2e": "apps/components-e2e"
+    "stencil-component": "libs/stencil-component",
+    "stencil-component-angular": "libs/stencil-component-angular",
+    "stencil-component-react": "libs/stencil-component-react",
+    "web-react": "apps/web-react"
   }
 }

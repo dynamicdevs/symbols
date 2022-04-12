@@ -1,0 +1,37 @@
+{
+  "name": "@dynamic-devs/symbol-react",
+  "version": "0.0.3",
+  "contributors": [
+    {
+      "name" : "César Contreras",
+      "email" : "ccontreras@dynamicdevs.io",
+      "url" : "https://www.linkedin.com/in/c1sar/"
+    },
+    {
+      "name" : "Lucho Morales",
+      "email" : "lmorales@dynamicdevs.io",
+      "url" : "https://www.linkedin.com/in/lucho-morales-segobia-793577141/"
+    }
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json && npm run copy",
+    "copy": "cp package.json ../../dist/libs/stencil-component-react/ && cp README.md ../../dist/libs/stencil-component-react/"
+  },
+  "dependencies": {
+    "@dynamic-devs/symbol": "^0.0.1"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": ["dist/libs/stencil-component-react"],
+        "dependsOn": [
+          {
+            "target": "build",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    }
+  }
+}
+

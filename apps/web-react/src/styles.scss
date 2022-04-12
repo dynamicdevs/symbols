@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@import './app/styles/index.scss';
+
+body {
+  @apply text-primary-dynamic-900;
+}
+
+@layer base {
+  * {
+    @apply font-lato;
+
+    code * {
+      @apply font-inconsolata;
+    }
+  }
+}

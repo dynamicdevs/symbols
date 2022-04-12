@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/stencil-component-angular",
+  "sourceRoot": "libs/stencil-component-angular/src",
+  "prefix": "symbol",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/stencil-component-angular"],
+      "options": {
+        "jestConfig": "libs/stencil-component-angular/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/stencil-component-angular/src/**/*.ts",
+          "libs/stencil-component-angular/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
