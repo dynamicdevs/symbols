@@ -32,8 +32,8 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
           <div className={`bg-primary-grey-600 absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-lg z-50 ${className}`}>
             <SymbolIcon
               name="exit"
-              iconClass="symbol-sm text-primary-neutral-400"
-              className="absolute cursor-pointer top-2 right-2"
+              iconClass="icon-sm lg:icon-md text-primary-neutral-400"
+              className="absolute cursor-pointer top-2 right-2 md:top-3"
               onClick={onClose}
             />
             {children}
