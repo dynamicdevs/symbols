@@ -13,5 +13,6 @@ jobs:
       - run: npx nx build stencil-component
       - run: cd dist/libs/stencil-component
       - run: npm publish
+        working-directory: ./dist/libs/stencil-component
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
