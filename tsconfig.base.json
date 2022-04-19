@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dynamic-devs/symbol": ["dist/libs/stencil-component"],
+      "@dynamic-devs/symbol-angular": [
+        "libs/stencil-component-angular/src/index.ts"
+      ],
+      "@dynamic-devs/symbol-react": [
+        "libs/stencil-component-react/src/index.ts"
+      ],
+      "@dynamic-devs/symbol/loader": ["dist/libs/stencil-component/loader"],
+      "@dynamic-devs/test-react": ["libs/react-test/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
