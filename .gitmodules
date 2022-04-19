@@ -1,0 +1,3 @@
+[submodule "settings"]
+	path = settings
+	url = git@github.com:dynamicdevs/default-config-libraries.git
