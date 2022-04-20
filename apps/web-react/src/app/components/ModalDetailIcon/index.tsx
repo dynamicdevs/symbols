@@ -4,7 +4,7 @@ import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
 import { TypeIcon } from '../../types/type-icon';
 import { TypeSize } from '../../types/type-size';
-import Modal from '../../elements/molecules/modal';
+import Modal from '../../elements/molecules/Modal';
 import { Popover, Transition } from '@headlessui/react';
 
 interface AttributeProps {
@@ -53,8 +53,8 @@ const ModalDetailIcon = ({
       <div className='flex justify-center md:justify-start md:border-b-2 md:border-primary-grey-500 md:border-solid'>
         <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
       </div>
-      <div className='flex flex-col md:items-center md:flex-row md:space-x-4 my-6 lg:my-8'>
-        <div className='w-full flex justify-center mb-6 md:mb-0'>
+      <div className='flex flex-col my-6 md:items-center md:flex-row md:space-x-4 lg:my-8'>
+        <div className='flex justify-center w-full mb-6 md:mb-0'>
           <SymbolIcon
             name={icon}
             iconClass={`symbol-${typeSize}`}
@@ -125,7 +125,7 @@ const ModalDetailIcon = ({
               <SymbolIcon
                 name="copy"
                 iconClass="icon-sm md:icon-md lg:icon-lg text-primary-grey-600 hover:text-secondary-blue-300"
-                className="absolute cursor-pointer right-0"
+                className="absolute right-0 cursor-pointer"
                 onClick={() => {
                   navigator.clipboard.writeText(
                     typeImport === 'HTML'
@@ -144,9 +144,9 @@ const ModalDetailIcon = ({
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute left-1/2 -translate-x-1/2 -top-1 -translate-y-full">
+              <Popover.Panel className="absolute -translate-x-1/2 -translate-y-full left-1/2 -top-1">
                 {({close}) => (
-                  <div className="rounded-lg px-2 bg-primary-neutral-100 cursor-pointer" onClick={() => close()}>
+                  <div className="px-2 rounded-lg cursor-pointer bg-primary-neutral-100" onClick={() => close()}>
                       <span className='font-bold text-secondary-blue-500'>Copied!</span>
                   </div>
                 )}
