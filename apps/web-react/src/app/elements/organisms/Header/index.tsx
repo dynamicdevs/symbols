@@ -10,7 +10,7 @@ const Footer = () => (
         <LogoFull className="hidden md:block lg:w-[157px] lg:h-8" />
       </a>
 
-      <a href='https://ko-fi.com/D1D6C947W' className="cursor-pointer" target="_blank" rel="noreferrer">
+      <a href={`https://ko-fi.com/${process.env['NX_KEY_KO_FI']}`} className="cursor-pointer" target="_blank" rel="noreferrer">
         <img src='https://symbols-assets.azureedge.net/web/button-ko-fi.png' alt='Buy Me a Coffee at ko-fi.com' />
       </a>
     </div>
