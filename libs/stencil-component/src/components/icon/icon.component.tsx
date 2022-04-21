@@ -1,7 +1,8 @@
 import { Build, Component, h, Host, Prop, State, Watch } from "@stencil/core";
+import { StyleType } from "../../types";
 import { getIconContent, ICONS_OUTLINE_CONTENT, ICONS_SOLID_CONTENT } from "../../utils";
 
-type StyleType = 'solid' | 'outline';
+
 @Component({
   tag: 'symbol-icon',
   styleUrl: 'icon.component.scss',
