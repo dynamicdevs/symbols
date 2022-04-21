@@ -4,13 +4,21 @@
   "sourceRoot": "libs/stencil-component-angular/src",
   "prefix": "symbol",
   "targets": {
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/stencil-component-angular"],
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/stencil-component-angular"],
       "options": {
-        "jestConfig": "libs/stencil-component-angular/jest.config.js",
-        "passWithNoTests": true
-      }
+        "project": "libs/stencil-component-angular/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/stencil-component-angular/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/stencil-component-angular/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

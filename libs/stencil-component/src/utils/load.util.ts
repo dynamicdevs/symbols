@@ -1,10 +1,10 @@
+import { StyleType } from "../types";
+
 const REQUESTS = new Map<string, Promise<string | void>>();
 export const ICONS_CONTENT = new Map<string, string>();
 
 export const ICONS_SOLID_CONTENT = new Map<string, string>();
 export const ICONS_OUTLINE_CONTENT = new Map<string, string>();
-
-type StyleType = 'solid' | 'outline';
 
 export const getIconContent = (name: string, type: StyleType) => {
   const url: string = `https://assets.dynamicdevs.io/symbol/icons/${type}/ic_${name}.svg`
