@@ -1,94 +1,129 @@
+<br>
+<div align="center"> 
+<a href="https://symbols.dynamicdevs.io/">
+<img src="https://assets.dynamicdevs.io/engineering/symbols-logo-regular.svg" alt="Symbols logo" height="60"/>
+</a>
+</div>
+
+<br>
+
+<p align="center">
+<a href="https://symbols.dynamicdevs.io/">symbols.dynamicdevs.io</a>
+</p>
+
+## About The Project
+
+Symbols is an icon library designed and developed by [Dynamic Devs][dynamicdevs] which are being used in our projects and available for the community.
+
+## Build With
+
+- [Nx][nx]
+- [Stencil][stencil]
+- [React][react]
+- [Angular][angular]
+- [TypeScript][typescript]
+- [EsLint][eslint]
+
+## Getting Started
+
+This is a [Node][node.js] module available through the [npm registry][npm]. Installation is done using the npm install command.
+### React Projects
+
+- Install npm package
+
+  ```
+  npm install --save @dynamic-devs/symbol-react
+  ```
+
+- Import module in the path where you're working.
+
+  ```
+  import { SymbolIcon } from '@dynamic-devs/symbol-react';
+  ```
+
+- Add this for use the icons on your project. 
+
+  ```
+  <SymbolIcon name="symbol" iconClass="symbol-xl" type="solid" />
+  ```
+
+### Angular Projects
+
+- Install npm package
+
+  ```
+  npm install --save @dynamic-devs/symbol-angular
+  ```
+
+- Import module on `app.module.ts`
+
+  ```
+  import { SymbolsModule } from '@dynamic-devs/symbol-angular'
+
+  @NgModule({
+    imports: [
+      SymbolsModule
+    ],
+  })
+  ```
+
+- Add this for use the icons on your project. 
+
+  ```
+  <symbol-icon name="symbol" icon-class="symbol-xl" type="solid"></symbol-icon>
+  ```
+
+For more imformation about the available icons, visit the website [Symbols][symbols].
+
+## Documentation
+
+| Prop        | Default     | Description          | Values             |
+| ----------- | ----------- | -------------------- | ------------------ |
+| name        |             | `string` Icon name   | Values can be found in [Symbols][symbols] |
+| iconClass   |             | `string` Icon size   | `16px` symbol-sm  <br> `24px` symbol-md  <br> `32px` symbol-lg <br> `40px` symbol-xl |
+| type        | 'solid'     | `string` Icon style  | solid <br> outline |
+
+## Contributors
+
+<br>
+
+<a href="https://github.com/dynamicdevs/symbols/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dynamicdevs/symbols" />
+</a>
+
+## Community
+
+Join to the conversation and help the community.
+
+- [Youtube][youtube]
+- [Spotity][spotify]
+- [Twitch][twitch]
+
+## Contact
+
+Dynamic Devs - business@dynamicdevs.io
 
 
-# Symbol
+<br>
 
-This project was generated using [Nx](https://nx.dev).
+***
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+<p align="center">
+<a href="https://ko-fi.com/D1D6C947W">
+<img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Kofi button"/>
+</a>
+</p>
 
-🔎 **Smart, Fast and Extensible Build System**
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
-
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@symbol/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+[dynamicdevs]: https://www.dynamicdevs.io/
+[symbols]:https://symbols.dynamicdevs.io/
+[nx]: https://nx.dev/
+[stencil]:https://stenciljs.com/
+[react]: https://es.reactjs.org/
+[angular]:https://angular.io/
+[typescript]:https://www.typescriptlang.org/
+[eslint]:https://eslint.org/
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/get-npm
+[youtube]: https://www.youtube.com/channel/UCD2cpIbELBfK_-9p8PoCGWg
+[spotify]: https://open.spotify.com/show/4fvKHii2mWHkX8mz28klz8?si=d95553238ea04ec4
+[twitch]: https://www.twitch.tv/dynamicdevs
