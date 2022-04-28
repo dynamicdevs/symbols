@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+
 import Icon from '../../elements/atoms/Icon';
 import Search from '../../elements/molecules/Search';
 import GridWrapper from '../../elements/organisms/GridWrapper';
@@ -8,11 +9,13 @@ import ModalDetailIcon from '../../components/ModalDetailIcon';
 import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
 import { cleanText } from '../../utils/clean-text';
 import { TypeIcon } from '../../types/type-icon';
+import useAnalyticsEventTracker from '../../hooks/useAnalytics';
 
 export const Home = () => {
   const [icons, setIcons] = useState<string[]>([]);
   const [iconSelected, setIconSelected] = useState<string>('');
   const [type, setType] = useState<TypeIcon>('solid');
+  const gaEventTracker = useAnalyticsEventTracker();
 
   useEffect(() => {
     handleChangeSearch('');
@@ -51,7 +54,15 @@ export const Home = () => {
       <GridWrapper className="py-8 min-h-[calc(100vh-360px)] md:min-h-[calc(100vh-392px)] lg:min-h-[calc(100vh-432px)]">
         <div className="grid grid-cols-4 col-span-4 gap-x-4 gap-y-8 md:col-span-8 md:grid-cols-8 lg:col-start-3 lg:gap-x-6 xl:gap-x-8">
           {icons.map((_) => (
-            <Icon key={_} title={_} type={type} onClick={() => setIconSelected(_)} />
+            <Icon 
+              key={_} 
+              title={_} 
+              type={type} 
+              onClick={() => {
+                setIconSelected(_);
+                gaEventTracker('Click', 'Detalle icono');
+              }}
+            />
           ))}
         </div>
       </GridWrapper>
