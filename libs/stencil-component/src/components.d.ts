@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { StyleType } from "./types";
 export namespace Components {
     interface SymbolIcon {
         "iconClass"?: string;

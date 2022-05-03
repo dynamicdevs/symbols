@@ -1,0 +1,12 @@
+{
+  "name": "@dynamic-devs/symbol-angular",
+  "version": "0.0.6",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0",
+    "@dynamic-devs/symbol": "^0.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

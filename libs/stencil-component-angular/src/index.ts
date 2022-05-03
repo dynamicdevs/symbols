@@ -1,1 +1,2 @@
-export * from './lib/stencil-component-angular.module';
+export * from './lib/symbols.module';
+export * from './generated/directives/proxies';
