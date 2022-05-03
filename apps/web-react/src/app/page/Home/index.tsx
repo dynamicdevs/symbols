@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
 
-import Icon from '../../elements/atoms/Icon';
-import Search from '../../elements/molecules/Search';
-import GridWrapper from '../../elements/organisms/GridWrapper';
-import ModalDetailIcon from '../../components/ModalDetailIcon';
+import Icon from '@/elements/atoms/Icon';
+import Search from '@/elements/molecules/Search';
+import GridWrapper from '@/elements/organisms/GridWrapper';
+import ModalDetailIcon from '@/components/ModalDetailIcon';
 
-import { IconNames, IconsDictionary } from '../../dictionary/icons-dictionary';
-import { cleanText } from '../../utils/clean-text';
-import { TypeIcon } from '../../types/type-icon';
-import useAnalyticsEventTracker from '../../hooks/useAnalytics';
+import { IconNames, IconsDictionary } from '@/dictionary/icons-dictionary';
+import { cleanText } from '@/utils/clean-text';
+import { TypeIcon } from '@/types/type-icon';
+import useAnalyticsEventTracker from '@/hooks/useAnalytics';
 
 export const Home = () => {
   const [icons, setIcons] = useState<string[]>([]);

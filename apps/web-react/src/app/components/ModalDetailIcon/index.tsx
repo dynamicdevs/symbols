@@ -2,11 +2,11 @@ import { Fragment, useEffect, useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
-import { TypeIcon } from '../../types/type-icon';
-import { TypeSize } from '../../types/type-size';
-import Modal from '../../elements/molecules/Modal';
+import { TypeIcon } from '@/types/type-icon';
+import { TypeSize } from '@/types/type-size';
+import Modal from '@/elements/molecules/Modal';
 import { Popover, Transition } from '@headlessui/react';
-import useAnalyticsEventTracker from '../../hooks/useAnalytics';
+import useAnalyticsEventTracker from '@/hooks/useAnalytics';
 
 interface AttributeProps {
   attr: string;

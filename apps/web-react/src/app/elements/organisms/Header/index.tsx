@@ -1,7 +1,7 @@
 import GridWrapper from "../GridWrapper";
-import { ReactComponent as Logo } from '../../../../assets/svg/logo.svg';
-import { ReactComponent as LogoFull } from '../../../../assets/svg/logo-full.svg';
-import useAnalyticsEventTracker from "../../../hooks/useAnalytics";
+import { ReactComponent as Logo } from '@assets/svg/logo.svg';
+import { ReactComponent as LogoFull } from '@assets/svg/logo-full.svg';
+import useAnalyticsEventTracker from "@/hooks/useAnalytics";
 
 const Footer = () => {
   const gaEventTracker = useAnalyticsEventTracker();

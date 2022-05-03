@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState, MutableRefObject } from 'react';
 import { SymbolIcon } from "@dynamic-devs/symbol-react";
 
-import { debounce } from '../../../utils/debounce';
+import { debounce } from '@/utils/debounce';
 
 interface Props {
   onChange: (e: string) => void;
