@@ -2,7 +2,7 @@ import { SymbolIcon } from "@dynamic-devs/symbol-react";
 
 interface Props {
   title: string;
-  type: 'solid' | 'outline' | '';
+  type: 'solid' | 'outline';
   onClick?: () => void;
 }
 
