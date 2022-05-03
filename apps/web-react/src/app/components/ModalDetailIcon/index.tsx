@@ -2,10 +2,11 @@ import { Fragment, useEffect, useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
-import { TypeIcon } from '../../types/type-icon';
-import { TypeSize } from '../../types/type-size';
-import Modal from '../../elements/molecules/Modal';
+import { TypeIcon } from '@/types/type-icon';
+import { TypeSize } from '@/types/type-size';
+import Modal from '@/elements/molecules/Modal';
 import { Popover, Transition } from '@headlessui/react';
+import useAnalyticsEventTracker from '@/hooks/useAnalytics';
 
 interface AttributeProps {
   attr: string;
@@ -43,6 +44,8 @@ const ModalDetailIcon = ({
   const [auxType, setAuxType] = useState<TypeIcon>(type);
   const [typeSize, setTypeSize] = useState<TypeSize>('xl');
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
+
+  const gaEventTracker = useAnalyticsEventTracker();
 
   useEffect(() => {
     setAuxType(type);
@@ -132,6 +135,7 @@ const ModalDetailIcon = ({
                     ? `<symbol-Icon name="${icon}" icon-class="symbol-${typeSize}" type="${auxType}"><symbol-icon/>`
                     : `<SymbolIcon name="${icon}" iconClass="symbol-${typeSize}"type="${auxType}" />`
                   );
+                  gaEventTracker('Click', 'Copiar icono');
                 }}
               />
             </Popover.Button>

@@ -1,7 +1,7 @@
 import { SymbolIcon } from "@dynamic-devs/symbol-react";
 
 import GridWrapper from "../GridWrapper";
-import { ReactComponent as LogoFull } from '../../../../assets/svg/logo-full.svg';
+import { ReactComponent as LogoFull } from '@assets/svg/logo-full.svg';
 
 const Footer = () => (
   <GridWrapper className="py-6 bg-primary-grey-600">
