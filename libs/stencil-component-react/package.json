@@ -1,6 +1,6 @@
 {
   "name": "@dynamic-devs/symbol-react",
-  "version": "0.0.4-alpha.7",
+  "version": "0.0.6",
   "contributors": [
     {
       "name" : "César Contreras",
@@ -18,7 +18,7 @@
     "copy": "cp package.json ../../dist/libs/stencil-component-react/ && cp README.md ../../dist/libs/stencil-component-react/"
   },
   "dependencies": {
-    "@dynamic-devs/symbol": "^0.0.1"
+    "@dynamic-devs/symbol": "^0.0.4"
   },
   "nx": {
     "targets": {
