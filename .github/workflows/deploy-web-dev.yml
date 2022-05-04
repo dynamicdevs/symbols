@@ -33,4 +33,4 @@ jobs:
       with:
         source-path: dist/apps/web-react
         sas-url: ${{ secrets.DEPLOY_SAS_URL }}
-        container: ${{ secrets.STORAGE_CONTAINER }}
+        container: symbol-web-dev
