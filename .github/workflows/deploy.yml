@@ -80,4 +80,3 @@ jobs:
         working-directory: ./dist/libs/stencil-component-angular
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
