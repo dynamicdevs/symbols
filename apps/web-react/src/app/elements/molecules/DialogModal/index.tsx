@@ -9,7 +9,7 @@ export type ModalProps<T> = {
   className?: string;
 };
 
-const Modal: FC<ModalProps<unknown>> = (props) => {
+const DialogModal: FC<ModalProps<unknown>> = (props) => {
   const { isOpen, onClose, children, className } = props;
 
   return (
@@ -44,4 +44,4 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
   );
 };
 
-export default Modal;
+export default DialogModal;
