@@ -3,13 +3,13 @@ name: Deploy website
 on:
   workflow_dispatch:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
-    environment: develop
+    environment: prod
 
     steps:
     - uses: actions/checkout@v2
