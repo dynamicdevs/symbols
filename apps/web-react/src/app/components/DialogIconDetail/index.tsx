@@ -4,7 +4,7 @@ import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
 import { TypeIcon } from '@/types/type-icon';
 import { TypeSize } from '@/types/type-size';
-import Modal from '@/elements/molecules/Modal';
+import DialogModal from '@elements/molecules/DialogModal';
 import { Popover, Transition } from '@headlessui/react';
 import useAnalyticsEventTracker from '@/hooks/useAnalytics';
 
@@ -35,7 +35,7 @@ interface Props {
 
 type TypeImport = 'HTML' | 'React';
 
-const ModalDetailIcon = ({
+const DialogIconDetail = ({
   icon,
   type,
   onClose
@@ -52,7 +52,7 @@ const ModalDetailIcon = ({
   }, [type])
 
   return (
-    <Modal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">      
+    <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">
       <div className='flex justify-center md:justify-start md:border-b-2 md:border-primary-grey-500 md:border-solid'>
         <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
       </div>
@@ -139,7 +139,7 @@ const ModalDetailIcon = ({
                 }}
               />
             </Popover.Button>
-            <Transition 
+            <Transition
               as={Fragment}
               enter="transition ease-out duration-200"
               enterFrom="opacity-0 translate-y-1"
@@ -184,8 +184,8 @@ const ModalDetailIcon = ({
           </pre>
         </div>
       </div>
-    </Modal>
+    </DialogModal>
   )
 }
 
-export default ModalDetailIcon;
+export default DialogIconDetail;

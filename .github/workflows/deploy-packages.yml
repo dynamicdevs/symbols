@@ -1,5 +1,9 @@
 name: publish-stencil-component
-on: push
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ deploy ]
 jobs:
   setup:
     runs-on: self-hosted
@@ -80,4 +84,3 @@ jobs:
         working-directory: ./dist/libs/stencil-component-angular
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
