@@ -136,14 +136,14 @@ const DialogIconDetail = ({
   return (
     <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-6">
       <div className='invisible h-0' ref={containerRef}></div>
-      <div className='flex justify-start border-b-[1px] border-primary-grey-500 w-full'>
+      <div className='flex justify-start border-b border-primary-grey-500 w-full'>
         <h2 className="font-bold text-paragraph-02 md:text-paragraph-01">{icon}</h2>
       </div>
       <div className='flex flex-col md:flex-row my-6 md:my-8 only-sm:gap-y-6 md:gap-x-8'>
         <div className='flex justify-center items-start'>
           <div className="flex justify-center items-center
-            w-[104px] h-[104px] md:w-[144px] md:h-[144px] lg:w-[176px] lg:h-[176px]
-            text-secondary-blue-500 border-[1px] border-primary-neutral-200 rounded-lg">
+            w-26 h-26 md:w-36 md:h-36 lg:w-44 lg:h-44
+            text-secondary-blue-500 border border-primary-neutral-200 rounded-lg">
             <SymbolIcon
               name={icon}
               iconClass={`symbol-${typeSize}`}
@@ -170,44 +170,44 @@ const DialogIconDetail = ({
             </button>
           </div>
           <h3 className="text-paragraph-03 font-bold mb-2">Size</h3>
-          <div className="flex flex-wrap gap-2 md:gap-x-4 md:max-w-[212px] lg:max-w-[288px]">
+          <div className="flex flex-wrap gap-2 md:gap-x-4 md:max-w-53 lg:max-w-72">
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === 'sm' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('sm')}
             >
               16px
             </button>
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === 'md' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('md')}
             >
               24px
             </button>
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === 'lg' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('lg')}
             >
               32px
             </button>
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === 'xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('xl')}
             >
               40px
             </button>
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === '2xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('2xl')}
             >
               64px
             </button>
             <button
-              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
               ${typeSize === '3xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('3xl')}
             >
