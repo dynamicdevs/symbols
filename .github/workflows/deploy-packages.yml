@@ -3,7 +3,7 @@ name: publish-stencil-component
 on:
   workflow_dispatch:
   push:
-    branches: [ deploy ]
+    branches: [ develop ]
 jobs:
   setup:
     runs-on: self-hosted

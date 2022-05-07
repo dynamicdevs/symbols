@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
@@ -7,6 +7,8 @@ import { TypeSize } from '@/types/type-size';
 import DialogModal from '@elements/molecules/DialogModal';
 import { Popover, Transition } from '@headlessui/react';
 import useAnalyticsEventTracker from '@/hooks/useAnalytics';
+import Button from '@elements/atoms/Button';
+import { ICON_SIZE } from '@utils/size';
 
 interface AttributeProps {
   attr: string;
@@ -44,65 +46,172 @@ const DialogIconDetail = ({
   const [auxType, setAuxType] = useState<TypeIcon>(type);
   const [typeSize, setTypeSize] = useState<TypeSize>('xl');
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
+  const [svgUrl, setSvgUrl] = useState<string>('#');
+  const [pngUrl, setPngUrl] = useState<string>('#');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const gaEventTracker = useAnalyticsEventTracker();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
+  const updateSVGFile = () => {
+    const size = ICON_SIZE[typeSize];
+    if (containerRef.current && containerRef.current.children[0]) {
+      const svgElement = containerRef.current.children[0];
+      svgElement.setAttribute('width', size.toString());
+      svgElement.setAttribute('height', size.toString());
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(svgElement);
+      source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+      const urlSVG = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(source)}`;
+      setSvgUrl(urlSVG);
+    }
+  }
+
+  const updatePNGFile = () => {
+    const size = ICON_SIZE[typeSize];
+    if (containerRef.current && containerRef.current.children[0]) {
+      const svgElement = containerRef.current.children[0] as any;
+      const { x, y } = svgElement.viewBox.baseVal;
+      const blob = new Blob([svgElement.outerHTML], {type: 'image/svg+xml'})
+      const url = URL.createObjectURL(blob);
+      const image = document.createElement('img');
+      image.src = url;
+      image.addEventListener('load', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const context = canvas.getContext('2d');
+        if (context) {
+          context.drawImage(image, x, y, size, size);
+          setPngUrl(canvas.toDataURL());
+          URL.revokeObjectURL(url);
+        }
+      })
+    }
+
+  }
+
+
+  const getIconByUrl = (type: 'solid' | 'outline', name: string) => {
+    setIsLoading(true);
+    const url = `https://symbol.blob.core.windows.net/symbols/icons/${type}/ic_${name}.svg`;
+    fetch(url).then((response) => {
+      if (response.ok) {
+        return response.text().then((svgContent) => {
+          const svgNamespace = 'http://www.w3.org/2000/svg';
+          if (containerRef.current) {
+            containerRef.current.innerHTML = svgContent;
+            const svgElement = containerRef.current.children[0];
+            svgElement.setAttribute('xmlns', svgNamespace);
+            updateSVGFile();
+            updatePNGFile();
+            setIsLoading(false);
+          }
+        })
+      } else {
+        setIsLoading(false);
+        return;
+      }
+    })
+  }
+
+  useEffect(() => {
+    getIconByUrl(type, icon);
+  }, [])
+
+  useEffect(() => {
+    updateSVGFile();
+    updatePNGFile();
+  }, [typeSize])
 
   useEffect(() => {
     setAuxType(type);
   }, [type])
 
+  useEffect(() => {
+    getIconByUrl(auxType, icon);
+  }, [auxType])
+
   return (
-    <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">
-      <div className='flex justify-center md:justify-start md:border-b-2 md:border-primary-grey-500 md:border-solid'>
-        <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
+    <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-6">
+      <div className='invisible h-0' ref={containerRef}></div>
+      <div className='flex justify-start border-b border-primary-grey-500 w-full'>
+        <h2 className="font-bold text-paragraph-02 md:text-paragraph-01">{icon}</h2>
       </div>
-      <div className='flex flex-col my-6 md:items-center md:flex-row md:space-x-4 lg:my-8'>
-        <div className='flex justify-center w-full mb-6 md:mb-0'>
-          <SymbolIcon
-            name={icon}
-            iconClass={`symbol-${typeSize}`}
-            type={auxType}
-          />
+      <div className='flex flex-col md:flex-row my-6 md:my-8 only-sm:gap-y-6 md:gap-x-8'>
+        <div className='flex justify-center items-start'>
+          <div className="flex justify-center items-center
+            w-26 h-26 md:w-36 md:h-36 lg:w-44 lg:h-44
+            text-secondary-blue-500 border border-primary-neutral-200 rounded-lg">
+            <SymbolIcon
+              name={icon}
+              iconClass={`symbol-${typeSize}`}
+              type={auxType}
+            />
+          </div>
         </div>
         <div className='w-full'>
-          <div className="flex mb-4">
+          <h3 className="text-paragraph-03 font-bold mb-2">Type</h3>
+          <div className="flex mb-4 gap-x-2 md:gap-x-4">
             <button
-              className={`button-sm md:button-md lg:button-lg ${auxType === 'solid' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg w-full md:w-fit
+              ${auxType === 'solid' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setAuxType('solid')}
             >
               Solid
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${auxType === 'outline' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg w-full md:w-fit
+              ${auxType === 'outline' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setAuxType('outline')}
             >
               Outline
             </button>
           </div>
-          <div className="flex">
+          <h3 className="text-paragraph-03 font-bold mb-2">Size</h3>
+          <div className="flex flex-wrap gap-2 md:gap-x-4 md:max-w-53 lg:max-w-72">
             <button
-              className={`button-sm md:button-md lg:button-lg ${typeSize === 'sm' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === 'sm' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('sm')}
             >
-              sm
+              16px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'md' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === 'md' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('md')}
             >
-              md
+              24px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'lg' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === 'lg' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('lg')}
             >
-              lg
+              32px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'xl' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === 'xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('xl')}
             >
-              xl
+              40px
+            </button>
+            <button
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === '2xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
+              onClick={() => setTypeSize('2xl')}
+            >
+              64px
+            </button>
+            <button
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-15 lg:w-21
+              ${typeSize === '3xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
+              onClick={() => setTypeSize('3xl')}
+            >
+              96px
             </button>
           </div>
         </div>
@@ -123,7 +232,7 @@ const DialogIconDetail = ({
           </li>
         </ul>
         <div className='absolute top-4 md:top-3 lg:top-6 right-4'>
-          <Popover className="relative flex items-center justify-center">
+          <Popover className="relative flex items-center justify-center w-4 md:w-6 lg:w-8">
             <Popover.Button>
               <SymbolIcon
                 name="copy"
@@ -160,7 +269,7 @@ const DialogIconDetail = ({
         </div>
         <div className="mt-8">
           <pre>
-            <code className="flex flex-wrap cursor-pointer">
+            <code className="flex flex-wrap cursor-pointer font-inconsolata">
               <span className="text-primary-grey-600">{'<'}</span>
               <span className="text-secondary-purple-400">{typeImport === 'HTML' ? 'symbol-icon' : 'SymbolIcon'}&nbsp;</span>
               <Attribute attr="name" value={icon} />
@@ -183,6 +292,27 @@ const DialogIconDetail = ({
             </code>
           </pre>
         </div>
+      </div>
+      <div className="mt-6 md:mt-8 flex flex-col gap-y-4 md:flex-row md:gap-y-0 md:gap-x-4">
+        <Button
+          className="btn-md lg:btn-lg btn-primary-solid only-sm:!w-full"
+          icon="download" iconClass="symbol-sm"
+          url={svgUrl}
+          download={`${icon}-${auxType}-${typeSize}.svg`}
+          isDisabled={isLoading}
+        >
+            Download SVG
+        </Button>
+        <Button
+          className="btn-md lg:btn-lg btn-primary-solid only-sm:!w-full"
+          icon="download"
+          iconClass="symbol-sm"
+          url={pngUrl}
+          download={`${icon}-${auxType}-${typeSize}.png`}
+          isDisabled={isLoading}
+        >
+            Download PNG
+        </Button>
       </div>
     </DialogModal>
   )
