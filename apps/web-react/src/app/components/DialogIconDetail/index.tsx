@@ -48,6 +48,7 @@ const DialogIconDetail = ({
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
   const [svgUrl, setSvgUrl] = useState<string>('#');
   const [pngUrl, setPngUrl] = useState<string>('#');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const gaEventTracker = useAnalyticsEventTracker();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -67,8 +68,33 @@ const DialogIconDetail = ({
     }
   }
 
+  const updatePNGFile = () => {
+    const size = ICON_SIZE[typeSize];
+    if (containerRef.current) {
+      const svgElement = containerRef.current.children[0] as any;
+      const { x, y } = svgElement.viewBox.baseVal;
+      const blob = new Blob([svgElement.outerHTML], {type: 'image/svg+xml'})
+      const url = URL.createObjectURL(blob);
+      const image = document.createElement('img');
+      image.src = url;
+      image.addEventListener('load', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const context = canvas.getContext('2d');
+        if (context) {
+          context.drawImage(image, x, y, size, size);
+          setPngUrl(canvas.toDataURL());
+          URL.revokeObjectURL(url);
+        }
+      })
+    }
+
+  }
+
 
   const getIconByUrl = (type: 'solid' | 'outline', name: string) => {
+    setIsLoading(true);
     const url = `https://symbol.blob.core.windows.net/symbols/icons/${type}/ic_${name}.svg`;
     fetch(url).then((response) => {
       if (response.ok) {
@@ -79,9 +105,12 @@ const DialogIconDetail = ({
             const svgElement = containerRef.current.children[0];
             svgElement.setAttribute('xmlns', svgNamespace);
             updateSVGFile();
+            updatePNGFile();
+            setIsLoading(false);
           }
         })
       } else {
+        setIsLoading(false);
         return;
       }
     })
@@ -93,6 +122,7 @@ const DialogIconDetail = ({
 
   useEffect(() => {
     updateSVGFile();
+    updatePNGFile();
   }, [typeSize])
 
   useEffect(() => {
@@ -100,7 +130,6 @@ const DialogIconDetail = ({
   }, [type])
 
   useEffect(() => {
-    console.log('type');
     getIconByUrl(auxType, icon);
   }, [auxType])
 
@@ -245,11 +274,21 @@ const DialogIconDetail = ({
           className="btn-md btn-primary-solid only-sm:!w-full"
           icon="download" iconClass="symbol-sm"
           url={svgUrl}
-          download='icon.svg'
+          download={`${icon}-${auxType}-${typeSize}.svg`}
+          isDisabled={isLoading}
         >
             Download SVG
         </Button>
-        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm" url={pngUrl} isDisabled>Download PNG</Button>
+        <Button
+          className="btn-md btn-primary-solid only-sm:!w-full"
+          icon="download"
+          iconClass="symbol-sm"
+          url={pngUrl}
+          download={`${icon}-${auxType}-${typeSize}.png`}
+          isDisabled={isLoading}
+        >
+            Download PNG
+        </Button>
       </div>
     </DialogModal>
   )
