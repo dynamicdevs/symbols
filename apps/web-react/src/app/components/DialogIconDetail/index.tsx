@@ -134,14 +134,16 @@ const DialogIconDetail = ({
   }, [auxType])
 
   return (
-    <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">
-      <div className='invisible' ref={containerRef}></div>
-      <div className='flex justify-center md:justify-start md:border-b-2 md:border-primary-grey-500 md:border-solid'>
-        <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
+    <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-6">
+      <div className='invisible h-0' ref={containerRef}></div>
+      <div className='flex justify-start border-b-[1px] border-primary-grey-500 w-full'>
+        <h2 className="font-bold text-paragraph-02 md:text-paragraph-01">{icon}</h2>
       </div>
-      <div className='flex flex-col my-6 md:items-center md:flex-row md:space-x-4 lg:my-8'>
-        <div className='flex justify-center items-center w-full mb-6 md:mb-0'>
-          <div className="flex justify-center items-center w-[104px] h-[104px] text-primary-neutral-200 border-[1px] rounded-lg">
+      <div className='flex flex-col md:flex-row my-6 md:my-8 only-sm:gap-y-6 md:gap-x-8'>
+        <div className='flex justify-center items-start'>
+          <div className="flex justify-center items-center
+            w-[104px] h-[104px] md:w-[144px] md:h-[144px] lg:w-[176px] lg:h-[176px]
+            text-primary-neutral-200 border-[1px] rounded-lg">
             <SymbolIcon
               name={icon}
               iconClass={`symbol-${typeSize}`}
@@ -150,44 +152,66 @@ const DialogIconDetail = ({
           </div>
         </div>
         <div className='w-full'>
-          <div className="flex mb-4">
+          <h3 className="text-paragraph-03 font-bold mb-2">Type</h3>
+          <div className="flex mb-4 gap-x-2 md:gap-x-4">
             <button
-              className={`button-sm md:button-md lg:button-lg ${auxType === 'solid' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg w-full md:w-fit
+              ${auxType === 'solid' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setAuxType('solid')}
             >
               Solid
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${auxType === 'outline' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg w-full md:w-fit
+              ${auxType === 'outline' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setAuxType('outline')}
             >
               Outline
             </button>
           </div>
-          <div className="flex">
+          <h3 className="text-paragraph-03 font-bold mb-2">Size</h3>
+          <div className="flex flex-wrap gap-2 md:gap-x-4 md:max-w-[212px] lg:max-w-[288px]">
             <button
-              className={`button-sm md:button-md lg:button-lg ${typeSize === 'sm' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === 'sm' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('sm')}
             >
-              sm
+              16px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'md' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === 'md' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('md')}
             >
-              md
+              24px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'lg' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === 'lg' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('lg')}
             >
-              lg
+              32px
             </button>
             <button
-              className={`button-sm ml-4 md:button-md lg:button-lg ${typeSize === 'xl' ? 'button-blue-solid' : 'button-blue-outline'}`}
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === 'xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
               onClick={() => setTypeSize('xl')}
             >
-              xl
+              40px
+            </button>
+            <button
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === '2xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
+              onClick={() => setTypeSize('2xl')}
+            >
+              64px
+            </button>
+            <button
+              className={`select-button-md lg:select-button-lg flex-auto md:flex-none md:w-[60px] lg:w-[85px]
+              ${typeSize === '3xl' ? 'select-blue-solid' : 'select-blue-outline'}`}
+              onClick={() => setTypeSize('3xl')}
+            >
+              96px
             </button>
           </div>
         </div>
@@ -245,7 +269,7 @@ const DialogIconDetail = ({
         </div>
         <div className="mt-8">
           <pre>
-            <code className="flex flex-wrap cursor-pointer">
+            <code className="flex flex-wrap cursor-pointer font-inconsolata">
               <span className="text-primary-grey-600">{'<'}</span>
               <span className="text-secondary-purple-400">{typeImport === 'HTML' ? 'symbol-icon' : 'SymbolIcon'}&nbsp;</span>
               <Attribute attr="name" value={icon} />
@@ -271,7 +295,7 @@ const DialogIconDetail = ({
       </div>
       <div className="mt-6 md:mt-8 flex flex-col gap-y-4 md:flex-row md:gap-y-0 md:gap-x-4">
         <Button
-          className="btn-md btn-primary-solid only-sm:!w-full"
+          className="btn-md lg:btn-lg btn-primary-solid only-sm:!w-full"
           icon="download" iconClass="symbol-sm"
           url={svgUrl}
           download={`${icon}-${auxType}-${typeSize}.svg`}
@@ -280,7 +304,7 @@ const DialogIconDetail = ({
             Download SVG
         </Button>
         <Button
-          className="btn-md btn-primary-solid only-sm:!w-full"
+          className="btn-md lg:btn-lg btn-primary-solid only-sm:!w-full"
           icon="download"
           iconClass="symbol-sm"
           url={pngUrl}

@@ -2,16 +2,13 @@
 
 @layer utilities {
   @variants responsive {
-    .button-sm {
-      @apply rounded-lg px-2 py-1 h-6 text-button-05 font-bold;
+
+    .select-button-md {
+      @apply rounded-sm px-4 py-2 h-8 text-button-05;
     }
 
-    .button-md {
-      @apply rounded-lg px-2 py-2 h-8;
-    }
-
-    .button-lg {
-      @apply rounded-lg px-4 py-4 h-12;
+    .select-button-lg {
+      @apply rounded-lg px-6 py-4 h-12 text-button-04;
     }
 
     .btn-md {
@@ -28,10 +25,11 @@
   @apply text-primary-grey-600 bg-secondary-blue-300 hover:bg-secondary-blue-400 outline-none transition-colors;
 }
 
-.button-blue-solid {
-  @apply text-primary-grey-600 bg-secondary-blue-300 hover:bg-secondary-blue-200 outline-none;
+.select-blue-solid {
+  @apply text-primary-grey-600 bg-secondary-blue-300 outline-none;
 }
 
-.button-blue-outline {
-  @apply text-primary-neutral-200 bg-transparent border border-primary-neutral-200 outline-none;
+.select-blue-outline {
+  @apply text-primary-neutral-200 bg-transparent border border-primary-neutral-200 outline-none
+  transition-colors hover:border-secondary-blue-300 hover:text-secondary-blue-300;
 }
