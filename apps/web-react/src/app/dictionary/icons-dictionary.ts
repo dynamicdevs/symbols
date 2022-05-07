@@ -55,6 +55,18 @@ export const IconsDictionary = {
     en: ["hamburger", "line", "lines", "menu", "options"],
     es: ["hamburguesa", "línea", "líneas", "menú", "opciones"],
   },
+  menu_right: {
+    en: ["hamburger", "line", "lines", "menu", "rows", "right"],
+    es: ["hamburguesa", "línea", "líneas", "menú", "filas", "derecha"],
+  },
+  menu_left: {
+    en: ["hamburger", "line", "lines", "menu", "rows", "left"],
+    es: ["hamburguesa", "línea", "líneas", "menú", "filas", "izquierda"],
+  },
+  menu_two: {
+    en: ["hamburger", "line", "lines", "menu", "rows", "two", "equal"],
+    es: ["hamburguesa", "línea", "líneas", "menú", "filas", "dos", "igual"],
+  },
   bell: {
     en: ["bell", "notification", "notice", "alarm"],
     es: ["campana", "notificación", "aviso", "alarma"],
@@ -250,6 +262,14 @@ export const IconsDictionary = {
   exit: {
     en: ["exit", "x", "close", "delete", "negative"],
     es: ["salir", "x", "cerrar", "borrar", "negativo"],
+  },
+  square: {
+    en: ["square", "form", "geometric", "cube"],
+    es: ["cuadrado", "forma", "geometrico", "cubo"],
+  },
+  cart: {
+    en: ["shopping", "cart", "bag", "add", "buy", "buying", "groceries", "shop", "mart", "purchase"],
+    es: ["compras", "carrito", "bolsa", "agregar", "comprar", "tienda", "cesta", "compra"],
   },
 };
 
