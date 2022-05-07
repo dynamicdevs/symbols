@@ -7,6 +7,7 @@ import { TypeSize } from '@/types/type-size';
 import DialogModal from '@elements/molecules/DialogModal';
 import { Popover, Transition } from '@headlessui/react';
 import useAnalyticsEventTracker from '@/hooks/useAnalytics';
+import Button from '@elements/atoms/Button';
 
 interface AttributeProps {
   attr: string;
@@ -57,12 +58,14 @@ const DialogIconDetail = ({
         <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
       </div>
       <div className='flex flex-col my-6 md:items-center md:flex-row md:space-x-4 lg:my-8'>
-        <div className='flex justify-center w-full mb-6 md:mb-0'>
-          <SymbolIcon
-            name={icon}
-            iconClass={`symbol-${typeSize}`}
-            type={auxType}
-          />
+        <div className='flex justify-center items-center w-full mb-6 md:mb-0'>
+          <div className="flex justify-center items-center w-[104px] h-[104px] text-primary-neutral-200 border-[1px] rounded-lg">
+            <SymbolIcon
+              name={icon}
+              iconClass={`symbol-${typeSize}`}
+              type={auxType}
+            />
+          </div>
         </div>
         <div className='w-full'>
           <div className="flex mb-4">
@@ -183,6 +186,10 @@ const DialogIconDetail = ({
             </code>
           </pre>
         </div>
+      </div>
+      <div className="mt-6 md:mt-8 flex flex-col gap-y-4 md:flex-row md:gap-y-0 md:gap-x-4">
+        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm">Download SVG</Button>
+        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm" isDisabled>Download PNG</Button>
       </div>
     </DialogModal>
   )

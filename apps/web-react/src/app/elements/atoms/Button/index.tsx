@@ -19,8 +19,8 @@ export const Button = ({ className, icon, url, iconType, iconClass, onClick, tar
       onClick={() => (onClick && !isDisabled ? onClick() : null)}
       target={target}
       className={
-        `flex items-center w-fit cursor-pointer
-        ${isDisabled ? '!text-primary-neutral-400 !bg-primary-grey-500 !cursor-default' : ''}
+        `flex items-center justify-center w-fit cursor-pointer
+        ${isDisabled ? '!text-primary-grey-400 !bg-primary-grey-500 !cursor-default' : ''}
         ${className}`
       }
     >
