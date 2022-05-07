@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 import { SymbolIcon } from '@dynamic-devs/symbol-react';
 
@@ -8,6 +8,7 @@ import DialogModal from '@elements/molecules/DialogModal';
 import { Popover, Transition } from '@headlessui/react';
 import useAnalyticsEventTracker from '@/hooks/useAnalytics';
 import Button from '@elements/atoms/Button';
+import { ICON_SIZE } from '@utils/size';
 
 interface AttributeProps {
   attr: string;
@@ -45,15 +46,67 @@ const DialogIconDetail = ({
   const [auxType, setAuxType] = useState<TypeIcon>(type);
   const [typeSize, setTypeSize] = useState<TypeSize>('xl');
   const [typeImport, setTypeImport] = useState<TypeImport>('React');
+  const [svgUrl, setSvgUrl] = useState<string>('#');
+  const [pngUrl, setPngUrl] = useState<string>('#');
 
   const gaEventTracker = useAnalyticsEventTracker();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
+  const updateSVGFile = () => {
+    const size = ICON_SIZE[typeSize];
+    if (containerRef.current) {
+      const svgElement = containerRef.current.children[0];
+      svgElement.setAttribute('width', size.toString());
+      svgElement.setAttribute('height', size.toString());
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(svgElement);
+      source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+      const urlSVG = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(source)}`;
+      setSvgUrl(urlSVG);
+    }
+  }
+
+
+  const getIconByUrl = (type: 'solid' | 'outline', name: string) => {
+    const url = `https://symbol.blob.core.windows.net/symbols/icons/${type}/ic_${name}.svg`;
+    fetch(url).then((response) => {
+      if (response.ok) {
+        return response.text().then((svgContent) => {
+          const svgNamespace = 'http://www.w3.org/2000/svg';
+          if (containerRef.current) {
+            containerRef.current.innerHTML = svgContent;
+            const svgElement = containerRef.current.children[0];
+            svgElement.setAttribute('xmlns', svgNamespace);
+            updateSVGFile();
+          }
+        })
+      } else {
+        return;
+      }
+    })
+  }
+
+  useEffect(() => {
+    getIconByUrl(type, icon);
+  }, [])
+
+  useEffect(() => {
+    updateSVGFile();
+  }, [typeSize])
 
   useEffect(() => {
     setAuxType(type);
   }, [type])
 
+  useEffect(() => {
+    console.log('type');
+    getIconByUrl(auxType, icon);
+  }, [auxType])
+
   return (
     <DialogModal isOpen={!!icon} onClose={onClose} className="flex flex-col p-8 lg:p-10 lg:pt-8">
+      <div className='invisible' ref={containerRef}></div>
       <div className='flex justify-center md:justify-start md:border-b-2 md:border-primary-grey-500 md:border-solid'>
         <h2 className="font-bold text-subheading-03 lg:text-subheading-02">{icon}</h2>
       </div>
@@ -188,8 +241,15 @@ const DialogIconDetail = ({
         </div>
       </div>
       <div className="mt-6 md:mt-8 flex flex-col gap-y-4 md:flex-row md:gap-y-0 md:gap-x-4">
-        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm">Download SVG</Button>
-        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm" isDisabled>Download PNG</Button>
+        <Button
+          className="btn-md btn-primary-solid only-sm:!w-full"
+          icon="download" iconClass="symbol-sm"
+          url={svgUrl}
+          download='icon.svg'
+        >
+            Download SVG
+        </Button>
+        <Button className="btn-md btn-primary-solid only-sm:!w-full" icon="download" iconClass="symbol-sm" url={pngUrl} isDisabled>Download PNG</Button>
       </div>
     </DialogModal>
   )

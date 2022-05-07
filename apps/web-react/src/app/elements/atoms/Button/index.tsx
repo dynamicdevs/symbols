@@ -10,10 +10,11 @@ interface Props {
   iconClass?: string,
   target?: '_blank' | '_self';
   onClick?: () => void;
+  download?: string;
   children: React.ReactNode;
 }
 
-export const Button = ({ className, icon, url, iconType, iconClass, onClick, target, isDisabled, children }: Props) => {
+export const Button = ({ className, icon, url, iconType, iconClass, onClick, target, isDisabled, download, children }: Props) => {
   return (
     <a href={url || '##'}
       onClick={() => (onClick && !isDisabled ? onClick() : null)}
@@ -23,6 +24,7 @@ export const Button = ({ className, icon, url, iconType, iconClass, onClick, tar
         ${isDisabled ? '!text-primary-grey-400 !bg-primary-grey-500 !cursor-default' : ''}
         ${className}`
       }
+      download={download}
     >
       { !!icon &&
         <SymbolIcon className={iconClass} name={icon} type={!iconType ? 'solid' : iconType}/>
