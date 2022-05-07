@@ -16,7 +16,7 @@ interface Props {
 
 export const Button = ({ className, icon, url, iconType, iconClass, onClick, target, isDisabled, download, children }: Props) => {
   return (
-    <a href={url || '##'}
+    <a href={url || ''}
       onClick={() => (onClick && !isDisabled ? onClick() : null)}
       target={target}
       className={

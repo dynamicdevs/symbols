@@ -56,7 +56,7 @@ const DialogIconDetail = ({
 
   const updateSVGFile = () => {
     const size = ICON_SIZE[typeSize];
-    if (containerRef.current) {
+    if (containerRef.current && containerRef.current.children[0]) {
       const svgElement = containerRef.current.children[0];
       svgElement.setAttribute('width', size.toString());
       svgElement.setAttribute('height', size.toString());
@@ -70,7 +70,7 @@ const DialogIconDetail = ({
 
   const updatePNGFile = () => {
     const size = ICON_SIZE[typeSize];
-    if (containerRef.current) {
+    if (containerRef.current && containerRef.current.children[0]) {
       const svgElement = containerRef.current.children[0] as any;
       const { x, y } = svgElement.viewBox.baseVal;
       const blob = new Blob([svgElement.outerHTML], {type: 'image/svg+xml'})
@@ -143,7 +143,7 @@ const DialogIconDetail = ({
         <div className='flex justify-center items-start'>
           <div className="flex justify-center items-center
             w-[104px] h-[104px] md:w-[144px] md:h-[144px] lg:w-[176px] lg:h-[176px]
-            text-primary-neutral-200 border-[1px] rounded-lg">
+            text-secondary-blue-500 border-[1px] rounded-lg">
             <SymbolIcon
               name={icon}
               iconClass={`symbol-${typeSize}`}
