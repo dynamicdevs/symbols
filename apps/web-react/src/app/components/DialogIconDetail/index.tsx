@@ -143,7 +143,7 @@ const DialogIconDetail = ({
         <div className='flex justify-center items-start'>
           <div className="flex justify-center items-center
             w-[104px] h-[104px] md:w-[144px] md:h-[144px] lg:w-[176px] lg:h-[176px]
-            text-secondary-blue-500 border-[1px] rounded-lg">
+            text-secondary-blue-500 border-[1px] border-primary-neutral-200 rounded-lg">
             <SymbolIcon
               name={icon}
               iconClass={`symbol-${typeSize}`}
