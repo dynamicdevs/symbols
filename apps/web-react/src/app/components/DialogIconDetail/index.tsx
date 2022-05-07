@@ -232,7 +232,7 @@ const DialogIconDetail = ({
           </li>
         </ul>
         <div className='absolute top-4 md:top-3 lg:top-6 right-4'>
-          <Popover className="relative flex items-center justify-center">
+          <Popover className="relative flex items-center justify-center w-4 md:w-6 lg:w-8">
             <Popover.Button>
               <SymbolIcon
                 name="copy"
