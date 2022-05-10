@@ -222,13 +222,13 @@ const DialogIconDetail = ({
             className={`text-button-05 lg:text-button-04 cursor-pointer ${typeImport === 'React' ? 'text-primary-grey-600 font-extrabold' : 'text-primary-neutral-300'}`}
             onClick={() => setTypeImport('React')}
           >
-            React/Angular
+            React
           </li>
           <li
             className={`text-button-05 lg:text-button-04 cursor-pointer ml-4 ${typeImport === 'HTML' ? 'text-primary-grey-600 font-extrabold' : 'text-primary-neutral-300'}`}
             onClick={() => setTypeImport('HTML')}
           >
-            HTML
+            Angular/HTML
           </li>
         </ul>
         <div className='absolute top-4 md:top-3 lg:top-6 right-4'>
@@ -241,8 +241,8 @@ const DialogIconDetail = ({
                 onClick={() => {
                   navigator.clipboard.writeText(
                     typeImport === 'HTML'
-                    ? `<symbol-Icon name="${icon}" icon-class="symbol-${typeSize}" type="${auxType}"><symbol-icon/>`
-                    : `<SymbolIcon name="${icon}" iconClass="symbol-${typeSize}"type="${auxType}" />`
+                    ? `<symbol-icon name="${icon}" icon-class="symbol-${typeSize}" type="${auxType}"></symbol-icon>`
+                    : `<SymbolIcon name="${icon}" iconClass="symbol-${typeSize}" type="${auxType}" />`
                   );
                   gaEventTracker('Click', 'Copiar icono');
                 }}
@@ -279,6 +279,7 @@ const DialogIconDetail = ({
               <Attribute attr="type" value={auxType} />
               {typeImport === 'HTML' ? (
                 <>
+                  <span className="text-primary-grey-600">{'>'}</span>
                   <span className="text-primary-grey-600">{'</'}</span>
                   <span className="text-secondary-purple-400">symbol-icon</span>
                   <span className="text-primary-grey-600">{'>'}</span>

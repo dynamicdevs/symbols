@@ -80,7 +80,7 @@ For more imformation about the available icons, visit the website [Symbols][symb
 | Prop        | Default     | Description          | Values             |
 | ----------- | ----------- | -------------------- | ------------------ |
 | name        |             | `string` Icon name   | Values can be found in [Symbols][symbols] |
-| iconClass   |             | `string` Icon size   | `16px` symbol-sm  <br> `24px` symbol-md  <br> `32px` symbol-lg <br> `40px` symbol-xl |
+| iconClass   |             | `string` Icon size   | `16px` symbol-sm  <br> `24px` symbol-md  <br> `32px` symbol-lg <br> `40px` symbol-xl <br> `64px` symbol-2xl <br> `96px` symbol-3xl |
 | type        | 'solid'     | `string` Icon style  | solid <br> outline |
 
 ## Contributors
