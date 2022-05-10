@@ -1,6 +1,6 @@
 const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
 const { join } = require('path');
-const themeDynamic = require('../../settings/tailwind/theme-dynamic');
+const themeHorizon = require('../../settings/tailwind/horizon');
 
 module.exports = {
   mode: 'jit',
@@ -8,6 +8,6 @@ module.exports = {
     join(__dirname, 'src/**/!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  theme: themeDynamic,
+  theme: themeHorizon,
   plugins: [],
 }

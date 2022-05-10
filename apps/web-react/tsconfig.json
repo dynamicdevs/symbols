@@ -10,7 +10,21 @@
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@dynamic-devs/symbol": ["../../dist/libs/stencil-component"],
+      "@dynamic-devs/symbol-angular": [
+        "../../libs/stencil-component-angular/src/index.ts"
+      ],
+      "@dynamic-devs/symbol-react": [
+        "../../libs/stencil-component-react/src/index.ts"
+      ],
+      "@dynamic-devs/symbol/loader": ["../../dist/libs/stencil-component/loader"],
+      "@dynamic-devs/test-react": ["../../libs/react-test/src/index.ts"],
+      "@*": ["./src/app/*"],
+      "@assets/*": ["./src/assets/*"]
+    }
   },
   "files": [],
   "include": [],

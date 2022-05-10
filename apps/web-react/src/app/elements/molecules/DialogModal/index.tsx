@@ -9,7 +9,7 @@ export type ModalProps<T> = {
   className?: string;
 };
 
-const Modal: FC<ModalProps<unknown>> = (props) => {
+const DialogModal: FC<ModalProps<unknown>> = (props) => {
   const { isOpen, onClose, children, className } = props;
 
   return (
@@ -28,12 +28,12 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Dialog.Overlay className="fixed z-40 w-screen h-screen bg-others-transparency-800" />
+          <Dialog.Overlay className="fixed z-40 w-screen h-screen bg-transparency-tblack-800" />
           <div className={`bg-primary-grey-600 absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 rounded-lg z-50 ${className}`}>
             <SymbolIcon
               name="exit"
-              iconClass="icon-sm lg:icon-md text-primary-neutral-400"
-              className="absolute cursor-pointer top-2 right-2 md:top-3"
+              iconClass="icon-md text-primary-neutral-400 hover:text-secondary-blue-300 transition-colors"
+              className="absolute cursor-pointer top-6 right-6"
               onClick={onClose}
             />
             {children}
@@ -44,4 +44,4 @@ const Modal: FC<ModalProps<unknown>> = (props) => {
   );
 };
 
-export default Modal;
+export default DialogModal;
