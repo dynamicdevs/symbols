@@ -20,9 +20,9 @@ const Footer = () => (
               className="icon-color-inherit"
             />
           </a>
-          <a href="https://gitlab.com/dynamicdevs/startup/symbol/sym-front-nx-component" target="_blank" rel="noreferrer" className="h-6 ml-4">
+          <a href="https://github.com/dynamicdevs/symbols" target="_blank" rel="noreferrer" className="h-6 ml-4">
             <SymbolIcon
-              name="gitlab"
+              name="github"
               type="solid"
               iconClass="symbol-md text-primary-neutral-200"
               className="icon-color-inherit"
