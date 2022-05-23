@@ -90,7 +90,7 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Build Stencil Components
+      - name: Build React Components
         run: npx nx build stencil-component-react
 
   build-angular-component:
@@ -110,5 +110,45 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Build Stencil Components
+      - name: Build Angular Components
         run: npx nx build stencil-component-angular
+
+  lint-web:
+    needs: [setup]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Restore node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Web Linter
+        run: npx nx lint web-react
+
+  test-web:
+    needs: [setup]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Restore node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Web Tests
+        run: npx nx text web-react

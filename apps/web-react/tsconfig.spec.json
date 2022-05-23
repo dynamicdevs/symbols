@@ -3,18 +3,22 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/assets/*"]
+    }
   },
   "include": [
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*.test.tsx",
-    "**/*.spec.tsx",
-    "**/*.test.js",
-    "**/*.spec.js",
-    "**/*.test.jsx",
-    "**/*.spec.jsx",
-    "**/*.d.ts"
+    "apps/web-react/src/app/**/*.test.ts",
+    "apps/web-react/src/app/**/*.spec.ts",
+    "apps/web-react/src/app/**/*.test.tsx",
+    "apps/web-react/src/app/**/*.spec.tsx",
+    "apps/web-react/src/app/**/*.test.js",
+    "apps/web-react/src/app/**/*.test.jsx",
+    "apps/web-react/src/app/**/*.spec.js",
+    "apps/web-react/src/app/**/*.spec.jsx",
+    "apps/web-react/src/app/**/*.d.ts"
   ],
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
