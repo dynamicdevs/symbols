@@ -2,7 +2,7 @@ name: Symbols Pipeline
 
 on:
   push:
-    branches: [develop]
+    branches: [feature/pipeline]
   pull_request:
     branches: [develop]
     types: [opened, synchronize]
@@ -92,6 +92,11 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build React Components
         run: npx nx build stencil-component-react
+      - name: Upload Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
 
   build-angular-component:
     needs: [build-stencil-component]
@@ -170,5 +175,10 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Build Angular Components
+      - name: Download React Components
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: Build Web
         run: npx nx build web-react
