@@ -151,7 +151,7 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Web Tests
-        run: npx nx text web-react
+        run: npx nx test web-react
 
   build-web:
     needs: [build-react-component]
