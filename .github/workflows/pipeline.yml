@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-  build-stencil:
+  build-stencil-component:
     needs: [setup]
     runs-on: ubuntu-18.04
     steps:
@@ -53,7 +53,7 @@ jobs:
       - name: Build Stencil Components
         run: npx nx build stencil-component
 
-  test-stencil:
+  test-stencil-component:
     needs: [setup]
     runs-on: ubuntu-18.04
     steps:
@@ -72,3 +72,43 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Test Stencil Components
         run: npx nx test stencil-component
+
+  build-react-component:
+    needs: [build-stencil-component]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Restore node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Build Stencil Components
+        run: npx nx build stencil-component-react
+
+  build-angular-component:
+    needs: [build-stencil-component]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Restore node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Build Stencil Components
+        run: npx nx build stencil-component-angular
