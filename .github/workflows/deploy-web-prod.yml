@@ -1,37 +1,37 @@
-name: Deploy website
+# name: Deploy website
 
-on:
-  workflow_dispatch:
-  push:
-    branches: [ main ]
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches: [ main ]
 
-jobs:
-  build-and-deploy:
-    name: Build and deploy
-    runs-on: ubuntu-latest
-    environment: prod
+# jobs:
+#   build-and-deploy:
+#     name: Build and deploy
+#     runs-on: ubuntu-latest
+#     environment: prod
 
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: recursive
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         submodules: recursive
 
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
+#     - name: Install Node.js
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 12.x
 
-    - name: Build website
-      run: |
-        npm install
-        npx nx build web-react
-      env:
-        NX_KEY_KO_FI: ${{ secrets.NX_KEY_KO_FI }}
-        NX_TRACKING_ID: ${{ secrets.NX_TRACKING_ID }}
+#     - name: Build website
+#       run: |
+#         npm install
+#         npx nx build web-react
+#       env:
+#         NX_KEY_KO_FI: ${{ secrets.NX_KEY_KO_FI }}
+#         NX_TRACKING_ID: ${{ secrets.NX_TRACKING_ID }}
 
-    - name: Deploy to Azure
-      uses: TravisSpomer/deploy-to-azure-storage@v1.4.0
-      with:
-        source-path: dist/apps/web-react
-        sas-url: ${{ secrets.DEPLOY_SAS_URL }}
-        container: ${{ secrets.STORAGE_CONTAINER }}
+#     - name: Deploy to Azure
+#       uses: TravisSpomer/deploy-to-azure-storage@v1.4.0
+#       with:
+#         source-path: dist/apps/web-react
+#         sas-url: ${{ secrets.DEPLOY_SAS_URL }}
+#         container: ${{ secrets.STORAGE_CONTAINER }}
