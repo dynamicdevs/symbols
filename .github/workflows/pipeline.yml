@@ -95,8 +95,8 @@ jobs:
       - name: Upload Build
         uses: actions/upload-artifact@v2
         with:
-          name: dist
-          path: dist
+          name: libs
+          path: libs
 
   build-angular-component:
     needs: [build-stencil-component]
@@ -178,7 +178,7 @@ jobs:
       - name: Download React Components
         uses: actions/download-artifact@v2
         with:
-          name: dist
-          path: dist
+          name: libs
+          path: libs
       - name: Build Web
         run: npx nx build web-react
