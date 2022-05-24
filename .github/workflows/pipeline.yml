@@ -41,17 +41,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build Stencil Components
-        run: npx nx build stencil-component
+        uses: ./.github/actions/project-builder
+        with:
+          project: stencil-component
 
   test-stencil-component:
     needs: [setup]
@@ -61,15 +54,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Test Stencil Components
         run: npx nx test stencil-component
 
@@ -81,17 +67,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build React Components
-        run: npx nx build stencil-component-react
+        uses: ./.github/actions/project-builder
+        with:
+          project: stencil-component-react
 
   build-angular-component:
     needs: [build-stencil-component]
@@ -101,17 +80,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build Angular Components
-        run: npx nx build stencil-component-angular
+        uses: ./.github/actions/project-builder
+        with:
+          project: stencil-component-angular
 
   lint-web:
     needs: [setup]
@@ -121,15 +93,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Web Linter
         run: npx nx lint web-react
 
@@ -141,15 +106,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Web Tests
         run: npx nx test web-react
 
@@ -162,20 +120,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - name: Restore node_modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build Web
+        uses: ./.github/actions/project-builder
+        with:
+          project: stencil-component-react
         env:
           NX_KEY_KO_FI: ${{ secrets.NX_KEY_KO_FI }}
           NX_TRACKING_ID: ${{ secrets.NX_TRACKING_ID }}
-        run: npx nx build web-react
       - name: Upload build files
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3
