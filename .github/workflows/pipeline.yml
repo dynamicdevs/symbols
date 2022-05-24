@@ -2,7 +2,7 @@ name: Symbols Pipeline
 
 on:
   push:
-    branches: [develop]
+    branches: [feature/pipeline]
   pull_request:
     branches: [develop]
     types: [opened, synchronize]
