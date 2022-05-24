@@ -185,6 +185,7 @@ jobs:
   deploy-web:
     needs: [build-web, lint-web, test-web]
     runs-on: ubuntu-18.04
+    environment: develop
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Download build files
