@@ -95,7 +95,7 @@ jobs:
         with:
           submodules: recursive
       - name: Build Angular Components
-        uses: ./actions/project-builder
+        uses: ./.github/actions/project-builder
         with:
           project: stencil-component-angular
 
