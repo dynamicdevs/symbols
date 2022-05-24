@@ -155,8 +155,7 @@ jobs:
 
   build-web:
     needs: [build-react-component]
-    environment:
-      name: ${{ github.ref_name != 'main' && 'prod' || 'develop'}}
+    environment: ${{ github.ref_name != 'main' && 'develop' || 'prod' }}
     runs-on: ubuntu-18.04
     steps:
       - name: Symbol - Checkout
@@ -187,8 +186,7 @@ jobs:
   deploy-web:
     needs: [build-web, lint-web, test-web]
     runs-on: ubuntu-18.04
-    environment:
-      name: ${{ github.ref_name != 'main' && 'prod' || 'develop'}}
+    environment: ${{ github.ref_name != 'main' && 'develop' || 'prod' }}
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Download build files
