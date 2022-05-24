@@ -148,6 +148,7 @@ jobs:
 
   build-web:
     needs: [build-react-component]
+    environment: ${{ github.ref_name != 'main' && 'develop' || 'prod' }}
     runs-on: ubuntu-18.04
     steps:
       - name: Symbol - Checkout
@@ -164,4 +165,31 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build Web
+        env:
+          NX_KEY_KO_FI: ${{ secrets.NX_KEY_KO_FI }}
+          NX_TRACKING_ID: ${{ secrets.NX_TRACKING_ID }}
         run: npx nx build web-react
+      - name: Upload build files
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-react
+          path: dist/apps/web-react
+
+  deploy-web:
+    needs: [build-web, lint-web, test-web]
+    runs-on: ubuntu-18.04
+    environment: ${{ github.ref_name != 'main' && 'develop' || 'prod' }}
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: web-react
+          path: dist
+      - name: Deploy in Azure Storage
+        uses: TravisSpomer/deploy-to-azure-storage@v1.4.0
+        with:
+          source-path: dist
+          sas-url: ${{ secrets.DEPLOY_SAS_URL }}
+          container: ${{ secrets.STORAGE_CONTAINER }}
