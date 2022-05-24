@@ -183,7 +183,7 @@ jobs:
           path: dist/apps/web-react
 
   deploy-web:
-    needs: [build-web]
+    needs: [build-web, lint-web, test-web]
     runs-on: ubuntu-18.04
     if: ${{ github.event_name == 'push' }}
     steps:
