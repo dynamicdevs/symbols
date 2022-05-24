@@ -123,7 +123,7 @@ jobs:
       - name: Build Web
         uses: ./.github/actions/project-builder
         with:
-          project: stencil-component-react
+          project: web-react
         env:
           NX_KEY_KO_FI: ${{ secrets.NX_KEY_KO_FI }}
           NX_TRACKING_ID: ${{ secrets.NX_TRACKING_ID }}
