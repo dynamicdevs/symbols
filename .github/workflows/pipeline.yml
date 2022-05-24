@@ -92,11 +92,6 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Build React Components
         run: npx nx build stencil-component-react
-      - name: Upload Build
-        uses: actions/upload-artifact@v2
-        with:
-          name: stencil-component-react
-          path: dist/libs/stencil-component-react/
 
   build-angular-component:
     needs: [build-stencil-component]
@@ -175,11 +170,5 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: libs
       - name: Build Web
         run: npx nx build web-react
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: libs
