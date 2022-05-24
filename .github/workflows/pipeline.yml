@@ -170,5 +170,5 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Build Angular Components
+      - name: Build Web
         run: npx nx build web-react
