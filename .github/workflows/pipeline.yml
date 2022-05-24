@@ -175,13 +175,11 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
-      - name: Download React Components
-        uses: actions/download-artifact@v2
-        with:
-          name: stencil-component-react
-          path: libs
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: libs
+        working-directory: dist
       - name: Build Web
         run: npx nx build web-react
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: dist
