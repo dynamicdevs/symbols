@@ -96,7 +96,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: stencil-component-react
-          path: libs
+          path: dist/libs/stencil-component-react
 
   build-angular-component:
     needs: [build-stencil-component]
