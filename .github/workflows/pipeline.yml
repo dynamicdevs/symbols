@@ -177,9 +177,9 @@ jobs:
           key: node-modules-${{ hashFiles('package-lock.json') }}
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: dist
+        working-directory: libs
       - name: Build Web
         run: npx nx build web-react
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: dist
+        working-directory: libs
