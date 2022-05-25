@@ -9,12 +9,10 @@ on:
 #     branches: [develop]
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-18.04
     steps:
-      - name: Release version
-        run: echo ${{ github.event.release.tag_name }}
-      - name: Cancel Previous Redundant Builds
+      - name: Cancel previous redundant builds
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
@@ -22,19 +20,63 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Setup Node
+      - name: Release version
+        run: echo ${{ github.event.release.tag_name }}
+      - name: Setup node
         uses: ./.github/actions/cache-node-modules
-      - name: Package Version
+
+  build-stencil:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Get current package version
         run: |
           cd libs/stencil-component
           node -p "require('./package.json').version"
-        # run: npm info @dynamic-devs/symbol version
-      - run: |
+      - name: Update package version
+        run: |
           cd libs/stencil-component
           npm version ${{ github.event.release.tag_name }}
-      - name: Build
+      - name: Build stencil components
         run: npx nx build stencil-component
-      - name: Package Version after build
+      - name: Get package version after building
         run: |
           cd dist/libs/stencil-component
           node -p "require('./package.json').version"
+      - name: Upload changes to the repository
+      - run: |
+          git config --global user.name "Dynamic bot"
+          git config --global user.email "info@dynamicdevs.io"
+          git push
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: stencil-component
+          path: dist/libs/stencil-component
+
+  deploy-stencil:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: stencil-component
+          path: dist
+      - run: |
+          cd dist
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
