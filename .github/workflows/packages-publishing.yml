@@ -50,7 +50,7 @@ jobs:
         run: |
           git config --global user.name "Dynamic bot"
           git config --global user.email "info@dynamicdevs.io"
-          git push
+          git push origin develop
         env:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload build files
