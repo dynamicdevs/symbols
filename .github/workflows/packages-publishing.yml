@@ -102,7 +102,7 @@ jobs:
         run: npm install --save --package-lock-only @dynamic-devs/symbol@${{ github.event.release.tag_name }}
         working-directory: ./libs/stencil-component-react
       - name: Build stencil components
-        run: npx nx build stencil-component
+        run: npx nx build stencil-component-react
       - name: Get package version after building
         run: node -p "require('./package.json').version"
         working-directory: ./dist/libs/stencil-component-react
