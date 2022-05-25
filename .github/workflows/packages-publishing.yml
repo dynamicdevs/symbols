@@ -23,9 +23,16 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/cache-node-modules
       - name: Package Version
-        run: npm info @dynamic-devs/symbol version
+        run: |
+          cd libs/stencil-component
+          node -p "require('./package.json').version"
+        # run: npm info @dynamic-devs/symbol version
       - run: |
           cd libs/stencil-component
           npm version ${{ github.event.release.tag_name }}
       - name: Build
         run: npx nx build stencil-component
+      - name: Package Version after build
+        run: |
+          cd dist/libs/stencil-component
+          node -p "require('./package.json').version"
