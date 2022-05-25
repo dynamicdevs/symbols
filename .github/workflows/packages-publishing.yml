@@ -49,7 +49,7 @@ jobs:
           cd dist/libs/stencil-component
           node -p "require('./package.json').version"
       - name: Upload changes to the repository
-      - run: |
+        run: |
           git config --global user.name "Dynamic bot"
           git config --global user.email "info@dynamicdevs.io"
           git push
@@ -75,7 +75,8 @@ jobs:
         with:
           name: stencil-component
           path: dist
-      - run: |
+      - name: Publish stencil-component
+        run: |
           cd dist
           npm publish
         env:
