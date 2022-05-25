@@ -32,6 +32,7 @@ jobs:
       - name: Symbol - Checkout
         uses: actions/checkout@v2
         with:
+          ref: ${{ github.event.release.target_commitish }}
           submodules: recursive
       - name: Setup
         uses: ./.github/actions/setup
@@ -50,7 +51,7 @@ jobs:
         run: |
           git config --global user.name "Dynamic bot"
           git config --global user.email "info@dynamicdevs.io"
-          git push origin develop
+          git push
         env:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload build files
