@@ -139,3 +139,62 @@ jobs:
         working-directory: ./dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  build-angular:
+    needs: [deploy-stencil]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Get current package version
+        run: node -p "require('./package.json').version"
+        working-directory: ./libs/stencil-component-angular
+      - name: Update package version
+        run: npm version ${{ github.event.release.tag_name }}
+        working-directory: ./libs/stencil-component-angular
+      - name: Update Symbols version
+        run: npm install --save --package-lock-only @dynamic-devs/symbol@${{ github.event.release.tag_name }}
+        working-directory: ./libs/stencil-component-angular
+      - name: Build stencil components
+        run: npx nx build stencil-component-angular
+      - name: Get package version after building
+        run: node -p "require('./package.json').version"
+        working-directory: ./dist/libs/stencil-component-angular
+      - name: Upload changes to the repository
+        run: |
+          git config --global user.name "Dynamic bot"
+          git config --global user.email "info@dynamicdevs.io"
+          git push
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: stencil-component-angular
+          path: dist/libs/stencil-component-angular
+
+  deploy-angular:
+    needs: [build-angular]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: stencil-component-angular
+          path: dist
+      - name: Publish stencil-component-angular
+        run: npm publish
+        working-directory: ./dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
