@@ -1,12 +1,12 @@
 name: Packages Publishing
 
-# on:
-#   release:
-#     types: [published]
-
 on:
-  push:
-    branches: [develop]
+  release:
+    types: [published]
+
+# on:
+#   push:
+#     branches: [develop]
 
 jobs:
   build:
