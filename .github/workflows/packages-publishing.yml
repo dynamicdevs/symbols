@@ -1,0 +1,25 @@
+name: Packages Publishing
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Setup Node
+        uses: ./.github/actions/setup
+      - name: Package Version
+        run: npm info @dynamic-devs/symbol version
+      - run: |
+          cd libs/stencil-component
+          npm version ${{ github.event.release.tag_name }}
+      - name: Build
+        run: |
+          cd ../../
+          npx nx build stencil-component
