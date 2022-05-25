@@ -12,8 +12,12 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Setup Node
-        uses: ./.github/actions/setup
+        uses: ./.github/actions/cache-modules
       - name: Package Version
         run: npm info @dynamic-devs/symbol version
       - run: |
