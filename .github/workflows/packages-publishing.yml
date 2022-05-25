@@ -36,19 +36,16 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Get current package version
-        run: |
-          cd libs/stencil-component
-          node -p "require('./package.json').version"
+        run: node -p "require('./package.json').version"
+        working-directory: ./libs/stencil-component
       - name: Update package version
-        run: |
-          cd libs/stencil-component
-          npm version ${{ github.event.release.tag_name }}
+        run: npm version ${{ github.event.release.tag_name }}
+        working-directory: ./libs/stencil-component
       - name: Build stencil components
         run: npx nx build stencil-component
       - name: Get package version after building
-        run: |
-          cd dist/libs/stencil-component
-          node -p "require('./package.json').version"
+        run: node -p "require('./package.json').version"
+        working-directory: ./dist/libs/stencil-component
       - name: Upload changes to the repository
         run: |
           git config --global user.name "Dynamic bot"
@@ -78,8 +75,7 @@ jobs:
           name: stencil-component
           path: dist
       - name: Publish stencil-component
-        run: |
-          cd dist
-          npm publish
+        run: npm publish
+        working-directory: ./dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
