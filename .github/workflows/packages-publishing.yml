@@ -26,6 +26,7 @@ jobs:
         uses: ./.github/actions/cache-node-modules
 
   build-stencil:
+    needs: [setup]
     runs-on: ubuntu-18.04
     steps:
       - name: Symbol - Checkout
@@ -62,6 +63,7 @@ jobs:
           path: dist/libs/stencil-component
 
   deploy-stencil:
+    needs: [build-stencil]
     runs-on: ubuntu-18.04
     steps:
       - name: Symbol - Checkout
