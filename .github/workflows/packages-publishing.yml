@@ -12,6 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
+      - name: Release version
+        run: echo ${{ github.event.release.tag_name }}
       - name: Cancel Previous Redundant Builds
         uses: styfle/cancel-workflow-action@0.9.1
         with:
