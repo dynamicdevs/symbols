@@ -1,8 +1,12 @@
 name: Packages Publishing
 
+# on:
+#   release:
+#     types: [published]
+
 on:
-  release:
-    types: [published]
+  push:
+    branches: [develop]
 
 jobs:
   build:
@@ -24,6 +28,4 @@ jobs:
           cd libs/stencil-component
           npm version ${{ github.event.release.tag_name }}
       - name: Build
-        run: |
-          cd ../../
-          npx nx build stencil-component
+        run: npx nx build stencil-component
