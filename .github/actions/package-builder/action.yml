@@ -1,5 +1,5 @@
 name: 'Package Builder'
-description: 'Upload version and build package. Upload build files'
+description: 'Creates and uploads a build artifact updating the version of the package and its dependencies'
 
 inputs:
   package:
