@@ -27,7 +27,7 @@ runs:
       working-directory: ./libs/${{ inputs.package }}
       shell: bash
     - name: Build ${{ inputs.package }}
-      run: npx nx build ${{ input.package }}
+      run: npx nx build ${{ inputs.package }}
       shell: bash
     - name: Get package version after building
       run: node -p "require('./package.json').version"
