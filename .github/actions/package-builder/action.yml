@@ -1,0 +1,48 @@
+name: 'Package Builder'
+description: 'Creates and uploads a build artifact updating the version of the package and its dependencies'
+
+inputs:
+  package:
+    description: 'The package name for build'
+    required: true
+  updateSymbols:
+    description: 'If required updates Symbols dependency in components package.json'
+    required: false
+    default: 'false'
+
+runs:
+  using: composite
+  steps:
+    - name: Get current package version
+      run: node -p "require('./package.json').version"
+      working-directory: ./libs/${{ inputs.package }}
+      shell: bash
+    - name: Update package version
+      run: npm version ${{ github.event.release.tag_name }}
+      working-directory: ./libs/${{ inputs.package }}
+      shell: bash
+    - name: Update Symbols version
+      run: npm install --save --package-lock-only @dynamic-devs/symbol@${{ github.event.release.tag_name }}
+      if: ${{ inputs.updateSymbols == 'true' }}
+      working-directory: ./libs/${{ inputs.package }}
+      shell: bash
+    - name: Build ${{ inputs.package }}
+      run: npx nx build ${{ input.package }}
+      shell: bash
+    - name: Get package version after building
+      run: node -p "require('./package.json').version"
+      working-directory: ./dist/libs/${{ inputs.package }}
+      shell: bash
+    - name: Upload changes to the repository
+      run: |
+          git config --global user.name "Dynamic bot"
+          git config --global user.email "info@dynamicdevs.io"
+          git push
+      env:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+      shell: bash
+    - name: Upload build files
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ inputs.package }}
+        path: dist/libs/${{ inputs.package }}
