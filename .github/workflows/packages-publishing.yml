@@ -36,10 +36,10 @@ jobs:
           submodules: recursive
       - name: Setup
         uses: ./.github/actions/setup
-      - name: Package Builder
+      - name: Stencil package Builder
         uses: ./.github/actions/package-builder
         with:
-          package: 'stencil-component'
+          package: stencil-component
 
   deploy-stencil:
     needs: [build-stencil]
@@ -73,7 +73,7 @@ jobs:
           submodules: recursive
       - name: Setup
         uses: ./.github/actions/setup
-      - name: Package Builder
+      - name: React package Builder
         uses: ./.github/actions/package-builder
         with:
           package: stencil-component-react
@@ -111,7 +111,7 @@ jobs:
           submodules: recursive
       - name: Setup
         uses: ./.github/actions/setup
-      - name: Package Builder
+      - name: Angular package Builder
         uses: ./.github/actions/package-builder
         with:
           package: stencil-component-angular
