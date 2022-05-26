@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "composite": true,
     "jsx": "react-jsx",
     "allowJs": true,
     "esModuleInterop": true,
@@ -18,7 +19,7 @@
         "../../libs/stencil-component-angular/src/index.ts"
       ],
       "@dynamic-devs/symbol-react": [
-        "../../libs/stencil-component-react/src/index.ts"
+        "../../dist/libs/stencil-component-react"
       ],
       "@dynamic-devs/symbol/loader": ["../../dist/libs/stencil-component/loader"],
       "@dynamic-devs/test-react": ["../../libs/react-test/src/index.ts"],

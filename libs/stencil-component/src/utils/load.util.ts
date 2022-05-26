@@ -1,4 +1,5 @@
 import { StyleType } from "../types";
+import { addSeoToSvg } from "./seo.util";
 
 const REQUESTS = new Map<string, Promise<string | void>>();
 export const ICONS_CONTENT = new Map<string, string>();
@@ -13,6 +14,9 @@ export const getIconContent = (name: string, type: StyleType) => {
     request = fetch(url).then((response: Response) => {
       if (response.ok) {
         return response.text().then((svgContent: string) => {
+
+          svgContent = addSeoToSvg(name, svgContent);
+
           if (type === 'solid') {
             ICONS_SOLID_CONTENT.set(name, svgContent || '');
           } else {

@@ -10,6 +10,12 @@
 <p align="center">
 <a href="https://symbols.dynamicdevs.io/">symbols.dynamicdevs.io</a>
 </p>
+<br>
+<div align="center">
+
+[![Symbols Pipeline](https://github.com/dynamicdevs/symbols/actions/workflows/pipeline.yml/badge.svg?branch=develop)](https://github.com/dynamicdevs/symbols/actions/workflows/pipeline.yml)
+
+</div>
 
 ## About The Project
 

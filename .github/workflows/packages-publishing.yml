@@ -1,0 +1,142 @@
+name: Packages Publishing
+
+on:
+  release:
+    types: [published]
+
+# on:
+#   push:
+#     branches: [develop]
+
+jobs:
+  setup:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Cancel previous redundant builds
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Release version
+        run: echo ${{ github.event.release.tag_name }}
+      - name: Setup node
+        uses: ./.github/actions/cache-node-modules
+
+  build-stencil:
+    needs: [setup]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Stencil package Builder
+        uses: ./.github/actions/package-builder
+        with:
+          package: stencil-component
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-stencil:
+    needs: [build-stencil]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: stencil-component
+          path: dist
+      - name: Publish stencil-component
+        run: npm publish
+        working-directory: ./dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  build-react:
+    needs: [deploy-stencil]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: React package Builder
+        uses: ./.github/actions/package-builder
+        with:
+          package: stencil-component-react
+          token: ${{ secrets.GITHUB_TOKEN }}
+          updateSymbols: 'true'
+
+  deploy-react:
+    needs: [build-react]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: stencil-component-react
+          path: dist
+      - name: Publish stencil-component-react
+        run: npm publish
+        working-directory: ./dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  build-angular:
+    needs: [deploy-stencil]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.target_commitish }}
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Angular package Builder
+        uses: ./.github/actions/package-builder
+        with:
+          package: stencil-component-angular
+          token: ${{ secrets.GITHUB_TOKEN }}
+          updateSymbols: 'true'
+
+  deploy-angular:
+    needs: [build-angular]
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Symbol - Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: stencil-component-angular
+          path: dist
+      - name: Publish stencil-component-angular
+        run: npm publish
+        working-directory: ./dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

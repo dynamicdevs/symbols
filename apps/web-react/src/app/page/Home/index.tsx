@@ -10,6 +10,7 @@ import { IconNames, IconsDictionary } from '@/dictionary/icons-dictionary';
 import { cleanText } from '@/utils/clean-text';
 import { TypeIcon } from '@/types/type-icon';
 import useAnalyticsEventTracker from '@/hooks/useAnalytics';
+import { Helmet } from 'react-helmet';
 
 export const Home = () => {
   const [icons, setIcons] = useState<string[]>([]);
@@ -31,6 +32,15 @@ export const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Symbols | Free icons library SVG and PNG for your projects</title>
+        <meta name="description" content="Download icons SVG or PNG or include them in your react and angular projects with Symbols icons library" />
+        <meta property="og:title" content="Symbols | Free icons library SVG and PNG for your projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://symbols.dynamicdevs.io/" />
+        <meta property="og:image" content="https://symbol.blob.core.windows.net/symbol-images/web/banner-seo.png" />
+        <meta property="og:description" content="Download icons SVG or PNG or include them in your react and angular projects with Symbols icons library" />
+      </Helmet>
       <GridWrapper className="bg-primary-grey-600">
         <div className="col-span-4 md:col-span-8 lg:col-span-12 py-6 mx-auto w-full md:pt-14 md:px-5 lg:w-[648px] lg:px-0 lg:pb-8 xl:w-[824px]">
           <Search onChange={handleChangeSearch} />
