@@ -40,6 +40,7 @@ jobs:
         uses: ./.github/actions/package-builder
         with:
           package: stencil-component
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-stencil:
     needs: [build-stencil]
@@ -77,6 +78,7 @@ jobs:
         uses: ./.github/actions/package-builder
         with:
           package: stencil-component-react
+          token: ${{ secrets.GITHUB_TOKEN }}
           updateSymbols: 'true'
 
   deploy-react:
@@ -115,6 +117,7 @@ jobs:
         uses: ./.github/actions/package-builder
         with:
           package: stencil-component-angular
+          token: ${{ secrets.GITHUB_TOKEN }}
           updateSymbols: 'true'
 
   deploy-angular:
