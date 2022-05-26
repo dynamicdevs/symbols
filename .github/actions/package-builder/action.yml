@@ -5,6 +5,9 @@ inputs:
   package:
     description: 'The package name for build'
     required: true
+  token:
+    description: 'A github token'
+    required: true
   updateSymbols:
     description: 'If required updates Symbols dependency in components package.json'
     required: false
@@ -39,7 +42,7 @@ runs:
           git config --global user.email "info@dynamicdevs.io"
           git push
       env:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ inputs.token }}
       shell: bash
     - name: Upload build files
       uses: actions/upload-artifact@v3
