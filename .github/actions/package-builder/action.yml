@@ -6,7 +6,7 @@ inputs:
     description: 'The package name for build'
     required: true
   updateSymbols:
-    description: 'If required update Symbols version'
+    description: 'If required updates Symbols dependency in components package.json'
     required: false
     default: 'false'
 
