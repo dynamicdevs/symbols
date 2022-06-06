@@ -1,7 +1,10 @@
-import { Build, Component, h, Host, Prop, State, Watch } from "@stencil/core";
-import { StyleType } from "../../types";
-import { getIconContent, ICONS_OUTLINE_CONTENT, ICONS_SOLID_CONTENT } from "../../utils";
-
+import { Build, Component, h, Host, Prop, State, Watch } from '@stencil/core';
+import { StyleType } from '../../types';
+import {
+  getIconContent,
+  ICONS_OUTLINE_CONTENT,
+  ICONS_SOLID_CONTENT,
+} from '../../utils';
 
 @Component({
   tag: 'symbol-icon',
@@ -13,7 +16,7 @@ export class SymbolIcon {
   @Prop() name: string;
   @Prop() iconClass?: string;
   @Prop() type: StyleType = 'solid';
-  @State() private svgContent?: string | void;
+  @State() private svgContent?: string;
 
   public connectedCallback() {
     this.loadIcon();
@@ -34,7 +37,11 @@ export class SymbolIcon {
 
   render() {
     return (
-      <Host role="img" class={`${this.iconClass} symbol-icon-container`} innerHTML={this.svgContent}>
+      <Host role="img">
+        <span
+          class={`${this.iconClass} symbol-icon-container`}
+          innerHTML={this.svgContent}
+        ></span>
       </Host>
     );
   }
@@ -44,7 +51,7 @@ export class SymbolIcon {
       this.svgContent = ICONS_SOLID_CONTENT.get(name);
     } else {
       getIconContent(name, 'solid').then(() => {
-        this.svgContent = ICONS_SOLID_CONTENT.get(name)
+        this.svgContent = ICONS_SOLID_CONTENT.get(name);
       });
     }
   }
@@ -54,9 +61,8 @@ export class SymbolIcon {
       this.svgContent = ICONS_OUTLINE_CONTENT.get(name);
     } else {
       getIconContent(name, 'outline').then(() => {
-        this.svgContent = ICONS_OUTLINE_CONTENT.get(name)
+        this.svgContent = ICONS_OUTLINE_CONTENT.get(name);
       });
     }
   }
-
 }

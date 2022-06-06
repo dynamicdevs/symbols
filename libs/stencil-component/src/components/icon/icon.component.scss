@@ -1,27 +1,31 @@
-:host(.symbol-icon-container) {
-  display: inline-block;
-  &.symbol-sm {
-    width: 16px;
-    height: 16px;
-  }
-  &.symbol-md {
-    width: 24px;
-    height: 24px;
-  }
-  &.symbol-lg {
-    width: 32px;
-    height: 32px;
-  }
-  &.symbol-xl {
-    width: 40px;
-    height: 40px;
-  }
-  &.symbol-2xl {
-    width: 64px;
-    height: 64px;
-  }
-  &.symbol-3xl {
-    width: 96px;
-    height: 96px;
+:host {
+  display: inline-flex;
+
+  .symbol-icon-container {
+    display: inline-flex;
+    &.symbol-sm {
+      width: 16px;
+      height: 16px;
+    }
+    &.symbol-md {
+      width: 24px;
+      height: 24px;
+    }
+    &.symbol-lg {
+      width: 32px;
+      height: 32px;
+    }
+    &.symbol-xl {
+      width: 40px;
+      height: 40px;
+    }
+    &.symbol-2xl {
+      width: 64px;
+      height: 64px;
+    }
+    &.symbol-3xl {
+      width: 96px;
+      height: 96px;
+    }
   }
 }
