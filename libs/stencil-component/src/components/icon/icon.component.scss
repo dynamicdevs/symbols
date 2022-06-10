@@ -3,6 +3,9 @@
 
   .symbol-icon-container {
     display: inline-flex;
+    width: inherit;
+    height: inherit;
+
     &.symbol-sm {
       width: 16px;
       height: 16px;
