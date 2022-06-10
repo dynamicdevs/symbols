@@ -1,5 +1,9 @@
 import { Build, Component, h, Host, Prop, State, Watch } from '@stencil/core';
 import { StyleType } from '../../types';
+
+import dynamicOutline from '../../assets/icons/outline/ic_dynamic.svg';
+import dynamicSolid from '../../assets/icons/solid/ic_dynamic.svg';
+
 import {
   getIconContent,
   ICONS_OUTLINE_CONTENT,
@@ -40,7 +44,13 @@ export class SymbolIcon {
       <Host role="img">
         <span
           class={`${this.iconClass} symbol-icon-container`}
-          innerHTML={this.svgContent}
+          innerHTML={
+            this.name === 'dynamic'
+              ? this.type === 'solid'
+                ? dynamicSolid
+                : dynamicOutline
+              : this.svgContent
+          }
         ></span>
       </Host>
     );
