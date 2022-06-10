@@ -3,6 +3,8 @@ import { StyleType } from '../../types';
 
 import dynamicOutline from '../../assets/icons/outline/ic_dynamic.svg';
 import dynamicSolid from '../../assets/icons/solid/ic_dynamic.svg';
+import symbolOutline from '../../assets/icons/outline/ic_symbol.svg';
+import symbolSolid from '../../assets/icons/solid/ic_symbol.svg';
 
 import {
   getIconContent,
@@ -49,6 +51,10 @@ export class SymbolIcon {
               ? this.type === 'solid'
                 ? dynamicSolid
                 : dynamicOutline
+              : this.name === 'symbol'
+              ? this.type === 'solid'
+                ? symbolSolid
+                : symbolOutline
               : this.svgContent
           }
         ></span>
