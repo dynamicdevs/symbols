@@ -1,4 +1,4 @@
-import { Build, Component, h, Host, Prop, State, Watch } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 import { StyleType } from '../../types';
 
 import dynamicSolid from '../../assets/icons/solid/ic_dynamic.svg';
@@ -17,7 +17,7 @@ import dashboardSolid from '../../assets/icons/solid/ic_dashboard.svg';
 import downloadSolid from '../../assets/icons/solid/ic_download.svg';
 import emailSolid from '../../assets/icons/solid/ic_email.svg';
 import exitSolid from '../../assets/icons/solid/ic_exit.svg';
-import externalLinkSolid from '../../assets/icons/solid/ic_external.svg';
+import externalLinkSolid from '../../assets/icons/solid/ic_external_link.svg';
 import eyeHiddenSolid from '../../assets/icons/solid/ic_eye_hidden.svg';
 import eyeViewSolid from '../../assets/icons/solid/ic_eye_view.svg';
 import facebookSolid from '../../assets/icons/solid/ic_facebook.svg';
@@ -30,6 +30,7 @@ import githubSolid from '../../assets/icons/solid/ic_github.svg';
 import gitlabSolid from '../../assets/icons/solid/ic_gitlab.svg';
 import houseSolid from '../../assets/icons/solid/ic_house.svg';
 import importantSolid from '../../assets/icons/solid/ic_important.svg';
+import informationSolid from '../../assets/icons/solid/ic_information.svg';
 import instagramSolid from '../../assets/icons/solid/ic_instagram.svg';
 import kofiSolid from '../../assets/icons/solid/ic_kofi.svg';
 import linkedinSolid from '../../assets/icons/solid/ic_linkedin.svg';
@@ -41,7 +42,7 @@ import menuTwoSolid from '../../assets/icons/solid/ic_menu_two.svg';
 import menuSolid from '../../assets/icons/solid/ic_menu.svg';
 import messageSolid from '../../assets/icons/solid/ic_message.svg';
 import microphoneSolid from '../../assets/icons/solid/ic_microphone.svg';
-import minusSolid from '../../assets/icons/solid/ic_minu.svg';
+import minusSolid from '../../assets/icons/solid/ic_minus.svg';
 import moneySolid from '../../assets/icons/solid/ic_money.svg';
 import moonSolid from '../../assets/icons/solid/ic_moon.svg';
 import negativeSolid from '../../assets/icons/solid/ic_negative.svg';
@@ -85,7 +86,7 @@ import dashboardOutline from '../../assets/icons/outline/ic_dashboard.svg';
 import downloadOutline from '../../assets/icons/outline/ic_download.svg';
 import emailOutline from '../../assets/icons/outline/ic_email.svg';
 import exitOutline from '../../assets/icons/outline/ic_exit.svg';
-import externalLinkOutline from '../../assets/icons/outline/ic_external.svg';
+import externalLinkOutline from '../../assets/icons/outline/ic_external_link.svg';
 import eyeHiddenOutline from '../../assets/icons/outline/ic_eye_hidden.svg';
 import eyeViewOutline from '../../assets/icons/outline/ic_eye_view.svg';
 import facebookOutline from '../../assets/icons/outline/ic_facebook.svg';
@@ -98,6 +99,7 @@ import githubOutline from '../../assets/icons/outline/ic_github.svg';
 import gitlabOutline from '../../assets/icons/outline/ic_gitlab.svg';
 import houseOutline from '../../assets/icons/outline/ic_house.svg';
 import importantOutline from '../../assets/icons/outline/ic_important.svg';
+import informationOutline from '../../assets/icons/outline/ic_information.svg';
 import instagramOutline from '../../assets/icons/outline/ic_instagram.svg';
 import kofiOutline from '../../assets/icons/outline/ic_kofi.svg';
 import linkedinOutline from '../../assets/icons/outline/ic_linkedin.svg';
@@ -109,7 +111,7 @@ import menuTwoOutline from '../../assets/icons/outline/ic_menu_two.svg';
 import menuOutline from '../../assets/icons/outline/ic_menu.svg';
 import messageOutline from '../../assets/icons/outline/ic_message.svg';
 import microphoneOutline from '../../assets/icons/outline/ic_microphone.svg';
-import minusOutline from '../../assets/icons/outline/ic_minu.svg';
+import minusOutline from '../../assets/icons/outline/ic_minus.svg';
 import moneyOutline from '../../assets/icons/outline/ic_money.svg';
 import moonOutline from '../../assets/icons/outline/ic_moon.svg';
 import negativeOutline from '../../assets/icons/outline/ic_negative.svg';
@@ -140,10 +142,10 @@ import youtubeOutline from '../../assets/icons/outline/ic_youtube.svg';
 const solidIcons = {
   dynamic: dynamicSolid,
   symbol: symbolSolid,
-  arrowDown: arrowDownSolid,
-  arrowLeft: arrowLeftSolid,
-  arrowRight: arrowRightSolid,
-  arrowUp: arrowUpSolid,
+  arrow_down: arrowDownSolid,
+  arrow_left: arrowLeftSolid,
+  arrow_right: arrowRightSolid,
+  arrow_up: arrowUpSolid,
   bell: bellSolid,
   briefcase: briefcaseSolid,
   calendar: calendarSolid,
@@ -154,27 +156,28 @@ const solidIcons = {
   download: downloadSolid,
   email: emailSolid,
   exit: exitSolid,
-  externalLink: externalLinkSolid,
-  eyeHidden: eyeHiddenSolid,
-  eyeView: eyeViewSolid,
+  external_link: externalLinkSolid,
+  eye_hidden: eyeHiddenSolid,
+  eye_view: eyeViewSolid,
   facebook: facebookSolid,
   figma: figmaSolid,
-  filterAs: filterAsSolid,
-  filterDes: filterDesSolid,
-  filterSort: filterSortSolid,
+  filter_as: filterAsSolid,
+  filter_des: filterDesSolid,
+  filter_sort: filterSortSolid,
   filter: filterSolid,
   github: githubSolid,
   gitlab: gitlabSolid,
   house: houseSolid,
+  information: informationSolid,
   important: importantSolid,
   instagram: instagramSolid,
   kofi: kofiSolid,
   linkedin: linkedinSolid,
   list: listSolid,
   location: locationSolid,
-  menuLef: menuLeftSolid,
-  menuRight: menuRightSolid,
-  menuTwo: menuTwoSolid,
+  menu_left: menuLeftSolid,
+  menu_right: menuRightSolid,
+  menu_two: menuTwoSolid,
   menu: menuSolid,
   message: messageSolid,
   microphone: microphoneSolid,
@@ -210,10 +213,10 @@ const solidIcons = {
 const outlineIcons = {
   dynamic: dynamicOutline,
   symbol: symbolOutline,
-  arrowDown: arrowDownOutline,
-  arrowLeft: arrowLeftOutline,
-  arrowRight: arrowRightOutline,
-  arrowUp: arrowUpOutline,
+  arrow_down: arrowDownOutline,
+  arrow_left: arrowLeftOutline,
+  arrow_right: arrowRightOutline,
+  arrow_up: arrowUpOutline,
   bell: bellOutline,
   briefcase: briefcaseOutline,
   calendar: calendarOutline,
@@ -224,27 +227,28 @@ const outlineIcons = {
   download: downloadOutline,
   email: emailOutline,
   exit: exitOutline,
-  externalLink: externalLinkOutline,
-  eyeHidden: eyeHiddenOutline,
-  eyeView: eyeViewOutline,
+  external_link: externalLinkOutline,
+  eye_hidden: eyeHiddenOutline,
+  eye_view: eyeViewOutline,
   facebook: facebookOutline,
   figma: figmaOutline,
-  filterAs: filterAsOutline,
-  filterDes: filterDesOutline,
-  filterSort: filterSortOutline,
+  filter_as: filterAsOutline,
+  filter_des: filterDesOutline,
+  filter_sort: filterSortOutline,
   filter: filterOutline,
   github: githubOutline,
   gitlab: gitlabOutline,
   house: houseOutline,
+  information: informationOutline,
   important: importantOutline,
   instagram: instagramOutline,
   kofi: kofiOutline,
   linkedin: linkedinOutline,
   list: listOutline,
   location: locationOutline,
-  menuLef: menuLeftOutline,
-  menuRight: menuRightOutline,
-  menuTwo: menuTwoOutline,
+  menu_left: menuLeftOutline,
+  menu_right: menuRightOutline,
+  menu_two: menuTwoOutline,
   menu: menuOutline,
   message: messageOutline,
   microphone: microphoneOutline,
@@ -277,12 +281,6 @@ const outlineIcons = {
   youtube: youtubeOutline,
 };
 
-import {
-  getIconContent,
-  ICONS_OUTLINE_CONTENT,
-  ICONS_SOLID_CONTENT,
-} from '../../utils';
-
 @Component({
   tag: 'symbol-icon',
   styleUrl: 'icon.component.scss',
@@ -293,24 +291,6 @@ export class SymbolIcon {
   @Prop() name: string;
   @Prop() iconClass?: string;
   @Prop() type: StyleType = 'solid';
-  @State() private svgContent?: string;
-
-  public connectedCallback() {
-    this.loadIcon();
-  }
-
-  @Watch('name')
-  @Watch('type')
-  private loadIcon(): void {
-    if (!Build.isBrowser) {
-      return;
-    }
-    if (this.type === 'solid') {
-      this.getSolidIcon(this.name);
-    } else {
-      this.getOutlineIcon(this.name);
-    }
-  }
 
   render() {
     return (
@@ -325,25 +305,5 @@ export class SymbolIcon {
         ></span>
       </Host>
     );
-  }
-
-  private async getSolidIcon(name: string) {
-    if (ICONS_SOLID_CONTENT.has(name)) {
-      this.svgContent = ICONS_SOLID_CONTENT.get(name);
-    } else {
-      getIconContent(name, 'solid').then(() => {
-        this.svgContent = ICONS_SOLID_CONTENT.get(name);
-      });
-    }
-  }
-
-  private async getOutlineIcon(name: string) {
-    if (ICONS_OUTLINE_CONTENT.has(name)) {
-      this.svgContent = ICONS_OUTLINE_CONTENT.get(name);
-    } else {
-      getIconContent(name, 'outline').then(() => {
-        this.svgContent = ICONS_OUTLINE_CONTENT.get(name);
-      });
-    }
   }
 }
