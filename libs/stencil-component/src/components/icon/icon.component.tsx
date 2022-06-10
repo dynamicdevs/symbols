@@ -9,12 +9,11 @@ import {
 @Component({
   tag: 'symbol-icon',
   styleUrl: 'icon.component.scss',
-  shadow: false,
-  scoped: true,
+  shadow: true,
+  scoped: false,
 })
 export class SymbolIcon {
   @Prop() name: string;
-  @State()
   @Prop() iconClass?: string;
   @Prop() type: StyleType = 'solid';
   @State() private svgContent?: string;
@@ -25,7 +24,6 @@ export class SymbolIcon {
 
   @Watch('name')
   @Watch('type')
-  @Watch('iconClass')
   private loadIcon(): void {
     if (!Build.isBrowser) {
       return;
