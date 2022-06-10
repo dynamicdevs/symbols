@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 
 import { sass } from '@stencil/sass';
+import { svgOptimizerPlugin } from './utils/rollup.utils';
 
 import { reactOutputTarget } from '@stencil/react-output-target';
 const angularValueAccessorBindings: ValueAccessorConfig[] = [];
@@ -13,11 +14,12 @@ import {
 export const config: Config = {
   namespace: 'symbol',
   taskQueue: 'async',
-  plugins: [sass()],
+  plugins: [sass(), svgOptimizerPlugin()],
   outputTargets: [
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      copy: [{ src: './assets', dest: 'assets' }],
     },
     {
       type: 'dist-custom-elements',
