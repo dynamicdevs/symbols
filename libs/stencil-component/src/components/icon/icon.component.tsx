@@ -139,6 +139,44 @@ import uploadOutline from '../../assets/icons/outline/ic_upload.svg';
 import warningOutline from '../../assets/icons/outline/ic_warning.svg';
 import youtubeOutline from '../../assets/icons/outline/ic_youtube.svg';
 
+import bitcoinOutline from '../../assets/icons/outline/ic_bitcoin.svg';
+import cakeOutline from '../../assets/icons/outline/ic_cake.svg';
+import chickOutline from '../../assets/icons/outline/ic_chick.svg';
+import chickenLegOutline from '../../assets/icons/outline/ic_chicken_leg.svg';
+import discordOutline from '../../assets/icons/outline/ic_discord.svg';
+import drinkOutline from '../../assets/icons/outline/ic_drink.svg';
+import messengerOutline from '../../assets/icons/outline/ic_messenger.svg';
+import pandaOutline from '../../assets/icons/outline/ic_panda.svg';
+import patreonOutline from '../../assets/icons/outline/ic_patreon.svg';
+import paypalOutline from '../../assets/icons/outline/ic_paypal.svg';
+import pieceCakeOutline from '../../assets/icons/outline/ic_piece_cake.svg';
+import rootsOutline from '../../assets/icons/outline/ic_roots.svg';
+import sushiOutline from '../../assets/icons/outline/ic_sushi.svg';
+import telegramOutline from '../../assets/icons/outline/ic_telegram.svg';
+import tetherOutline from '../../assets/icons/outline/ic_tether.svg';
+import whatsappOutline from '../../assets/icons/outline/ic_whatsapp.svg';
+import wineOutline from '../../assets/icons/outline/ic_wine.svg';
+
+import bitcoinSolid from '../../assets/icons/solid/ic_bitcoin.svg';
+import cakeSolid from '../../assets/icons/solid/ic_cake.svg';
+import chickSolid from '../../assets/icons/solid/ic_chick.svg';
+import chickenLegSolid from '../../assets/icons/solid/ic_chicken_leg.svg';
+import discordSolid from '../../assets/icons/solid/ic_discord.svg';
+import drinkSolid from '../../assets/icons/solid/ic_drink.svg';
+import messengerSolid from '../../assets/icons/solid/ic_messenger.svg';
+import pandaSolid from '../../assets/icons/solid/ic_panda.svg';
+import patreonSolid from '../../assets/icons/solid/ic_patreon.svg';
+import paypalSolid from '../../assets/icons/solid/ic_paypal.svg';
+import pieceCakeSolid from '../../assets/icons/solid/ic_piece_cake.svg';
+import rootsSolid from '../../assets/icons/solid/ic_roots.svg';
+import sushiSolid from '../../assets/icons/solid/ic_sushi.svg';
+import telegramSolid from '../../assets/icons/solid/ic_telegram.svg';
+import tetherSolid from '../../assets/icons/solid/ic_tether.svg';
+import whatsappSolid from '../../assets/icons/solid/ic_whatsapp.svg';
+import wineSolid from '../../assets/icons/solid/ic_wine.svg';
+
+
+
 const solidIcons = {
   dynamic: dynamicSolid,
   symbol: symbolSolid,
@@ -208,6 +246,23 @@ const solidIcons = {
   upload: uploadSolid,
   warning: warningSolid,
   youtube: youtubeSolid,
+  bitcoin: bitcoinSolid,
+  chick: chickSolid,
+  cake: cakeSolid,
+  chicken_leg: chickenLegSolid,
+  discord: discordSolid,
+  drink: drinkSolid,
+  messenger: messengerSolid,
+  panda: pandaSolid,
+  patreon: patreonSolid,
+  paypal: paypalSolid,
+  piece_cake: pieceCakeSolid,
+  roots: rootsSolid,
+  sushi: sushiSolid,
+  telegram: telegramSolid,
+  tether: tetherSolid,
+  whatsapp: whatsappSolid,
+  wine: wineSolid,
 };
 
 const outlineIcons = {
@@ -279,6 +334,23 @@ const outlineIcons = {
   upload: uploadOutline,
   warning: warningOutline,
   youtube: youtubeOutline,
+  bitcoin: bitcoinOutline,
+  chick: chickOutline,
+  cake: cakeOutline,
+  chicken_leg: chickenLegOutline,
+  discord: discordOutline,
+  drink: drinkOutline,
+  messenger: messengerOutline,
+  panda: pandaOutline,
+  patreon: patreonOutline,
+  paypal: paypalOutline,
+  piece_cake: pieceCakeOutline,
+  roots: rootsOutline,
+  sushi: sushiOutline,
+  telegram: telegramOutline,
+  tether: tetherOutline,
+  whatsapp: whatsappOutline,
+  wine: wineOutline,
 };
 
 @Component({
