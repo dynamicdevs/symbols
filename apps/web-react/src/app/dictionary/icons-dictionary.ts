@@ -271,6 +271,78 @@ export const IconsDictionary = {
     en: ["shopping", "cart", "bag", "add", "buy", "buying", "groceries", "shop", "mart", "purchase"],
     es: ["compras", "carrito", "bolsa", "agregar", "comprar", "tienda", "cesta", "compra"],
   },
+  bitcoin: {
+    en: ["bitcoin", "crypto", "crytocurrency", "money", "currency", "payment"],
+    es: ["bitcoin", "cripto", "criptomoneda", "moneda", "pago", "dinero"],
+  },
+  tether: {
+    en: ["crypto", "crytocurrency", "money", "currency", "payment", "tether", "usdt"],
+    es: ["cripto", "criptomoneda", "moneda", "pago", "dinero", "tether", "usdt"],
+  },
+  ethereum: {
+    en: ["crypto", "crytocurrency", "money", "currency", "payment", "ethereum"],
+    es: ["cripto", "criptomoneda", "moneda", "pago", "dinero", "ethereum"],
+  },
+  paypal: {
+    en: ["money", "payment", "transfer", "send", "paypal"],
+    es: ["pago", "dinero", "transferir", "enviar", "paypal"],
+  },
+  drink: {
+    en: ["drink", "juice", "soda", "coke", "straw", "water"],
+    es: ["bebida", "jugo", "gaseosa", "soda", "coca cola", "pajilla", "cañita", "sorbete", "agua"],
+  },
+  cake: {
+    en: ["cake", "birthday", "candles", "celebration", "party"],
+    es: ["pastel", "cumpleaños", "velas", "celebración", "fiesta", "torta"],
+  },
+  piece_cake: {
+    en: ["cake", "birthday", "candles", "celebration", "party", "piece"],
+    es: ["pastel", "cumpleaños", "velas", "celebración", "fiesta", "torta", "porcion", "pedazo"],
+  },
+  wine: {
+    en: ["wine", "drink", "alcohol", "water", "glass"],
+    es: ["vino", "bebida", "alcohol", "agua", "vidrio"],
+  },
+  sushi: {
+    en: ["sushi", "japanese", "food", "sushi roll", "california roll"],
+    es: ["sushi", "japones", "comida", "asiatico", "makis", "california roll"],
+  },
+  chicken_leg: {
+    en: ["chicken leg", "food", "fried chicken"],
+    es: ["pierna de pollo", "comida", "pollo frito"],
+  },
+  patreon: {
+    en: ["patreon", "sponsor", "subscription", "support", "platform"],
+    es: ["patreon", "patrocinador", "suscripcion", "soporte", "plataforma"],
+  },
+  roots: {
+    en: ["roots", "brand", "product", "dynamic", "links"],
+    es: ["raices", "marca", "producto", "dynamic", "enlaces"],
+  },
+  discord: {
+    en: ["discord", "brand", "communication", "game", "gaming"],
+    es: ["discord", "marca", "comunicacion", "videojuegos", "juegos"],
+  },
+  telegram: {
+    en: ["telegram", "brand", "communication", "chat", "chatting", "group"],
+    es: ["telegram", "marca", "comunicacion", "chat", "conversacion", "grupo"],
+  },
+  whatsapp: {
+    en: ["whatsapp", "brand", "communication", "chat", "chatting", "group"],
+    es: ["whatsapp", "marca", "comunicacion", "chat", "conversacion", "grupo"],
+  },
+  messenger: {
+    en: ["messenger", "brand", "communication", "chat", "chatting", "group"],
+    es: ["messenger", "marca", "comunicacion", "chat", "conversacion", "grupo"],
+  },
+  chick: {
+    en: ["chick", "chicken", "animal", "fly", "cute"],
+    es: ["pollito", "pollo", "animal", "volar", "bonito"],
+  },
+  panda: {
+    en: ["panda", "bear", "animal", "lazy", "cute", "milagros"],
+    es: ["panda", "osos", "animal", "perezoso", "bonito", "milagros"],
+  },
 };
 
 export type IconNames = keyof typeof IconsDictionary;

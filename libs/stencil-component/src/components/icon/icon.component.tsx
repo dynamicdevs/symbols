@@ -140,6 +140,7 @@ import warningOutline from '../../assets/icons/outline/ic_warning.svg';
 import youtubeOutline from '../../assets/icons/outline/ic_youtube.svg';
 
 import bitcoinOutline from '../../assets/icons/outline/ic_bitcoin.svg';
+import ethereumOutline from '../../assets/icons/outline/ic_ethereum.svg';
 import cakeOutline from '../../assets/icons/outline/ic_cake.svg';
 import chickOutline from '../../assets/icons/outline/ic_chick.svg';
 import chickenLegOutline from '../../assets/icons/outline/ic_chicken_leg.svg';
@@ -158,6 +159,7 @@ import whatsappOutline from '../../assets/icons/outline/ic_whatsapp.svg';
 import wineOutline from '../../assets/icons/outline/ic_wine.svg';
 
 import bitcoinSolid from '../../assets/icons/solid/ic_bitcoin.svg';
+import ethereumSolid from '../../assets/icons/solid/ic_ethereum.svg';
 import cakeSolid from '../../assets/icons/solid/ic_cake.svg';
 import chickSolid from '../../assets/icons/solid/ic_chick.svg';
 import chickenLegSolid from '../../assets/icons/solid/ic_chicken_leg.svg';
@@ -263,6 +265,7 @@ const solidIcons = {
   tether: tetherSolid,
   whatsapp: whatsappSolid,
   wine: wineSolid,
+  ethereum: ethereumSolid,
 };
 
 const outlineIcons = {
@@ -351,6 +354,7 @@ const outlineIcons = {
   tether: tetherOutline,
   whatsapp: whatsappOutline,
   wine: wineOutline,
+  ethereum: ethereumOutline,
 };
 
 @Component({
