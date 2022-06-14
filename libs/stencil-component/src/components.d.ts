@@ -7,6 +7,350 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { StyleType } from "./types";
 export namespace Components {
+    interface IcArrowDownSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcArrowLeftSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcArrowRightSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcArrowUpSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcBellSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcBitcoinSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcBriefcaseSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcCakeSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcCalendarSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcCartSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcChickSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcChickenLegSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcClockSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcCopySvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDashboardSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDiscordSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDownloadSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDrinkSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDynamicSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcEmailSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcEthereumSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcExitSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcExternalLinkSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcEyeHiddenSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcEyeViewSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFacebookSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFigmaSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFilterAsSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFilterDesSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFilterSortSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcFilterSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcGithubSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcGitlabSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcHouseSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcImportantSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcInformationSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcInstagramSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcKofiSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcLinkedinSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcListSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcLocationSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMenuLeftSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMenuRightSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMenuSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMenuTwoSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMessageSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMessengerSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMicrophoneSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMinusSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMoneySvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcMoonSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcNegativeSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcNotionSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPandaSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPatreonSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPaypalSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPeopleSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPersonSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPieceCakeSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPlusSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPositiveSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcQuestionSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcRootsSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcRowsSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSearchSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSettingsSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcShareSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSpeakSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSpotifySvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSquareSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcStarSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSunSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSushiSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcSymbolSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTagSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTelegramSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTetherSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTiktokSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTrashSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTwitchSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTwitterSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcUploadSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcWarningSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcWhatsappSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcWineSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcYoutubeSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface SymbolIcon {
         "iconClass"?: string;
         "name": string;
@@ -14,6 +358,522 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLIcArrowDownSvgElement extends Components.IcArrowDownSvg, HTMLStencilElement {
+    }
+    var HTMLIcArrowDownSvgElement: {
+        prototype: HTMLIcArrowDownSvgElement;
+        new (): HTMLIcArrowDownSvgElement;
+    };
+    interface HTMLIcArrowLeftSvgElement extends Components.IcArrowLeftSvg, HTMLStencilElement {
+    }
+    var HTMLIcArrowLeftSvgElement: {
+        prototype: HTMLIcArrowLeftSvgElement;
+        new (): HTMLIcArrowLeftSvgElement;
+    };
+    interface HTMLIcArrowRightSvgElement extends Components.IcArrowRightSvg, HTMLStencilElement {
+    }
+    var HTMLIcArrowRightSvgElement: {
+        prototype: HTMLIcArrowRightSvgElement;
+        new (): HTMLIcArrowRightSvgElement;
+    };
+    interface HTMLIcArrowUpSvgElement extends Components.IcArrowUpSvg, HTMLStencilElement {
+    }
+    var HTMLIcArrowUpSvgElement: {
+        prototype: HTMLIcArrowUpSvgElement;
+        new (): HTMLIcArrowUpSvgElement;
+    };
+    interface HTMLIcBellSvgElement extends Components.IcBellSvg, HTMLStencilElement {
+    }
+    var HTMLIcBellSvgElement: {
+        prototype: HTMLIcBellSvgElement;
+        new (): HTMLIcBellSvgElement;
+    };
+    interface HTMLIcBitcoinSvgElement extends Components.IcBitcoinSvg, HTMLStencilElement {
+    }
+    var HTMLIcBitcoinSvgElement: {
+        prototype: HTMLIcBitcoinSvgElement;
+        new (): HTMLIcBitcoinSvgElement;
+    };
+    interface HTMLIcBriefcaseSvgElement extends Components.IcBriefcaseSvg, HTMLStencilElement {
+    }
+    var HTMLIcBriefcaseSvgElement: {
+        prototype: HTMLIcBriefcaseSvgElement;
+        new (): HTMLIcBriefcaseSvgElement;
+    };
+    interface HTMLIcCakeSvgElement extends Components.IcCakeSvg, HTMLStencilElement {
+    }
+    var HTMLIcCakeSvgElement: {
+        prototype: HTMLIcCakeSvgElement;
+        new (): HTMLIcCakeSvgElement;
+    };
+    interface HTMLIcCalendarSvgElement extends Components.IcCalendarSvg, HTMLStencilElement {
+    }
+    var HTMLIcCalendarSvgElement: {
+        prototype: HTMLIcCalendarSvgElement;
+        new (): HTMLIcCalendarSvgElement;
+    };
+    interface HTMLIcCartSvgElement extends Components.IcCartSvg, HTMLStencilElement {
+    }
+    var HTMLIcCartSvgElement: {
+        prototype: HTMLIcCartSvgElement;
+        new (): HTMLIcCartSvgElement;
+    };
+    interface HTMLIcChickSvgElement extends Components.IcChickSvg, HTMLStencilElement {
+    }
+    var HTMLIcChickSvgElement: {
+        prototype: HTMLIcChickSvgElement;
+        new (): HTMLIcChickSvgElement;
+    };
+    interface HTMLIcChickenLegSvgElement extends Components.IcChickenLegSvg, HTMLStencilElement {
+    }
+    var HTMLIcChickenLegSvgElement: {
+        prototype: HTMLIcChickenLegSvgElement;
+        new (): HTMLIcChickenLegSvgElement;
+    };
+    interface HTMLIcClockSvgElement extends Components.IcClockSvg, HTMLStencilElement {
+    }
+    var HTMLIcClockSvgElement: {
+        prototype: HTMLIcClockSvgElement;
+        new (): HTMLIcClockSvgElement;
+    };
+    interface HTMLIcCopySvgElement extends Components.IcCopySvg, HTMLStencilElement {
+    }
+    var HTMLIcCopySvgElement: {
+        prototype: HTMLIcCopySvgElement;
+        new (): HTMLIcCopySvgElement;
+    };
+    interface HTMLIcDashboardSvgElement extends Components.IcDashboardSvg, HTMLStencilElement {
+    }
+    var HTMLIcDashboardSvgElement: {
+        prototype: HTMLIcDashboardSvgElement;
+        new (): HTMLIcDashboardSvgElement;
+    };
+    interface HTMLIcDiscordSvgElement extends Components.IcDiscordSvg, HTMLStencilElement {
+    }
+    var HTMLIcDiscordSvgElement: {
+        prototype: HTMLIcDiscordSvgElement;
+        new (): HTMLIcDiscordSvgElement;
+    };
+    interface HTMLIcDownloadSvgElement extends Components.IcDownloadSvg, HTMLStencilElement {
+    }
+    var HTMLIcDownloadSvgElement: {
+        prototype: HTMLIcDownloadSvgElement;
+        new (): HTMLIcDownloadSvgElement;
+    };
+    interface HTMLIcDrinkSvgElement extends Components.IcDrinkSvg, HTMLStencilElement {
+    }
+    var HTMLIcDrinkSvgElement: {
+        prototype: HTMLIcDrinkSvgElement;
+        new (): HTMLIcDrinkSvgElement;
+    };
+    interface HTMLIcDynamicSvgElement extends Components.IcDynamicSvg, HTMLStencilElement {
+    }
+    var HTMLIcDynamicSvgElement: {
+        prototype: HTMLIcDynamicSvgElement;
+        new (): HTMLIcDynamicSvgElement;
+    };
+    interface HTMLIcEmailSvgElement extends Components.IcEmailSvg, HTMLStencilElement {
+    }
+    var HTMLIcEmailSvgElement: {
+        prototype: HTMLIcEmailSvgElement;
+        new (): HTMLIcEmailSvgElement;
+    };
+    interface HTMLIcEthereumSvgElement extends Components.IcEthereumSvg, HTMLStencilElement {
+    }
+    var HTMLIcEthereumSvgElement: {
+        prototype: HTMLIcEthereumSvgElement;
+        new (): HTMLIcEthereumSvgElement;
+    };
+    interface HTMLIcExitSvgElement extends Components.IcExitSvg, HTMLStencilElement {
+    }
+    var HTMLIcExitSvgElement: {
+        prototype: HTMLIcExitSvgElement;
+        new (): HTMLIcExitSvgElement;
+    };
+    interface HTMLIcExternalLinkSvgElement extends Components.IcExternalLinkSvg, HTMLStencilElement {
+    }
+    var HTMLIcExternalLinkSvgElement: {
+        prototype: HTMLIcExternalLinkSvgElement;
+        new (): HTMLIcExternalLinkSvgElement;
+    };
+    interface HTMLIcEyeHiddenSvgElement extends Components.IcEyeHiddenSvg, HTMLStencilElement {
+    }
+    var HTMLIcEyeHiddenSvgElement: {
+        prototype: HTMLIcEyeHiddenSvgElement;
+        new (): HTMLIcEyeHiddenSvgElement;
+    };
+    interface HTMLIcEyeViewSvgElement extends Components.IcEyeViewSvg, HTMLStencilElement {
+    }
+    var HTMLIcEyeViewSvgElement: {
+        prototype: HTMLIcEyeViewSvgElement;
+        new (): HTMLIcEyeViewSvgElement;
+    };
+    interface HTMLIcFacebookSvgElement extends Components.IcFacebookSvg, HTMLStencilElement {
+    }
+    var HTMLIcFacebookSvgElement: {
+        prototype: HTMLIcFacebookSvgElement;
+        new (): HTMLIcFacebookSvgElement;
+    };
+    interface HTMLIcFigmaSvgElement extends Components.IcFigmaSvg, HTMLStencilElement {
+    }
+    var HTMLIcFigmaSvgElement: {
+        prototype: HTMLIcFigmaSvgElement;
+        new (): HTMLIcFigmaSvgElement;
+    };
+    interface HTMLIcFilterAsSvgElement extends Components.IcFilterAsSvg, HTMLStencilElement {
+    }
+    var HTMLIcFilterAsSvgElement: {
+        prototype: HTMLIcFilterAsSvgElement;
+        new (): HTMLIcFilterAsSvgElement;
+    };
+    interface HTMLIcFilterDesSvgElement extends Components.IcFilterDesSvg, HTMLStencilElement {
+    }
+    var HTMLIcFilterDesSvgElement: {
+        prototype: HTMLIcFilterDesSvgElement;
+        new (): HTMLIcFilterDesSvgElement;
+    };
+    interface HTMLIcFilterSortSvgElement extends Components.IcFilterSortSvg, HTMLStencilElement {
+    }
+    var HTMLIcFilterSortSvgElement: {
+        prototype: HTMLIcFilterSortSvgElement;
+        new (): HTMLIcFilterSortSvgElement;
+    };
+    interface HTMLIcFilterSvgElement extends Components.IcFilterSvg, HTMLStencilElement {
+    }
+    var HTMLIcFilterSvgElement: {
+        prototype: HTMLIcFilterSvgElement;
+        new (): HTMLIcFilterSvgElement;
+    };
+    interface HTMLIcGithubSvgElement extends Components.IcGithubSvg, HTMLStencilElement {
+    }
+    var HTMLIcGithubSvgElement: {
+        prototype: HTMLIcGithubSvgElement;
+        new (): HTMLIcGithubSvgElement;
+    };
+    interface HTMLIcGitlabSvgElement extends Components.IcGitlabSvg, HTMLStencilElement {
+    }
+    var HTMLIcGitlabSvgElement: {
+        prototype: HTMLIcGitlabSvgElement;
+        new (): HTMLIcGitlabSvgElement;
+    };
+    interface HTMLIcHouseSvgElement extends Components.IcHouseSvg, HTMLStencilElement {
+    }
+    var HTMLIcHouseSvgElement: {
+        prototype: HTMLIcHouseSvgElement;
+        new (): HTMLIcHouseSvgElement;
+    };
+    interface HTMLIcImportantSvgElement extends Components.IcImportantSvg, HTMLStencilElement {
+    }
+    var HTMLIcImportantSvgElement: {
+        prototype: HTMLIcImportantSvgElement;
+        new (): HTMLIcImportantSvgElement;
+    };
+    interface HTMLIcInformationSvgElement extends Components.IcInformationSvg, HTMLStencilElement {
+    }
+    var HTMLIcInformationSvgElement: {
+        prototype: HTMLIcInformationSvgElement;
+        new (): HTMLIcInformationSvgElement;
+    };
+    interface HTMLIcInstagramSvgElement extends Components.IcInstagramSvg, HTMLStencilElement {
+    }
+    var HTMLIcInstagramSvgElement: {
+        prototype: HTMLIcInstagramSvgElement;
+        new (): HTMLIcInstagramSvgElement;
+    };
+    interface HTMLIcKofiSvgElement extends Components.IcKofiSvg, HTMLStencilElement {
+    }
+    var HTMLIcKofiSvgElement: {
+        prototype: HTMLIcKofiSvgElement;
+        new (): HTMLIcKofiSvgElement;
+    };
+    interface HTMLIcLinkedinSvgElement extends Components.IcLinkedinSvg, HTMLStencilElement {
+    }
+    var HTMLIcLinkedinSvgElement: {
+        prototype: HTMLIcLinkedinSvgElement;
+        new (): HTMLIcLinkedinSvgElement;
+    };
+    interface HTMLIcListSvgElement extends Components.IcListSvg, HTMLStencilElement {
+    }
+    var HTMLIcListSvgElement: {
+        prototype: HTMLIcListSvgElement;
+        new (): HTMLIcListSvgElement;
+    };
+    interface HTMLIcLocationSvgElement extends Components.IcLocationSvg, HTMLStencilElement {
+    }
+    var HTMLIcLocationSvgElement: {
+        prototype: HTMLIcLocationSvgElement;
+        new (): HTMLIcLocationSvgElement;
+    };
+    interface HTMLIcMenuLeftSvgElement extends Components.IcMenuLeftSvg, HTMLStencilElement {
+    }
+    var HTMLIcMenuLeftSvgElement: {
+        prototype: HTMLIcMenuLeftSvgElement;
+        new (): HTMLIcMenuLeftSvgElement;
+    };
+    interface HTMLIcMenuRightSvgElement extends Components.IcMenuRightSvg, HTMLStencilElement {
+    }
+    var HTMLIcMenuRightSvgElement: {
+        prototype: HTMLIcMenuRightSvgElement;
+        new (): HTMLIcMenuRightSvgElement;
+    };
+    interface HTMLIcMenuSvgElement extends Components.IcMenuSvg, HTMLStencilElement {
+    }
+    var HTMLIcMenuSvgElement: {
+        prototype: HTMLIcMenuSvgElement;
+        new (): HTMLIcMenuSvgElement;
+    };
+    interface HTMLIcMenuTwoSvgElement extends Components.IcMenuTwoSvg, HTMLStencilElement {
+    }
+    var HTMLIcMenuTwoSvgElement: {
+        prototype: HTMLIcMenuTwoSvgElement;
+        new (): HTMLIcMenuTwoSvgElement;
+    };
+    interface HTMLIcMessageSvgElement extends Components.IcMessageSvg, HTMLStencilElement {
+    }
+    var HTMLIcMessageSvgElement: {
+        prototype: HTMLIcMessageSvgElement;
+        new (): HTMLIcMessageSvgElement;
+    };
+    interface HTMLIcMessengerSvgElement extends Components.IcMessengerSvg, HTMLStencilElement {
+    }
+    var HTMLIcMessengerSvgElement: {
+        prototype: HTMLIcMessengerSvgElement;
+        new (): HTMLIcMessengerSvgElement;
+    };
+    interface HTMLIcMicrophoneSvgElement extends Components.IcMicrophoneSvg, HTMLStencilElement {
+    }
+    var HTMLIcMicrophoneSvgElement: {
+        prototype: HTMLIcMicrophoneSvgElement;
+        new (): HTMLIcMicrophoneSvgElement;
+    };
+    interface HTMLIcMinusSvgElement extends Components.IcMinusSvg, HTMLStencilElement {
+    }
+    var HTMLIcMinusSvgElement: {
+        prototype: HTMLIcMinusSvgElement;
+        new (): HTMLIcMinusSvgElement;
+    };
+    interface HTMLIcMoneySvgElement extends Components.IcMoneySvg, HTMLStencilElement {
+    }
+    var HTMLIcMoneySvgElement: {
+        prototype: HTMLIcMoneySvgElement;
+        new (): HTMLIcMoneySvgElement;
+    };
+    interface HTMLIcMoonSvgElement extends Components.IcMoonSvg, HTMLStencilElement {
+    }
+    var HTMLIcMoonSvgElement: {
+        prototype: HTMLIcMoonSvgElement;
+        new (): HTMLIcMoonSvgElement;
+    };
+    interface HTMLIcNegativeSvgElement extends Components.IcNegativeSvg, HTMLStencilElement {
+    }
+    var HTMLIcNegativeSvgElement: {
+        prototype: HTMLIcNegativeSvgElement;
+        new (): HTMLIcNegativeSvgElement;
+    };
+    interface HTMLIcNotionSvgElement extends Components.IcNotionSvg, HTMLStencilElement {
+    }
+    var HTMLIcNotionSvgElement: {
+        prototype: HTMLIcNotionSvgElement;
+        new (): HTMLIcNotionSvgElement;
+    };
+    interface HTMLIcPandaSvgElement extends Components.IcPandaSvg, HTMLStencilElement {
+    }
+    var HTMLIcPandaSvgElement: {
+        prototype: HTMLIcPandaSvgElement;
+        new (): HTMLIcPandaSvgElement;
+    };
+    interface HTMLIcPatreonSvgElement extends Components.IcPatreonSvg, HTMLStencilElement {
+    }
+    var HTMLIcPatreonSvgElement: {
+        prototype: HTMLIcPatreonSvgElement;
+        new (): HTMLIcPatreonSvgElement;
+    };
+    interface HTMLIcPaypalSvgElement extends Components.IcPaypalSvg, HTMLStencilElement {
+    }
+    var HTMLIcPaypalSvgElement: {
+        prototype: HTMLIcPaypalSvgElement;
+        new (): HTMLIcPaypalSvgElement;
+    };
+    interface HTMLIcPeopleSvgElement extends Components.IcPeopleSvg, HTMLStencilElement {
+    }
+    var HTMLIcPeopleSvgElement: {
+        prototype: HTMLIcPeopleSvgElement;
+        new (): HTMLIcPeopleSvgElement;
+    };
+    interface HTMLIcPersonSvgElement extends Components.IcPersonSvg, HTMLStencilElement {
+    }
+    var HTMLIcPersonSvgElement: {
+        prototype: HTMLIcPersonSvgElement;
+        new (): HTMLIcPersonSvgElement;
+    };
+    interface HTMLIcPieceCakeSvgElement extends Components.IcPieceCakeSvg, HTMLStencilElement {
+    }
+    var HTMLIcPieceCakeSvgElement: {
+        prototype: HTMLIcPieceCakeSvgElement;
+        new (): HTMLIcPieceCakeSvgElement;
+    };
+    interface HTMLIcPlusSvgElement extends Components.IcPlusSvg, HTMLStencilElement {
+    }
+    var HTMLIcPlusSvgElement: {
+        prototype: HTMLIcPlusSvgElement;
+        new (): HTMLIcPlusSvgElement;
+    };
+    interface HTMLIcPositiveSvgElement extends Components.IcPositiveSvg, HTMLStencilElement {
+    }
+    var HTMLIcPositiveSvgElement: {
+        prototype: HTMLIcPositiveSvgElement;
+        new (): HTMLIcPositiveSvgElement;
+    };
+    interface HTMLIcQuestionSvgElement extends Components.IcQuestionSvg, HTMLStencilElement {
+    }
+    var HTMLIcQuestionSvgElement: {
+        prototype: HTMLIcQuestionSvgElement;
+        new (): HTMLIcQuestionSvgElement;
+    };
+    interface HTMLIcRootsSvgElement extends Components.IcRootsSvg, HTMLStencilElement {
+    }
+    var HTMLIcRootsSvgElement: {
+        prototype: HTMLIcRootsSvgElement;
+        new (): HTMLIcRootsSvgElement;
+    };
+    interface HTMLIcRowsSvgElement extends Components.IcRowsSvg, HTMLStencilElement {
+    }
+    var HTMLIcRowsSvgElement: {
+        prototype: HTMLIcRowsSvgElement;
+        new (): HTMLIcRowsSvgElement;
+    };
+    interface HTMLIcSearchSvgElement extends Components.IcSearchSvg, HTMLStencilElement {
+    }
+    var HTMLIcSearchSvgElement: {
+        prototype: HTMLIcSearchSvgElement;
+        new (): HTMLIcSearchSvgElement;
+    };
+    interface HTMLIcSettingsSvgElement extends Components.IcSettingsSvg, HTMLStencilElement {
+    }
+    var HTMLIcSettingsSvgElement: {
+        prototype: HTMLIcSettingsSvgElement;
+        new (): HTMLIcSettingsSvgElement;
+    };
+    interface HTMLIcShareSvgElement extends Components.IcShareSvg, HTMLStencilElement {
+    }
+    var HTMLIcShareSvgElement: {
+        prototype: HTMLIcShareSvgElement;
+        new (): HTMLIcShareSvgElement;
+    };
+    interface HTMLIcSpeakSvgElement extends Components.IcSpeakSvg, HTMLStencilElement {
+    }
+    var HTMLIcSpeakSvgElement: {
+        prototype: HTMLIcSpeakSvgElement;
+        new (): HTMLIcSpeakSvgElement;
+    };
+    interface HTMLIcSpotifySvgElement extends Components.IcSpotifySvg, HTMLStencilElement {
+    }
+    var HTMLIcSpotifySvgElement: {
+        prototype: HTMLIcSpotifySvgElement;
+        new (): HTMLIcSpotifySvgElement;
+    };
+    interface HTMLIcSquareSvgElement extends Components.IcSquareSvg, HTMLStencilElement {
+    }
+    var HTMLIcSquareSvgElement: {
+        prototype: HTMLIcSquareSvgElement;
+        new (): HTMLIcSquareSvgElement;
+    };
+    interface HTMLIcStarSvgElement extends Components.IcStarSvg, HTMLStencilElement {
+    }
+    var HTMLIcStarSvgElement: {
+        prototype: HTMLIcStarSvgElement;
+        new (): HTMLIcStarSvgElement;
+    };
+    interface HTMLIcSunSvgElement extends Components.IcSunSvg, HTMLStencilElement {
+    }
+    var HTMLIcSunSvgElement: {
+        prototype: HTMLIcSunSvgElement;
+        new (): HTMLIcSunSvgElement;
+    };
+    interface HTMLIcSushiSvgElement extends Components.IcSushiSvg, HTMLStencilElement {
+    }
+    var HTMLIcSushiSvgElement: {
+        prototype: HTMLIcSushiSvgElement;
+        new (): HTMLIcSushiSvgElement;
+    };
+    interface HTMLIcSymbolSvgElement extends Components.IcSymbolSvg, HTMLStencilElement {
+    }
+    var HTMLIcSymbolSvgElement: {
+        prototype: HTMLIcSymbolSvgElement;
+        new (): HTMLIcSymbolSvgElement;
+    };
+    interface HTMLIcTagSvgElement extends Components.IcTagSvg, HTMLStencilElement {
+    }
+    var HTMLIcTagSvgElement: {
+        prototype: HTMLIcTagSvgElement;
+        new (): HTMLIcTagSvgElement;
+    };
+    interface HTMLIcTelegramSvgElement extends Components.IcTelegramSvg, HTMLStencilElement {
+    }
+    var HTMLIcTelegramSvgElement: {
+        prototype: HTMLIcTelegramSvgElement;
+        new (): HTMLIcTelegramSvgElement;
+    };
+    interface HTMLIcTetherSvgElement extends Components.IcTetherSvg, HTMLStencilElement {
+    }
+    var HTMLIcTetherSvgElement: {
+        prototype: HTMLIcTetherSvgElement;
+        new (): HTMLIcTetherSvgElement;
+    };
+    interface HTMLIcTiktokSvgElement extends Components.IcTiktokSvg, HTMLStencilElement {
+    }
+    var HTMLIcTiktokSvgElement: {
+        prototype: HTMLIcTiktokSvgElement;
+        new (): HTMLIcTiktokSvgElement;
+    };
+    interface HTMLIcTrashSvgElement extends Components.IcTrashSvg, HTMLStencilElement {
+    }
+    var HTMLIcTrashSvgElement: {
+        prototype: HTMLIcTrashSvgElement;
+        new (): HTMLIcTrashSvgElement;
+    };
+    interface HTMLIcTwitchSvgElement extends Components.IcTwitchSvg, HTMLStencilElement {
+    }
+    var HTMLIcTwitchSvgElement: {
+        prototype: HTMLIcTwitchSvgElement;
+        new (): HTMLIcTwitchSvgElement;
+    };
+    interface HTMLIcTwitterSvgElement extends Components.IcTwitterSvg, HTMLStencilElement {
+    }
+    var HTMLIcTwitterSvgElement: {
+        prototype: HTMLIcTwitterSvgElement;
+        new (): HTMLIcTwitterSvgElement;
+    };
+    interface HTMLIcUploadSvgElement extends Components.IcUploadSvg, HTMLStencilElement {
+    }
+    var HTMLIcUploadSvgElement: {
+        prototype: HTMLIcUploadSvgElement;
+        new (): HTMLIcUploadSvgElement;
+    };
+    interface HTMLIcWarningSvgElement extends Components.IcWarningSvg, HTMLStencilElement {
+    }
+    var HTMLIcWarningSvgElement: {
+        prototype: HTMLIcWarningSvgElement;
+        new (): HTMLIcWarningSvgElement;
+    };
+    interface HTMLIcWhatsappSvgElement extends Components.IcWhatsappSvg, HTMLStencilElement {
+    }
+    var HTMLIcWhatsappSvgElement: {
+        prototype: HTMLIcWhatsappSvgElement;
+        new (): HTMLIcWhatsappSvgElement;
+    };
+    interface HTMLIcWineSvgElement extends Components.IcWineSvg, HTMLStencilElement {
+    }
+    var HTMLIcWineSvgElement: {
+        prototype: HTMLIcWineSvgElement;
+        new (): HTMLIcWineSvgElement;
+    };
+    interface HTMLIcYoutubeSvgElement extends Components.IcYoutubeSvg, HTMLStencilElement {
+    }
+    var HTMLIcYoutubeSvgElement: {
+        prototype: HTMLIcYoutubeSvgElement;
+        new (): HTMLIcYoutubeSvgElement;
+    };
     interface HTMLSymbolIconElement extends Components.SymbolIcon, HTMLStencilElement {
     }
     var HTMLSymbolIconElement: {
@@ -21,16 +881,532 @@ declare global {
         new (): HTMLSymbolIconElement;
     };
     interface HTMLElementTagNameMap {
+        "ic-arrow-down-svg": HTMLIcArrowDownSvgElement;
+        "ic-arrow-left-svg": HTMLIcArrowLeftSvgElement;
+        "ic-arrow-right-svg": HTMLIcArrowRightSvgElement;
+        "ic-arrow-up-svg": HTMLIcArrowUpSvgElement;
+        "ic-bell-svg": HTMLIcBellSvgElement;
+        "ic-bitcoin-svg": HTMLIcBitcoinSvgElement;
+        "ic-briefcase-svg": HTMLIcBriefcaseSvgElement;
+        "ic-cake-svg": HTMLIcCakeSvgElement;
+        "ic-calendar-svg": HTMLIcCalendarSvgElement;
+        "ic-cart-svg": HTMLIcCartSvgElement;
+        "ic-chick-svg": HTMLIcChickSvgElement;
+        "ic-chicken-leg-svg": HTMLIcChickenLegSvgElement;
+        "ic-clock-svg": HTMLIcClockSvgElement;
+        "ic-copy-svg": HTMLIcCopySvgElement;
+        "ic-dashboard-svg": HTMLIcDashboardSvgElement;
+        "ic-discord-svg": HTMLIcDiscordSvgElement;
+        "ic-download-svg": HTMLIcDownloadSvgElement;
+        "ic-drink-svg": HTMLIcDrinkSvgElement;
+        "ic-dynamic-svg": HTMLIcDynamicSvgElement;
+        "ic-email-svg": HTMLIcEmailSvgElement;
+        "ic-ethereum-svg": HTMLIcEthereumSvgElement;
+        "ic-exit-svg": HTMLIcExitSvgElement;
+        "ic-external-link-svg": HTMLIcExternalLinkSvgElement;
+        "ic-eye-hidden-svg": HTMLIcEyeHiddenSvgElement;
+        "ic-eye-view-svg": HTMLIcEyeViewSvgElement;
+        "ic-facebook-svg": HTMLIcFacebookSvgElement;
+        "ic-figma-svg": HTMLIcFigmaSvgElement;
+        "ic-filter-as-svg": HTMLIcFilterAsSvgElement;
+        "ic-filter-des-svg": HTMLIcFilterDesSvgElement;
+        "ic-filter-sort-svg": HTMLIcFilterSortSvgElement;
+        "ic-filter-svg": HTMLIcFilterSvgElement;
+        "ic-github-svg": HTMLIcGithubSvgElement;
+        "ic-gitlab-svg": HTMLIcGitlabSvgElement;
+        "ic-house-svg": HTMLIcHouseSvgElement;
+        "ic-important-svg": HTMLIcImportantSvgElement;
+        "ic-information-svg": HTMLIcInformationSvgElement;
+        "ic-instagram-svg": HTMLIcInstagramSvgElement;
+        "ic-kofi-svg": HTMLIcKofiSvgElement;
+        "ic-linkedin-svg": HTMLIcLinkedinSvgElement;
+        "ic-list-svg": HTMLIcListSvgElement;
+        "ic-location-svg": HTMLIcLocationSvgElement;
+        "ic-menu-left-svg": HTMLIcMenuLeftSvgElement;
+        "ic-menu-right-svg": HTMLIcMenuRightSvgElement;
+        "ic-menu-svg": HTMLIcMenuSvgElement;
+        "ic-menu-two-svg": HTMLIcMenuTwoSvgElement;
+        "ic-message-svg": HTMLIcMessageSvgElement;
+        "ic-messenger-svg": HTMLIcMessengerSvgElement;
+        "ic-microphone-svg": HTMLIcMicrophoneSvgElement;
+        "ic-minus-svg": HTMLIcMinusSvgElement;
+        "ic-money-svg": HTMLIcMoneySvgElement;
+        "ic-moon-svg": HTMLIcMoonSvgElement;
+        "ic-negative-svg": HTMLIcNegativeSvgElement;
+        "ic-notion-svg": HTMLIcNotionSvgElement;
+        "ic-panda-svg": HTMLIcPandaSvgElement;
+        "ic-patreon-svg": HTMLIcPatreonSvgElement;
+        "ic-paypal-svg": HTMLIcPaypalSvgElement;
+        "ic-people-svg": HTMLIcPeopleSvgElement;
+        "ic-person-svg": HTMLIcPersonSvgElement;
+        "ic-piece-cake-svg": HTMLIcPieceCakeSvgElement;
+        "ic-plus-svg": HTMLIcPlusSvgElement;
+        "ic-positive-svg": HTMLIcPositiveSvgElement;
+        "ic-question-svg": HTMLIcQuestionSvgElement;
+        "ic-roots-svg": HTMLIcRootsSvgElement;
+        "ic-rows-svg": HTMLIcRowsSvgElement;
+        "ic-search-svg": HTMLIcSearchSvgElement;
+        "ic-settings-svg": HTMLIcSettingsSvgElement;
+        "ic-share-svg": HTMLIcShareSvgElement;
+        "ic-speak-svg": HTMLIcSpeakSvgElement;
+        "ic-spotify-svg": HTMLIcSpotifySvgElement;
+        "ic-square-svg": HTMLIcSquareSvgElement;
+        "ic-star-svg": HTMLIcStarSvgElement;
+        "ic-sun-svg": HTMLIcSunSvgElement;
+        "ic-sushi-svg": HTMLIcSushiSvgElement;
+        "ic-symbol-svg": HTMLIcSymbolSvgElement;
+        "ic-tag-svg": HTMLIcTagSvgElement;
+        "ic-telegram-svg": HTMLIcTelegramSvgElement;
+        "ic-tether-svg": HTMLIcTetherSvgElement;
+        "ic-tiktok-svg": HTMLIcTiktokSvgElement;
+        "ic-trash-svg": HTMLIcTrashSvgElement;
+        "ic-twitch-svg": HTMLIcTwitchSvgElement;
+        "ic-twitter-svg": HTMLIcTwitterSvgElement;
+        "ic-upload-svg": HTMLIcUploadSvgElement;
+        "ic-warning-svg": HTMLIcWarningSvgElement;
+        "ic-whatsapp-svg": HTMLIcWhatsappSvgElement;
+        "ic-wine-svg": HTMLIcWineSvgElement;
+        "ic-youtube-svg": HTMLIcYoutubeSvgElement;
         "symbol-icon": HTMLSymbolIconElement;
     }
 }
 declare namespace LocalJSX {
+    interface IcArrowDownSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcArrowLeftSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcArrowRightSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcArrowUpSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcBellSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcBitcoinSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcBriefcaseSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcCakeSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcCalendarSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcCartSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcChickSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcChickenLegSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcClockSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcCopySvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDashboardSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDiscordSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDownloadSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDrinkSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDynamicSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcEmailSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcEthereumSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcExitSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcExternalLinkSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcEyeHiddenSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcEyeViewSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFacebookSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFigmaSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFilterAsSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFilterDesSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFilterSortSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcFilterSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcGithubSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcGitlabSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcHouseSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcImportantSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcInformationSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcInstagramSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcKofiSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcLinkedinSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcListSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcLocationSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMenuLeftSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMenuRightSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMenuSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMenuTwoSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMessageSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMessengerSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMicrophoneSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMinusSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMoneySvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcMoonSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcNegativeSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcNotionSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPandaSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPatreonSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPaypalSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPeopleSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPersonSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPieceCakeSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPlusSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPositiveSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcQuestionSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcRootsSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcRowsSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSearchSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSettingsSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcShareSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSpeakSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSpotifySvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSquareSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcStarSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSunSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSushiSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcSymbolSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTagSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTelegramSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTetherSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTiktokSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTrashSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTwitchSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTwitterSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcUploadSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcWarningSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcWhatsappSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcWineSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcYoutubeSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface SymbolIcon {
         "iconClass"?: string;
         "name"?: string;
         "type"?: StyleType;
     }
     interface IntrinsicElements {
+        "ic-arrow-down-svg": IcArrowDownSvg;
+        "ic-arrow-left-svg": IcArrowLeftSvg;
+        "ic-arrow-right-svg": IcArrowRightSvg;
+        "ic-arrow-up-svg": IcArrowUpSvg;
+        "ic-bell-svg": IcBellSvg;
+        "ic-bitcoin-svg": IcBitcoinSvg;
+        "ic-briefcase-svg": IcBriefcaseSvg;
+        "ic-cake-svg": IcCakeSvg;
+        "ic-calendar-svg": IcCalendarSvg;
+        "ic-cart-svg": IcCartSvg;
+        "ic-chick-svg": IcChickSvg;
+        "ic-chicken-leg-svg": IcChickenLegSvg;
+        "ic-clock-svg": IcClockSvg;
+        "ic-copy-svg": IcCopySvg;
+        "ic-dashboard-svg": IcDashboardSvg;
+        "ic-discord-svg": IcDiscordSvg;
+        "ic-download-svg": IcDownloadSvg;
+        "ic-drink-svg": IcDrinkSvg;
+        "ic-dynamic-svg": IcDynamicSvg;
+        "ic-email-svg": IcEmailSvg;
+        "ic-ethereum-svg": IcEthereumSvg;
+        "ic-exit-svg": IcExitSvg;
+        "ic-external-link-svg": IcExternalLinkSvg;
+        "ic-eye-hidden-svg": IcEyeHiddenSvg;
+        "ic-eye-view-svg": IcEyeViewSvg;
+        "ic-facebook-svg": IcFacebookSvg;
+        "ic-figma-svg": IcFigmaSvg;
+        "ic-filter-as-svg": IcFilterAsSvg;
+        "ic-filter-des-svg": IcFilterDesSvg;
+        "ic-filter-sort-svg": IcFilterSortSvg;
+        "ic-filter-svg": IcFilterSvg;
+        "ic-github-svg": IcGithubSvg;
+        "ic-gitlab-svg": IcGitlabSvg;
+        "ic-house-svg": IcHouseSvg;
+        "ic-important-svg": IcImportantSvg;
+        "ic-information-svg": IcInformationSvg;
+        "ic-instagram-svg": IcInstagramSvg;
+        "ic-kofi-svg": IcKofiSvg;
+        "ic-linkedin-svg": IcLinkedinSvg;
+        "ic-list-svg": IcListSvg;
+        "ic-location-svg": IcLocationSvg;
+        "ic-menu-left-svg": IcMenuLeftSvg;
+        "ic-menu-right-svg": IcMenuRightSvg;
+        "ic-menu-svg": IcMenuSvg;
+        "ic-menu-two-svg": IcMenuTwoSvg;
+        "ic-message-svg": IcMessageSvg;
+        "ic-messenger-svg": IcMessengerSvg;
+        "ic-microphone-svg": IcMicrophoneSvg;
+        "ic-minus-svg": IcMinusSvg;
+        "ic-money-svg": IcMoneySvg;
+        "ic-moon-svg": IcMoonSvg;
+        "ic-negative-svg": IcNegativeSvg;
+        "ic-notion-svg": IcNotionSvg;
+        "ic-panda-svg": IcPandaSvg;
+        "ic-patreon-svg": IcPatreonSvg;
+        "ic-paypal-svg": IcPaypalSvg;
+        "ic-people-svg": IcPeopleSvg;
+        "ic-person-svg": IcPersonSvg;
+        "ic-piece-cake-svg": IcPieceCakeSvg;
+        "ic-plus-svg": IcPlusSvg;
+        "ic-positive-svg": IcPositiveSvg;
+        "ic-question-svg": IcQuestionSvg;
+        "ic-roots-svg": IcRootsSvg;
+        "ic-rows-svg": IcRowsSvg;
+        "ic-search-svg": IcSearchSvg;
+        "ic-settings-svg": IcSettingsSvg;
+        "ic-share-svg": IcShareSvg;
+        "ic-speak-svg": IcSpeakSvg;
+        "ic-spotify-svg": IcSpotifySvg;
+        "ic-square-svg": IcSquareSvg;
+        "ic-star-svg": IcStarSvg;
+        "ic-sun-svg": IcSunSvg;
+        "ic-sushi-svg": IcSushiSvg;
+        "ic-symbol-svg": IcSymbolSvg;
+        "ic-tag-svg": IcTagSvg;
+        "ic-telegram-svg": IcTelegramSvg;
+        "ic-tether-svg": IcTetherSvg;
+        "ic-tiktok-svg": IcTiktokSvg;
+        "ic-trash-svg": IcTrashSvg;
+        "ic-twitch-svg": IcTwitchSvg;
+        "ic-twitter-svg": IcTwitterSvg;
+        "ic-upload-svg": IcUploadSvg;
+        "ic-warning-svg": IcWarningSvg;
+        "ic-whatsapp-svg": IcWhatsappSvg;
+        "ic-wine-svg": IcWineSvg;
+        "ic-youtube-svg": IcYoutubeSvg;
         "symbol-icon": SymbolIcon;
     }
 }
@@ -38,6 +1414,92 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ic-arrow-down-svg": LocalJSX.IcArrowDownSvg & JSXBase.HTMLAttributes<HTMLIcArrowDownSvgElement>;
+            "ic-arrow-left-svg": LocalJSX.IcArrowLeftSvg & JSXBase.HTMLAttributes<HTMLIcArrowLeftSvgElement>;
+            "ic-arrow-right-svg": LocalJSX.IcArrowRightSvg & JSXBase.HTMLAttributes<HTMLIcArrowRightSvgElement>;
+            "ic-arrow-up-svg": LocalJSX.IcArrowUpSvg & JSXBase.HTMLAttributes<HTMLIcArrowUpSvgElement>;
+            "ic-bell-svg": LocalJSX.IcBellSvg & JSXBase.HTMLAttributes<HTMLIcBellSvgElement>;
+            "ic-bitcoin-svg": LocalJSX.IcBitcoinSvg & JSXBase.HTMLAttributes<HTMLIcBitcoinSvgElement>;
+            "ic-briefcase-svg": LocalJSX.IcBriefcaseSvg & JSXBase.HTMLAttributes<HTMLIcBriefcaseSvgElement>;
+            "ic-cake-svg": LocalJSX.IcCakeSvg & JSXBase.HTMLAttributes<HTMLIcCakeSvgElement>;
+            "ic-calendar-svg": LocalJSX.IcCalendarSvg & JSXBase.HTMLAttributes<HTMLIcCalendarSvgElement>;
+            "ic-cart-svg": LocalJSX.IcCartSvg & JSXBase.HTMLAttributes<HTMLIcCartSvgElement>;
+            "ic-chick-svg": LocalJSX.IcChickSvg & JSXBase.HTMLAttributes<HTMLIcChickSvgElement>;
+            "ic-chicken-leg-svg": LocalJSX.IcChickenLegSvg & JSXBase.HTMLAttributes<HTMLIcChickenLegSvgElement>;
+            "ic-clock-svg": LocalJSX.IcClockSvg & JSXBase.HTMLAttributes<HTMLIcClockSvgElement>;
+            "ic-copy-svg": LocalJSX.IcCopySvg & JSXBase.HTMLAttributes<HTMLIcCopySvgElement>;
+            "ic-dashboard-svg": LocalJSX.IcDashboardSvg & JSXBase.HTMLAttributes<HTMLIcDashboardSvgElement>;
+            "ic-discord-svg": LocalJSX.IcDiscordSvg & JSXBase.HTMLAttributes<HTMLIcDiscordSvgElement>;
+            "ic-download-svg": LocalJSX.IcDownloadSvg & JSXBase.HTMLAttributes<HTMLIcDownloadSvgElement>;
+            "ic-drink-svg": LocalJSX.IcDrinkSvg & JSXBase.HTMLAttributes<HTMLIcDrinkSvgElement>;
+            "ic-dynamic-svg": LocalJSX.IcDynamicSvg & JSXBase.HTMLAttributes<HTMLIcDynamicSvgElement>;
+            "ic-email-svg": LocalJSX.IcEmailSvg & JSXBase.HTMLAttributes<HTMLIcEmailSvgElement>;
+            "ic-ethereum-svg": LocalJSX.IcEthereumSvg & JSXBase.HTMLAttributes<HTMLIcEthereumSvgElement>;
+            "ic-exit-svg": LocalJSX.IcExitSvg & JSXBase.HTMLAttributes<HTMLIcExitSvgElement>;
+            "ic-external-link-svg": LocalJSX.IcExternalLinkSvg & JSXBase.HTMLAttributes<HTMLIcExternalLinkSvgElement>;
+            "ic-eye-hidden-svg": LocalJSX.IcEyeHiddenSvg & JSXBase.HTMLAttributes<HTMLIcEyeHiddenSvgElement>;
+            "ic-eye-view-svg": LocalJSX.IcEyeViewSvg & JSXBase.HTMLAttributes<HTMLIcEyeViewSvgElement>;
+            "ic-facebook-svg": LocalJSX.IcFacebookSvg & JSXBase.HTMLAttributes<HTMLIcFacebookSvgElement>;
+            "ic-figma-svg": LocalJSX.IcFigmaSvg & JSXBase.HTMLAttributes<HTMLIcFigmaSvgElement>;
+            "ic-filter-as-svg": LocalJSX.IcFilterAsSvg & JSXBase.HTMLAttributes<HTMLIcFilterAsSvgElement>;
+            "ic-filter-des-svg": LocalJSX.IcFilterDesSvg & JSXBase.HTMLAttributes<HTMLIcFilterDesSvgElement>;
+            "ic-filter-sort-svg": LocalJSX.IcFilterSortSvg & JSXBase.HTMLAttributes<HTMLIcFilterSortSvgElement>;
+            "ic-filter-svg": LocalJSX.IcFilterSvg & JSXBase.HTMLAttributes<HTMLIcFilterSvgElement>;
+            "ic-github-svg": LocalJSX.IcGithubSvg & JSXBase.HTMLAttributes<HTMLIcGithubSvgElement>;
+            "ic-gitlab-svg": LocalJSX.IcGitlabSvg & JSXBase.HTMLAttributes<HTMLIcGitlabSvgElement>;
+            "ic-house-svg": LocalJSX.IcHouseSvg & JSXBase.HTMLAttributes<HTMLIcHouseSvgElement>;
+            "ic-important-svg": LocalJSX.IcImportantSvg & JSXBase.HTMLAttributes<HTMLIcImportantSvgElement>;
+            "ic-information-svg": LocalJSX.IcInformationSvg & JSXBase.HTMLAttributes<HTMLIcInformationSvgElement>;
+            "ic-instagram-svg": LocalJSX.IcInstagramSvg & JSXBase.HTMLAttributes<HTMLIcInstagramSvgElement>;
+            "ic-kofi-svg": LocalJSX.IcKofiSvg & JSXBase.HTMLAttributes<HTMLIcKofiSvgElement>;
+            "ic-linkedin-svg": LocalJSX.IcLinkedinSvg & JSXBase.HTMLAttributes<HTMLIcLinkedinSvgElement>;
+            "ic-list-svg": LocalJSX.IcListSvg & JSXBase.HTMLAttributes<HTMLIcListSvgElement>;
+            "ic-location-svg": LocalJSX.IcLocationSvg & JSXBase.HTMLAttributes<HTMLIcLocationSvgElement>;
+            "ic-menu-left-svg": LocalJSX.IcMenuLeftSvg & JSXBase.HTMLAttributes<HTMLIcMenuLeftSvgElement>;
+            "ic-menu-right-svg": LocalJSX.IcMenuRightSvg & JSXBase.HTMLAttributes<HTMLIcMenuRightSvgElement>;
+            "ic-menu-svg": LocalJSX.IcMenuSvg & JSXBase.HTMLAttributes<HTMLIcMenuSvgElement>;
+            "ic-menu-two-svg": LocalJSX.IcMenuTwoSvg & JSXBase.HTMLAttributes<HTMLIcMenuTwoSvgElement>;
+            "ic-message-svg": LocalJSX.IcMessageSvg & JSXBase.HTMLAttributes<HTMLIcMessageSvgElement>;
+            "ic-messenger-svg": LocalJSX.IcMessengerSvg & JSXBase.HTMLAttributes<HTMLIcMessengerSvgElement>;
+            "ic-microphone-svg": LocalJSX.IcMicrophoneSvg & JSXBase.HTMLAttributes<HTMLIcMicrophoneSvgElement>;
+            "ic-minus-svg": LocalJSX.IcMinusSvg & JSXBase.HTMLAttributes<HTMLIcMinusSvgElement>;
+            "ic-money-svg": LocalJSX.IcMoneySvg & JSXBase.HTMLAttributes<HTMLIcMoneySvgElement>;
+            "ic-moon-svg": LocalJSX.IcMoonSvg & JSXBase.HTMLAttributes<HTMLIcMoonSvgElement>;
+            "ic-negative-svg": LocalJSX.IcNegativeSvg & JSXBase.HTMLAttributes<HTMLIcNegativeSvgElement>;
+            "ic-notion-svg": LocalJSX.IcNotionSvg & JSXBase.HTMLAttributes<HTMLIcNotionSvgElement>;
+            "ic-panda-svg": LocalJSX.IcPandaSvg & JSXBase.HTMLAttributes<HTMLIcPandaSvgElement>;
+            "ic-patreon-svg": LocalJSX.IcPatreonSvg & JSXBase.HTMLAttributes<HTMLIcPatreonSvgElement>;
+            "ic-paypal-svg": LocalJSX.IcPaypalSvg & JSXBase.HTMLAttributes<HTMLIcPaypalSvgElement>;
+            "ic-people-svg": LocalJSX.IcPeopleSvg & JSXBase.HTMLAttributes<HTMLIcPeopleSvgElement>;
+            "ic-person-svg": LocalJSX.IcPersonSvg & JSXBase.HTMLAttributes<HTMLIcPersonSvgElement>;
+            "ic-piece-cake-svg": LocalJSX.IcPieceCakeSvg & JSXBase.HTMLAttributes<HTMLIcPieceCakeSvgElement>;
+            "ic-plus-svg": LocalJSX.IcPlusSvg & JSXBase.HTMLAttributes<HTMLIcPlusSvgElement>;
+            "ic-positive-svg": LocalJSX.IcPositiveSvg & JSXBase.HTMLAttributes<HTMLIcPositiveSvgElement>;
+            "ic-question-svg": LocalJSX.IcQuestionSvg & JSXBase.HTMLAttributes<HTMLIcQuestionSvgElement>;
+            "ic-roots-svg": LocalJSX.IcRootsSvg & JSXBase.HTMLAttributes<HTMLIcRootsSvgElement>;
+            "ic-rows-svg": LocalJSX.IcRowsSvg & JSXBase.HTMLAttributes<HTMLIcRowsSvgElement>;
+            "ic-search-svg": LocalJSX.IcSearchSvg & JSXBase.HTMLAttributes<HTMLIcSearchSvgElement>;
+            "ic-settings-svg": LocalJSX.IcSettingsSvg & JSXBase.HTMLAttributes<HTMLIcSettingsSvgElement>;
+            "ic-share-svg": LocalJSX.IcShareSvg & JSXBase.HTMLAttributes<HTMLIcShareSvgElement>;
+            "ic-speak-svg": LocalJSX.IcSpeakSvg & JSXBase.HTMLAttributes<HTMLIcSpeakSvgElement>;
+            "ic-spotify-svg": LocalJSX.IcSpotifySvg & JSXBase.HTMLAttributes<HTMLIcSpotifySvgElement>;
+            "ic-square-svg": LocalJSX.IcSquareSvg & JSXBase.HTMLAttributes<HTMLIcSquareSvgElement>;
+            "ic-star-svg": LocalJSX.IcStarSvg & JSXBase.HTMLAttributes<HTMLIcStarSvgElement>;
+            "ic-sun-svg": LocalJSX.IcSunSvg & JSXBase.HTMLAttributes<HTMLIcSunSvgElement>;
+            "ic-sushi-svg": LocalJSX.IcSushiSvg & JSXBase.HTMLAttributes<HTMLIcSushiSvgElement>;
+            "ic-symbol-svg": LocalJSX.IcSymbolSvg & JSXBase.HTMLAttributes<HTMLIcSymbolSvgElement>;
+            "ic-tag-svg": LocalJSX.IcTagSvg & JSXBase.HTMLAttributes<HTMLIcTagSvgElement>;
+            "ic-telegram-svg": LocalJSX.IcTelegramSvg & JSXBase.HTMLAttributes<HTMLIcTelegramSvgElement>;
+            "ic-tether-svg": LocalJSX.IcTetherSvg & JSXBase.HTMLAttributes<HTMLIcTetherSvgElement>;
+            "ic-tiktok-svg": LocalJSX.IcTiktokSvg & JSXBase.HTMLAttributes<HTMLIcTiktokSvgElement>;
+            "ic-trash-svg": LocalJSX.IcTrashSvg & JSXBase.HTMLAttributes<HTMLIcTrashSvgElement>;
+            "ic-twitch-svg": LocalJSX.IcTwitchSvg & JSXBase.HTMLAttributes<HTMLIcTwitchSvgElement>;
+            "ic-twitter-svg": LocalJSX.IcTwitterSvg & JSXBase.HTMLAttributes<HTMLIcTwitterSvgElement>;
+            "ic-upload-svg": LocalJSX.IcUploadSvg & JSXBase.HTMLAttributes<HTMLIcUploadSvgElement>;
+            "ic-warning-svg": LocalJSX.IcWarningSvg & JSXBase.HTMLAttributes<HTMLIcWarningSvgElement>;
+            "ic-whatsapp-svg": LocalJSX.IcWhatsappSvg & JSXBase.HTMLAttributes<HTMLIcWhatsappSvgElement>;
+            "ic-wine-svg": LocalJSX.IcWineSvg & JSXBase.HTMLAttributes<HTMLIcWineSvgElement>;
+            "ic-youtube-svg": LocalJSX.IcYoutubeSvg & JSXBase.HTMLAttributes<HTMLIcYoutubeSvgElement>;
             "symbol-icon": LocalJSX.SymbolIcon & JSXBase.HTMLAttributes<HTMLSymbolIconElement>;
         }
     }
