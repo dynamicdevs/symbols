@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 import { sass } from '@stencil/sass';
-import { svgOptimizerPlugin } from './utils/rollup.utils';
+import { svgOptimizerPlugin } from './src/utils/rollup.utils';
 
 import { reactOutputTarget } from '@stencil/react-output-target';
 const angularValueAccessorBindings: ValueAccessorConfig[] = [];

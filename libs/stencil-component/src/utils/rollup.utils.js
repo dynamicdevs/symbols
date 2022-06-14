@@ -1,4 +1,4 @@
-const SVGO = require('svgo');
+const { optimize } = require('svgo');
 
 const usePlugin = (fileName) => {
     return /.svg$/i.test(fileName);
@@ -28,13 +28,12 @@ exports.svgOptimizerPlugin = () => {
                 return null
             }
 
-            const svgo = new SVGO();
-            return svgo.optimize(svgBase64, { path: fileName }).then((result) => {
-                return {
-                    id: fileName,
-                    code: `export default '${result.data}'`,
-                }
-            });
+            const result = optimize(svgBase64, { path: fileName });
+
+            return {
+              id: fileName,
+              code: `export default '${result.data}'`,
+            }
         },
     };
 }
