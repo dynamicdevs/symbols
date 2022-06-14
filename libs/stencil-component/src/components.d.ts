@@ -27,7 +27,15 @@ export namespace Components {
         "iconClass"?: string;
         "type": StyleType;
     }
+    interface IcBitcoinSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface IcBriefcaseSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcCakeSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -36,6 +44,14 @@ export namespace Components {
         "type": StyleType;
     }
     interface IcCartSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcChickSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcChickenLegSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -51,7 +67,15 @@ export namespace Components {
         "iconClass"?: string;
         "type": StyleType;
     }
+    interface IcDiscordSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface IcDownloadSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcDrinkSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -60,6 +84,10 @@ export namespace Components {
         "type": StyleType;
     }
     interface IcEmailSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcEthereumSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -163,6 +191,10 @@ export namespace Components {
         "iconClass"?: string;
         "type": StyleType;
     }
+    interface IcMessengerSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface IcMicrophoneSvg {
         "iconClass"?: string;
         "type": StyleType;
@@ -187,11 +219,27 @@ export namespace Components {
         "iconClass"?: string;
         "type": StyleType;
     }
+    interface IcPandaSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPatreonSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPaypalSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface IcPeopleSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
     interface IcPersonSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcPieceCakeSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -204,6 +252,10 @@ export namespace Components {
         "type": StyleType;
     }
     interface IcQuestionSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcRootsSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -243,11 +295,23 @@ export namespace Components {
         "iconClass"?: string;
         "type": StyleType;
     }
+    interface IcSushiSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
     interface IcSymbolSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
     interface IcTagSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTelegramSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcTetherSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -272,6 +336,14 @@ export namespace Components {
         "type": StyleType;
     }
     interface IcWarningSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcWhatsappSvg {
+        "iconClass"?: string;
+        "type": StyleType;
+    }
+    interface IcWineSvg {
         "iconClass"?: string;
         "type": StyleType;
     }
@@ -316,11 +388,23 @@ declare global {
         prototype: HTMLIcBellSvgElement;
         new (): HTMLIcBellSvgElement;
     };
+    interface HTMLIcBitcoinSvgElement extends Components.IcBitcoinSvg, HTMLStencilElement {
+    }
+    var HTMLIcBitcoinSvgElement: {
+        prototype: HTMLIcBitcoinSvgElement;
+        new (): HTMLIcBitcoinSvgElement;
+    };
     interface HTMLIcBriefcaseSvgElement extends Components.IcBriefcaseSvg, HTMLStencilElement {
     }
     var HTMLIcBriefcaseSvgElement: {
         prototype: HTMLIcBriefcaseSvgElement;
         new (): HTMLIcBriefcaseSvgElement;
+    };
+    interface HTMLIcCakeSvgElement extends Components.IcCakeSvg, HTMLStencilElement {
+    }
+    var HTMLIcCakeSvgElement: {
+        prototype: HTMLIcCakeSvgElement;
+        new (): HTMLIcCakeSvgElement;
     };
     interface HTMLIcCalendarSvgElement extends Components.IcCalendarSvg, HTMLStencilElement {
     }
@@ -333,6 +417,18 @@ declare global {
     var HTMLIcCartSvgElement: {
         prototype: HTMLIcCartSvgElement;
         new (): HTMLIcCartSvgElement;
+    };
+    interface HTMLIcChickSvgElement extends Components.IcChickSvg, HTMLStencilElement {
+    }
+    var HTMLIcChickSvgElement: {
+        prototype: HTMLIcChickSvgElement;
+        new (): HTMLIcChickSvgElement;
+    };
+    interface HTMLIcChickenLegSvgElement extends Components.IcChickenLegSvg, HTMLStencilElement {
+    }
+    var HTMLIcChickenLegSvgElement: {
+        prototype: HTMLIcChickenLegSvgElement;
+        new (): HTMLIcChickenLegSvgElement;
     };
     interface HTMLIcClockSvgElement extends Components.IcClockSvg, HTMLStencilElement {
     }
@@ -352,11 +448,23 @@ declare global {
         prototype: HTMLIcDashboardSvgElement;
         new (): HTMLIcDashboardSvgElement;
     };
+    interface HTMLIcDiscordSvgElement extends Components.IcDiscordSvg, HTMLStencilElement {
+    }
+    var HTMLIcDiscordSvgElement: {
+        prototype: HTMLIcDiscordSvgElement;
+        new (): HTMLIcDiscordSvgElement;
+    };
     interface HTMLIcDownloadSvgElement extends Components.IcDownloadSvg, HTMLStencilElement {
     }
     var HTMLIcDownloadSvgElement: {
         prototype: HTMLIcDownloadSvgElement;
         new (): HTMLIcDownloadSvgElement;
+    };
+    interface HTMLIcDrinkSvgElement extends Components.IcDrinkSvg, HTMLStencilElement {
+    }
+    var HTMLIcDrinkSvgElement: {
+        prototype: HTMLIcDrinkSvgElement;
+        new (): HTMLIcDrinkSvgElement;
     };
     interface HTMLIcDynamicSvgElement extends Components.IcDynamicSvg, HTMLStencilElement {
     }
@@ -369,6 +477,12 @@ declare global {
     var HTMLIcEmailSvgElement: {
         prototype: HTMLIcEmailSvgElement;
         new (): HTMLIcEmailSvgElement;
+    };
+    interface HTMLIcEthereumSvgElement extends Components.IcEthereumSvg, HTMLStencilElement {
+    }
+    var HTMLIcEthereumSvgElement: {
+        prototype: HTMLIcEthereumSvgElement;
+        new (): HTMLIcEthereumSvgElement;
     };
     interface HTMLIcExitSvgElement extends Components.IcExitSvg, HTMLStencilElement {
     }
@@ -520,6 +634,12 @@ declare global {
         prototype: HTMLIcMessageSvgElement;
         new (): HTMLIcMessageSvgElement;
     };
+    interface HTMLIcMessengerSvgElement extends Components.IcMessengerSvg, HTMLStencilElement {
+    }
+    var HTMLIcMessengerSvgElement: {
+        prototype: HTMLIcMessengerSvgElement;
+        new (): HTMLIcMessengerSvgElement;
+    };
     interface HTMLIcMicrophoneSvgElement extends Components.IcMicrophoneSvg, HTMLStencilElement {
     }
     var HTMLIcMicrophoneSvgElement: {
@@ -556,6 +676,24 @@ declare global {
         prototype: HTMLIcNotionSvgElement;
         new (): HTMLIcNotionSvgElement;
     };
+    interface HTMLIcPandaSvgElement extends Components.IcPandaSvg, HTMLStencilElement {
+    }
+    var HTMLIcPandaSvgElement: {
+        prototype: HTMLIcPandaSvgElement;
+        new (): HTMLIcPandaSvgElement;
+    };
+    interface HTMLIcPatreonSvgElement extends Components.IcPatreonSvg, HTMLStencilElement {
+    }
+    var HTMLIcPatreonSvgElement: {
+        prototype: HTMLIcPatreonSvgElement;
+        new (): HTMLIcPatreonSvgElement;
+    };
+    interface HTMLIcPaypalSvgElement extends Components.IcPaypalSvg, HTMLStencilElement {
+    }
+    var HTMLIcPaypalSvgElement: {
+        prototype: HTMLIcPaypalSvgElement;
+        new (): HTMLIcPaypalSvgElement;
+    };
     interface HTMLIcPeopleSvgElement extends Components.IcPeopleSvg, HTMLStencilElement {
     }
     var HTMLIcPeopleSvgElement: {
@@ -567,6 +705,12 @@ declare global {
     var HTMLIcPersonSvgElement: {
         prototype: HTMLIcPersonSvgElement;
         new (): HTMLIcPersonSvgElement;
+    };
+    interface HTMLIcPieceCakeSvgElement extends Components.IcPieceCakeSvg, HTMLStencilElement {
+    }
+    var HTMLIcPieceCakeSvgElement: {
+        prototype: HTMLIcPieceCakeSvgElement;
+        new (): HTMLIcPieceCakeSvgElement;
     };
     interface HTMLIcPlusSvgElement extends Components.IcPlusSvg, HTMLStencilElement {
     }
@@ -585,6 +729,12 @@ declare global {
     var HTMLIcQuestionSvgElement: {
         prototype: HTMLIcQuestionSvgElement;
         new (): HTMLIcQuestionSvgElement;
+    };
+    interface HTMLIcRootsSvgElement extends Components.IcRootsSvg, HTMLStencilElement {
+    }
+    var HTMLIcRootsSvgElement: {
+        prototype: HTMLIcRootsSvgElement;
+        new (): HTMLIcRootsSvgElement;
     };
     interface HTMLIcRowsSvgElement extends Components.IcRowsSvg, HTMLStencilElement {
     }
@@ -640,6 +790,12 @@ declare global {
         prototype: HTMLIcSunSvgElement;
         new (): HTMLIcSunSvgElement;
     };
+    interface HTMLIcSushiSvgElement extends Components.IcSushiSvg, HTMLStencilElement {
+    }
+    var HTMLIcSushiSvgElement: {
+        prototype: HTMLIcSushiSvgElement;
+        new (): HTMLIcSushiSvgElement;
+    };
     interface HTMLIcSymbolSvgElement extends Components.IcSymbolSvg, HTMLStencilElement {
     }
     var HTMLIcSymbolSvgElement: {
@@ -651,6 +807,18 @@ declare global {
     var HTMLIcTagSvgElement: {
         prototype: HTMLIcTagSvgElement;
         new (): HTMLIcTagSvgElement;
+    };
+    interface HTMLIcTelegramSvgElement extends Components.IcTelegramSvg, HTMLStencilElement {
+    }
+    var HTMLIcTelegramSvgElement: {
+        prototype: HTMLIcTelegramSvgElement;
+        new (): HTMLIcTelegramSvgElement;
+    };
+    interface HTMLIcTetherSvgElement extends Components.IcTetherSvg, HTMLStencilElement {
+    }
+    var HTMLIcTetherSvgElement: {
+        prototype: HTMLIcTetherSvgElement;
+        new (): HTMLIcTetherSvgElement;
     };
     interface HTMLIcTiktokSvgElement extends Components.IcTiktokSvg, HTMLStencilElement {
     }
@@ -688,6 +856,18 @@ declare global {
         prototype: HTMLIcWarningSvgElement;
         new (): HTMLIcWarningSvgElement;
     };
+    interface HTMLIcWhatsappSvgElement extends Components.IcWhatsappSvg, HTMLStencilElement {
+    }
+    var HTMLIcWhatsappSvgElement: {
+        prototype: HTMLIcWhatsappSvgElement;
+        new (): HTMLIcWhatsappSvgElement;
+    };
+    interface HTMLIcWineSvgElement extends Components.IcWineSvg, HTMLStencilElement {
+    }
+    var HTMLIcWineSvgElement: {
+        prototype: HTMLIcWineSvgElement;
+        new (): HTMLIcWineSvgElement;
+    };
     interface HTMLIcYoutubeSvgElement extends Components.IcYoutubeSvg, HTMLStencilElement {
     }
     var HTMLIcYoutubeSvgElement: {
@@ -706,15 +886,22 @@ declare global {
         "ic-arrow-right-svg": HTMLIcArrowRightSvgElement;
         "ic-arrow-up-svg": HTMLIcArrowUpSvgElement;
         "ic-bell-svg": HTMLIcBellSvgElement;
+        "ic-bitcoin-svg": HTMLIcBitcoinSvgElement;
         "ic-briefcase-svg": HTMLIcBriefcaseSvgElement;
+        "ic-cake-svg": HTMLIcCakeSvgElement;
         "ic-calendar-svg": HTMLIcCalendarSvgElement;
         "ic-cart-svg": HTMLIcCartSvgElement;
+        "ic-chick-svg": HTMLIcChickSvgElement;
+        "ic-chicken-leg-svg": HTMLIcChickenLegSvgElement;
         "ic-clock-svg": HTMLIcClockSvgElement;
         "ic-copy-svg": HTMLIcCopySvgElement;
         "ic-dashboard-svg": HTMLIcDashboardSvgElement;
+        "ic-discord-svg": HTMLIcDiscordSvgElement;
         "ic-download-svg": HTMLIcDownloadSvgElement;
+        "ic-drink-svg": HTMLIcDrinkSvgElement;
         "ic-dynamic-svg": HTMLIcDynamicSvgElement;
         "ic-email-svg": HTMLIcEmailSvgElement;
+        "ic-ethereum-svg": HTMLIcEthereumSvgElement;
         "ic-exit-svg": HTMLIcExitSvgElement;
         "ic-external-link-svg": HTMLIcExternalLinkSvgElement;
         "ic-eye-hidden-svg": HTMLIcEyeHiddenSvgElement;
@@ -740,17 +927,23 @@ declare global {
         "ic-menu-svg": HTMLIcMenuSvgElement;
         "ic-menu-two-svg": HTMLIcMenuTwoSvgElement;
         "ic-message-svg": HTMLIcMessageSvgElement;
+        "ic-messenger-svg": HTMLIcMessengerSvgElement;
         "ic-microphone-svg": HTMLIcMicrophoneSvgElement;
         "ic-minus-svg": HTMLIcMinusSvgElement;
         "ic-money-svg": HTMLIcMoneySvgElement;
         "ic-moon-svg": HTMLIcMoonSvgElement;
         "ic-negative-svg": HTMLIcNegativeSvgElement;
         "ic-notion-svg": HTMLIcNotionSvgElement;
+        "ic-panda-svg": HTMLIcPandaSvgElement;
+        "ic-patreon-svg": HTMLIcPatreonSvgElement;
+        "ic-paypal-svg": HTMLIcPaypalSvgElement;
         "ic-people-svg": HTMLIcPeopleSvgElement;
         "ic-person-svg": HTMLIcPersonSvgElement;
+        "ic-piece-cake-svg": HTMLIcPieceCakeSvgElement;
         "ic-plus-svg": HTMLIcPlusSvgElement;
         "ic-positive-svg": HTMLIcPositiveSvgElement;
         "ic-question-svg": HTMLIcQuestionSvgElement;
+        "ic-roots-svg": HTMLIcRootsSvgElement;
         "ic-rows-svg": HTMLIcRowsSvgElement;
         "ic-search-svg": HTMLIcSearchSvgElement;
         "ic-settings-svg": HTMLIcSettingsSvgElement;
@@ -760,14 +953,19 @@ declare global {
         "ic-square-svg": HTMLIcSquareSvgElement;
         "ic-star-svg": HTMLIcStarSvgElement;
         "ic-sun-svg": HTMLIcSunSvgElement;
+        "ic-sushi-svg": HTMLIcSushiSvgElement;
         "ic-symbol-svg": HTMLIcSymbolSvgElement;
         "ic-tag-svg": HTMLIcTagSvgElement;
+        "ic-telegram-svg": HTMLIcTelegramSvgElement;
+        "ic-tether-svg": HTMLIcTetherSvgElement;
         "ic-tiktok-svg": HTMLIcTiktokSvgElement;
         "ic-trash-svg": HTMLIcTrashSvgElement;
         "ic-twitch-svg": HTMLIcTwitchSvgElement;
         "ic-twitter-svg": HTMLIcTwitterSvgElement;
         "ic-upload-svg": HTMLIcUploadSvgElement;
         "ic-warning-svg": HTMLIcWarningSvgElement;
+        "ic-whatsapp-svg": HTMLIcWhatsappSvgElement;
+        "ic-wine-svg": HTMLIcWineSvgElement;
         "ic-youtube-svg": HTMLIcYoutubeSvgElement;
         "symbol-icon": HTMLSymbolIconElement;
     }
@@ -793,7 +991,15 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcBitcoinSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcBriefcaseSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcCakeSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -802,6 +1008,14 @@ declare namespace LocalJSX {
         "type"?: StyleType;
     }
     interface IcCartSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcChickSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcChickenLegSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -817,7 +1031,15 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcDiscordSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcDownloadSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcDrinkSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -826,6 +1048,10 @@ declare namespace LocalJSX {
         "type"?: StyleType;
     }
     interface IcEmailSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcEthereumSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -929,6 +1155,10 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcMessengerSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcMicrophoneSvg {
         "iconClass"?: string;
         "type"?: StyleType;
@@ -953,11 +1183,27 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcPandaSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPatreonSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPaypalSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcPeopleSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
     interface IcPersonSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcPieceCakeSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -970,6 +1216,10 @@ declare namespace LocalJSX {
         "type"?: StyleType;
     }
     interface IcQuestionSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcRootsSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -1009,11 +1259,23 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcSushiSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcSymbolSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
     interface IcTagSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTelegramSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcTetherSvg {
         "iconClass"?: string;
         "type"?: StyleType;
     }
@@ -1041,6 +1303,14 @@ declare namespace LocalJSX {
         "iconClass"?: string;
         "type"?: StyleType;
     }
+    interface IcWhatsappSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
+    interface IcWineSvg {
+        "iconClass"?: string;
+        "type"?: StyleType;
+    }
     interface IcYoutubeSvg {
         "iconClass"?: string;
         "type"?: StyleType;
@@ -1056,15 +1326,22 @@ declare namespace LocalJSX {
         "ic-arrow-right-svg": IcArrowRightSvg;
         "ic-arrow-up-svg": IcArrowUpSvg;
         "ic-bell-svg": IcBellSvg;
+        "ic-bitcoin-svg": IcBitcoinSvg;
         "ic-briefcase-svg": IcBriefcaseSvg;
+        "ic-cake-svg": IcCakeSvg;
         "ic-calendar-svg": IcCalendarSvg;
         "ic-cart-svg": IcCartSvg;
+        "ic-chick-svg": IcChickSvg;
+        "ic-chicken-leg-svg": IcChickenLegSvg;
         "ic-clock-svg": IcClockSvg;
         "ic-copy-svg": IcCopySvg;
         "ic-dashboard-svg": IcDashboardSvg;
+        "ic-discord-svg": IcDiscordSvg;
         "ic-download-svg": IcDownloadSvg;
+        "ic-drink-svg": IcDrinkSvg;
         "ic-dynamic-svg": IcDynamicSvg;
         "ic-email-svg": IcEmailSvg;
+        "ic-ethereum-svg": IcEthereumSvg;
         "ic-exit-svg": IcExitSvg;
         "ic-external-link-svg": IcExternalLinkSvg;
         "ic-eye-hidden-svg": IcEyeHiddenSvg;
@@ -1090,17 +1367,23 @@ declare namespace LocalJSX {
         "ic-menu-svg": IcMenuSvg;
         "ic-menu-two-svg": IcMenuTwoSvg;
         "ic-message-svg": IcMessageSvg;
+        "ic-messenger-svg": IcMessengerSvg;
         "ic-microphone-svg": IcMicrophoneSvg;
         "ic-minus-svg": IcMinusSvg;
         "ic-money-svg": IcMoneySvg;
         "ic-moon-svg": IcMoonSvg;
         "ic-negative-svg": IcNegativeSvg;
         "ic-notion-svg": IcNotionSvg;
+        "ic-panda-svg": IcPandaSvg;
+        "ic-patreon-svg": IcPatreonSvg;
+        "ic-paypal-svg": IcPaypalSvg;
         "ic-people-svg": IcPeopleSvg;
         "ic-person-svg": IcPersonSvg;
+        "ic-piece-cake-svg": IcPieceCakeSvg;
         "ic-plus-svg": IcPlusSvg;
         "ic-positive-svg": IcPositiveSvg;
         "ic-question-svg": IcQuestionSvg;
+        "ic-roots-svg": IcRootsSvg;
         "ic-rows-svg": IcRowsSvg;
         "ic-search-svg": IcSearchSvg;
         "ic-settings-svg": IcSettingsSvg;
@@ -1110,14 +1393,19 @@ declare namespace LocalJSX {
         "ic-square-svg": IcSquareSvg;
         "ic-star-svg": IcStarSvg;
         "ic-sun-svg": IcSunSvg;
+        "ic-sushi-svg": IcSushiSvg;
         "ic-symbol-svg": IcSymbolSvg;
         "ic-tag-svg": IcTagSvg;
+        "ic-telegram-svg": IcTelegramSvg;
+        "ic-tether-svg": IcTetherSvg;
         "ic-tiktok-svg": IcTiktokSvg;
         "ic-trash-svg": IcTrashSvg;
         "ic-twitch-svg": IcTwitchSvg;
         "ic-twitter-svg": IcTwitterSvg;
         "ic-upload-svg": IcUploadSvg;
         "ic-warning-svg": IcWarningSvg;
+        "ic-whatsapp-svg": IcWhatsappSvg;
+        "ic-wine-svg": IcWineSvg;
         "ic-youtube-svg": IcYoutubeSvg;
         "symbol-icon": SymbolIcon;
     }
@@ -1131,15 +1419,22 @@ declare module "@stencil/core" {
             "ic-arrow-right-svg": LocalJSX.IcArrowRightSvg & JSXBase.HTMLAttributes<HTMLIcArrowRightSvgElement>;
             "ic-arrow-up-svg": LocalJSX.IcArrowUpSvg & JSXBase.HTMLAttributes<HTMLIcArrowUpSvgElement>;
             "ic-bell-svg": LocalJSX.IcBellSvg & JSXBase.HTMLAttributes<HTMLIcBellSvgElement>;
+            "ic-bitcoin-svg": LocalJSX.IcBitcoinSvg & JSXBase.HTMLAttributes<HTMLIcBitcoinSvgElement>;
             "ic-briefcase-svg": LocalJSX.IcBriefcaseSvg & JSXBase.HTMLAttributes<HTMLIcBriefcaseSvgElement>;
+            "ic-cake-svg": LocalJSX.IcCakeSvg & JSXBase.HTMLAttributes<HTMLIcCakeSvgElement>;
             "ic-calendar-svg": LocalJSX.IcCalendarSvg & JSXBase.HTMLAttributes<HTMLIcCalendarSvgElement>;
             "ic-cart-svg": LocalJSX.IcCartSvg & JSXBase.HTMLAttributes<HTMLIcCartSvgElement>;
+            "ic-chick-svg": LocalJSX.IcChickSvg & JSXBase.HTMLAttributes<HTMLIcChickSvgElement>;
+            "ic-chicken-leg-svg": LocalJSX.IcChickenLegSvg & JSXBase.HTMLAttributes<HTMLIcChickenLegSvgElement>;
             "ic-clock-svg": LocalJSX.IcClockSvg & JSXBase.HTMLAttributes<HTMLIcClockSvgElement>;
             "ic-copy-svg": LocalJSX.IcCopySvg & JSXBase.HTMLAttributes<HTMLIcCopySvgElement>;
             "ic-dashboard-svg": LocalJSX.IcDashboardSvg & JSXBase.HTMLAttributes<HTMLIcDashboardSvgElement>;
+            "ic-discord-svg": LocalJSX.IcDiscordSvg & JSXBase.HTMLAttributes<HTMLIcDiscordSvgElement>;
             "ic-download-svg": LocalJSX.IcDownloadSvg & JSXBase.HTMLAttributes<HTMLIcDownloadSvgElement>;
+            "ic-drink-svg": LocalJSX.IcDrinkSvg & JSXBase.HTMLAttributes<HTMLIcDrinkSvgElement>;
             "ic-dynamic-svg": LocalJSX.IcDynamicSvg & JSXBase.HTMLAttributes<HTMLIcDynamicSvgElement>;
             "ic-email-svg": LocalJSX.IcEmailSvg & JSXBase.HTMLAttributes<HTMLIcEmailSvgElement>;
+            "ic-ethereum-svg": LocalJSX.IcEthereumSvg & JSXBase.HTMLAttributes<HTMLIcEthereumSvgElement>;
             "ic-exit-svg": LocalJSX.IcExitSvg & JSXBase.HTMLAttributes<HTMLIcExitSvgElement>;
             "ic-external-link-svg": LocalJSX.IcExternalLinkSvg & JSXBase.HTMLAttributes<HTMLIcExternalLinkSvgElement>;
             "ic-eye-hidden-svg": LocalJSX.IcEyeHiddenSvg & JSXBase.HTMLAttributes<HTMLIcEyeHiddenSvgElement>;
@@ -1165,17 +1460,23 @@ declare module "@stencil/core" {
             "ic-menu-svg": LocalJSX.IcMenuSvg & JSXBase.HTMLAttributes<HTMLIcMenuSvgElement>;
             "ic-menu-two-svg": LocalJSX.IcMenuTwoSvg & JSXBase.HTMLAttributes<HTMLIcMenuTwoSvgElement>;
             "ic-message-svg": LocalJSX.IcMessageSvg & JSXBase.HTMLAttributes<HTMLIcMessageSvgElement>;
+            "ic-messenger-svg": LocalJSX.IcMessengerSvg & JSXBase.HTMLAttributes<HTMLIcMessengerSvgElement>;
             "ic-microphone-svg": LocalJSX.IcMicrophoneSvg & JSXBase.HTMLAttributes<HTMLIcMicrophoneSvgElement>;
             "ic-minus-svg": LocalJSX.IcMinusSvg & JSXBase.HTMLAttributes<HTMLIcMinusSvgElement>;
             "ic-money-svg": LocalJSX.IcMoneySvg & JSXBase.HTMLAttributes<HTMLIcMoneySvgElement>;
             "ic-moon-svg": LocalJSX.IcMoonSvg & JSXBase.HTMLAttributes<HTMLIcMoonSvgElement>;
             "ic-negative-svg": LocalJSX.IcNegativeSvg & JSXBase.HTMLAttributes<HTMLIcNegativeSvgElement>;
             "ic-notion-svg": LocalJSX.IcNotionSvg & JSXBase.HTMLAttributes<HTMLIcNotionSvgElement>;
+            "ic-panda-svg": LocalJSX.IcPandaSvg & JSXBase.HTMLAttributes<HTMLIcPandaSvgElement>;
+            "ic-patreon-svg": LocalJSX.IcPatreonSvg & JSXBase.HTMLAttributes<HTMLIcPatreonSvgElement>;
+            "ic-paypal-svg": LocalJSX.IcPaypalSvg & JSXBase.HTMLAttributes<HTMLIcPaypalSvgElement>;
             "ic-people-svg": LocalJSX.IcPeopleSvg & JSXBase.HTMLAttributes<HTMLIcPeopleSvgElement>;
             "ic-person-svg": LocalJSX.IcPersonSvg & JSXBase.HTMLAttributes<HTMLIcPersonSvgElement>;
+            "ic-piece-cake-svg": LocalJSX.IcPieceCakeSvg & JSXBase.HTMLAttributes<HTMLIcPieceCakeSvgElement>;
             "ic-plus-svg": LocalJSX.IcPlusSvg & JSXBase.HTMLAttributes<HTMLIcPlusSvgElement>;
             "ic-positive-svg": LocalJSX.IcPositiveSvg & JSXBase.HTMLAttributes<HTMLIcPositiveSvgElement>;
             "ic-question-svg": LocalJSX.IcQuestionSvg & JSXBase.HTMLAttributes<HTMLIcQuestionSvgElement>;
+            "ic-roots-svg": LocalJSX.IcRootsSvg & JSXBase.HTMLAttributes<HTMLIcRootsSvgElement>;
             "ic-rows-svg": LocalJSX.IcRowsSvg & JSXBase.HTMLAttributes<HTMLIcRowsSvgElement>;
             "ic-search-svg": LocalJSX.IcSearchSvg & JSXBase.HTMLAttributes<HTMLIcSearchSvgElement>;
             "ic-settings-svg": LocalJSX.IcSettingsSvg & JSXBase.HTMLAttributes<HTMLIcSettingsSvgElement>;
@@ -1185,14 +1486,19 @@ declare module "@stencil/core" {
             "ic-square-svg": LocalJSX.IcSquareSvg & JSXBase.HTMLAttributes<HTMLIcSquareSvgElement>;
             "ic-star-svg": LocalJSX.IcStarSvg & JSXBase.HTMLAttributes<HTMLIcStarSvgElement>;
             "ic-sun-svg": LocalJSX.IcSunSvg & JSXBase.HTMLAttributes<HTMLIcSunSvgElement>;
+            "ic-sushi-svg": LocalJSX.IcSushiSvg & JSXBase.HTMLAttributes<HTMLIcSushiSvgElement>;
             "ic-symbol-svg": LocalJSX.IcSymbolSvg & JSXBase.HTMLAttributes<HTMLIcSymbolSvgElement>;
             "ic-tag-svg": LocalJSX.IcTagSvg & JSXBase.HTMLAttributes<HTMLIcTagSvgElement>;
+            "ic-telegram-svg": LocalJSX.IcTelegramSvg & JSXBase.HTMLAttributes<HTMLIcTelegramSvgElement>;
+            "ic-tether-svg": LocalJSX.IcTetherSvg & JSXBase.HTMLAttributes<HTMLIcTetherSvgElement>;
             "ic-tiktok-svg": LocalJSX.IcTiktokSvg & JSXBase.HTMLAttributes<HTMLIcTiktokSvgElement>;
             "ic-trash-svg": LocalJSX.IcTrashSvg & JSXBase.HTMLAttributes<HTMLIcTrashSvgElement>;
             "ic-twitch-svg": LocalJSX.IcTwitchSvg & JSXBase.HTMLAttributes<HTMLIcTwitchSvgElement>;
             "ic-twitter-svg": LocalJSX.IcTwitterSvg & JSXBase.HTMLAttributes<HTMLIcTwitterSvgElement>;
             "ic-upload-svg": LocalJSX.IcUploadSvg & JSXBase.HTMLAttributes<HTMLIcUploadSvgElement>;
             "ic-warning-svg": LocalJSX.IcWarningSvg & JSXBase.HTMLAttributes<HTMLIcWarningSvgElement>;
+            "ic-whatsapp-svg": LocalJSX.IcWhatsappSvg & JSXBase.HTMLAttributes<HTMLIcWhatsappSvgElement>;
+            "ic-wine-svg": LocalJSX.IcWineSvg & JSXBase.HTMLAttributes<HTMLIcWineSvgElement>;
             "ic-youtube-svg": LocalJSX.IcYoutubeSvg & JSXBase.HTMLAttributes<HTMLIcYoutubeSvgElement>;
             "symbol-icon": LocalJSX.SymbolIcon & JSXBase.HTMLAttributes<HTMLSymbolIconElement>;
         }

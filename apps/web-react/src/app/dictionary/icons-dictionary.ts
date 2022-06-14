@@ -271,6 +271,10 @@ export const IconsDictionary = {
     en: ["shopping", "cart", "bag", "add", "buy", "buying", "groceries", "shop", "mart", "purchase"],
     es: ["compras", "carrito", "bolsa", "agregar", "comprar", "tienda", "cesta", "compra"],
   },
+  ethereum: {
+    en: ["crypto", "crytocurrency", "money", "currency", "payment", "ethereum"],
+    es: ["cripto", "criptomoneda", "moneda", "pago", "dinero", "ethereum"],
+  },
   bitcoin: {
     en: ["bitcoin", "crypto", "crytocurrency", "money", "currency", "payment"],
     es: ["bitcoin", "cripto", "criptomoneda", "moneda", "pago", "dinero"],
@@ -278,10 +282,6 @@ export const IconsDictionary = {
   tether: {
     en: ["crypto", "crytocurrency", "money", "currency", "payment", "tether", "usdt"],
     es: ["cripto", "criptomoneda", "moneda", "pago", "dinero", "tether", "usdt"],
-  },
-  ethereum: {
-    en: ["crypto", "crytocurrency", "money", "currency", "payment", "ethereum"],
-    es: ["cripto", "criptomoneda", "moneda", "pago", "dinero", "ethereum"],
   },
   paypal: {
     en: ["money", "payment", "transfer", "send", "paypal"],
