@@ -2,8 +2,8 @@
   "name": "@dynamic-devs/symbol-angular",
   "version": "0.0.9",
   "peerDependencies": {
-    "@angular/common": "^14.0.2",
-    "@angular/core": "^14.0.2",
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
     "@dynamic-devs/symbol": "^0.0.9"
   },
   "dependencies": {
