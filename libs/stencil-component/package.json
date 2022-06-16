@@ -12,5 +12,8 @@
   "files": [
     "dist/",
     "loader/"
-  ]
+  ],
+  "scripts": {
+    "generate:icons": "ts-node ./src/utils/generate-icons.utils.ts"
+  }
 }
