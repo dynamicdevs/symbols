@@ -1,6 +1,5 @@
 import { Component, h, Host, Prop } from '@stencil/core';
 import { StyleType } from '../../types';
-import { iconName } from '../../utils/icon.util';
 
 @Component({
   tag: 'symbol-icon',
@@ -14,7 +13,7 @@ export class SymbolIcon {
   @Prop() type: StyleType = 'solid';
 
   render() {
-    const SVG = `ic-${iconName[this.name]}-svg`;
+    const SVG = `ic-${this.name.replace('_', '-')}-svg`;
 
     return (
       <Host role="img">
