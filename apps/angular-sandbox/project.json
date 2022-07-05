@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/angular-sandbox",
   "sourceRoot": "apps/angular-sandbox/src",
   "prefix": "dynamic-devs",
   "targets": {

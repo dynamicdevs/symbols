@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "libs/stencil-component-angular",
   "sourceRoot": "libs/stencil-component-angular/src",
   "prefix": "symbol",
   "targets": {

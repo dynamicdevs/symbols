@@ -1,5 +1,4 @@
 {
-  "root": "libs/stencil-component",
   "sourceRoot": "libs/stencil-component/src",
   "projectType": "library",
   "generators": {

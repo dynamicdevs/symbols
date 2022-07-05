@@ -1,5 +1,4 @@
 {
-  "root": "apps/web-react",
   "sourceRoot": "apps/web-react/src",
   "projectType": "application",
   "targets": {

@@ -1,5 +1,4 @@
 {
-  "root": "libs/stencil-component-react",
   "sourceRoot": "libs/stencil-component-react/src",
   "projectType": "library",
   "tags": [],
